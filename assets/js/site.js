@@ -1,4 +1,4 @@
-// DeskWidgets site: builds the theme gallery, playground, widget gallery and feature
+// WidgetThemes site: builds the theme gallery, playground, widget gallery and feature
 // demos from assets/data/themes.json, which the app writes with --export-site.
 (() => {
   "use strict";
@@ -260,7 +260,7 @@
     // The command points at wherever this page is published, so it's right on any host.
     const base = location.protocol.startsWith("http")
       ? location.origin + location.pathname.replace(/[^/]*$/, "")
-      : "https://deskwidgets.example/";
+      : "https://widgetthemes.example/";
     const command = `curl -fsSL ${base}install.sh | bash`;
     const code = $("#install-command"), copy = $("#copy-command");
     code.textContent = command;
