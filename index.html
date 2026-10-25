@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeskWidgets — Desktop widgets for your Mac</title>
+  <meta name="description" content="24 hand-made themes and 20 widgets for your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Free for macOS 14 and later.">
+  <meta property="og:title" content="DeskWidgets — Desktop widgets for your Mac">
+  <meta property="og:description" content="24 hand-made themes and 20 widgets for your Mac desktop. Free for macOS 14 and later.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" type="image/png" href="assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=4">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><img src="assets/img/icon.png" alt="" width="28" height="28"> DeskWidgets</a>
+    <nav>
+      <a href="#themes">Themes</a>
+      <a href="#playground">Playground</a>
+      <a href="#widgets">Widgets</a>
+      <a href="#features">Features</a>
+    </nav>
+    <a class="button small" href="#download">Download</a>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Free for macOS 14 and later</p>
+        <h1>Your desktop,<br><em>dressed for the occasion.</em></h1>
+        <p class="lede">DeskWidgets puts live widgets on your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Every one is drawn by hand in 24 complete themes, from a 1970s hi-fi to a quiet Kyoto print.</p>
+        <div class="cta-row">
+          <a class="button" href="#download">Download for Mac</a>
+          <a class="button ghost" href="#playground">Try it in your browser</a>
+        </div>
+      </div>
+      <figure class="laptop" aria-label="Theme previews">
+        <div class="laptop-screen">
+          <img id="hero-shot" src="assets/img/themes/hifi/preset.webp" alt="The Hi-Fi theme on a Mac desktop">
+          <img id="hero-shot-next" class="next" alt="" aria-hidden="true">
+        </div>
+        <div class="laptop-base"></div>
+        <figcaption><span id="hero-theme">Hi-Fi</span> <span class="dim" id="hero-tagline">Nixie tubes, VU needles and a tuner dial</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- Numbers -->
+    <section class="stats" aria-label="At a glance">
+      <div><strong>24</strong><span>themes</span></div>
+      <div><strong>20</strong><span>widgets</span></div>
+      <div><strong>~8%</strong><span>CPU with animation on</span></div>
+      <div><strong>0</strong><span>trackers or accounts</span></div>
+    </section>
+
+    <!-- Themes -->
+    <section id="themes" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Themes</p>
+        <h2>Twenty-four themes.<br><em>Each one a complete design.</em></h2>
+        <p class="lede">A theme isn't a colour swap. Each one draws its own version of every widget, lays them out in its own composition, links them with its own desktop decoration, and comes with a matching wallpaper.</p>
+      </div>
+      <div class="chips" role="tablist" aria-label="Filter themes">
+        <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-filter="concept" role="tab" aria-selected="false">Concept</button>
+        <button class="chip" data-filter="minimal" role="tab" aria-selected="false">Minimal</button>
+        <button class="chip" data-filter="light" role="tab" aria-selected="false">Light</button>
+      </div>
+      <div id="theme-grid" class="theme-grid"></div>
+    </section>
+
+    <!-- Playground -->
+    <section id="playground" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Playground</p>
+        <h2>Arrange a desktop.<br><em>Right here.</em></h2>
+        <p class="lede">Pick a theme and drag its widgets around, just as you would on your Mac. Add or remove widgets from the tray below.</p>
+      </div>
+      <div class="playground">
+        <div class="pg-toolbar">
+          <label class="select">
+            <span>Theme</span>
+            <select id="pg-theme" aria-label="Theme"></select>
+          </label>
+          <button class="chip" id="pg-pair" hidden>Switch to dark</button>
+          <button class="chip" id="pg-reset">Reset layout</button>
+        </div>
+        <div class="pg-stage-wrap">
+          <div id="pg-stage" class="pg-stage" aria-label="Desktop preview">
+            <div class="pg-menubar"><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span class="clock" id="pg-clock"></span></div>
+          </div>
+        </div>
+        <div id="pg-tray" class="pg-tray" aria-label="Widgets"></div>
+      </div>
+    </section>
+
+    <!-- Widgets -->
+    <section id="widgets" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Widgets</p>
+        <h2>Twenty widgets,<br><em>drawn for every theme.</em></h2>
+        <p class="lede">From system meters to a focus timer, each widget comes in 1:1 and 2:1 sizes, scales from 75% to 200%, and never draws text smaller than 10.5 points.</p>
+      </div>
+      <label class="select inline">
+        <span>Show in</span>
+        <select id="wg-theme" aria-label="Theme for the widget gallery"></select>
+      </label>
+      <div id="widget-grid" class="widget-grid"></div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Made to live on<br><em>a real desktop.</em></h2>
+      </div>
+      <div class="features">
+        <article class="feature wide">
+          <div class="feature-copy">
+            <h3>Your colour, any theme</h3>
+            <p>Most themes take a new accent: curated choices like ice-blue nixie tubes for Hi-Fi or magenta for Overdrive, or any colour you like.</p>
+            <div class="swatches" id="accent-swatches" aria-label="Accent colours"></div>
+          </div>
+          <div class="feature-visual accent-visual">
+            <img id="accent-image" alt="The Hi-Fi clock in its original nixie orange">
+          </div>
+        </article>
+
+        <article class="feature wide">
+          <div class="feature-copy">
+            <h3>Light by day, dark by night</h3>
+            <p>Field, Lumen and Paper each have a partner theme. Turn on <i>Match system appearance</i> and your widgets and wallpaper switch when macOS does.</p>
+            <p class="hint">Drag the handle to compare.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="compare" id="compare">
+              <img src="assets/img/themes/fieldDark/preset.webp" alt="Field Dark theme">
+              <div class="compare-top"><img src="assets/img/themes/field/preset.webp" alt="Field theme"></div>
+              <input type="range" min="0" max="100" value="50" aria-label="Compare light and dark">
+              <span class="compare-handle" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">⏱</span>
+          <h3>Focus timer</h3>
+          <p>Pomodoro sessions with short and long breaks, a chime and a notification, styled to match every theme.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">↗</span>
+          <h3>Click to open</h3>
+          <p>Widgets are doors: CPU opens Activity Monitor, Weather opens Weather, Battery opens its settings.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">◐</span>
+          <h3>Smart fade</h3>
+          <p>Widgets you pin above your windows fade away when a window slides under them, and come back on Show Desktop.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">▭▭</span>
+          <h3>Every display</h3>
+          <p>Each display can wear its own theme. Unplug a monitor and its widgets wait for it to come back.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">✦</span>
+          <h3>Subtle motion</h3>
+          <p>Sonar sweeps, flickering neon and dancing VU needles. Motion pauses when widgets are covered and respects Reduce Motion.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">⇪</span>
+          <h3>Share your setup</h3>
+          <p>Save a desktop under My Themes and export it as a file, accent colours included. Double-click to import.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">⌘</span>
+          <h3>Native and light</h3>
+          <p>Written in Swift and SwiftUI. It lives in the menu bar, uses about 8% of one core with animation on, and less when covered.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon" aria-hidden="true">◎</span>
+          <h3>Private by design</h3>
+          <p>No account, no analytics, no tracking. Your calendar, reminders and activity never leave your Mac.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="section download">
+      <img class="download-icon" src="assets/img/icon.png" alt="" width="112" height="112">
+      <h2>Download <em>DeskWidgets</em></h2>
+      <p class="lede">Free. Requires macOS 14 Sonoma or later, on Apple silicon or Intel.</p>
+      <div class="install">
+        <div class="install-tabs" role="tablist" aria-label="How to install">
+          <button class="chip active" type="button" role="tab" aria-selected="true" data-tab="terminal">Terminal</button>
+          <button class="chip" type="button" role="tab" aria-selected="false" data-tab="dmg">Disk image</button>
+        </div>
+
+        <div class="install-panel" data-panel="terminal" role="tabpanel">
+          <p>Paste this into Terminal and press Return. It downloads DeskWidgets, checks it, puts it in Applications and opens it, with no security prompts to click through.</p>
+          <div class="command">
+            <code id="install-command">curl -fsSL https://deskwidgets.example/install.sh | bash</code>
+            <button class="copy" type="button" id="copy-command">Copy</button>
+          </div>
+          <p class="fine">No password needed. <a href="install.sh" target="_blank" rel="noopener">Read the script first</a>; it's short.</p>
+        </div>
+
+        <div class="install-panel" data-panel="dmg" role="tabpanel" hidden>
+          <a class="button large" href="downloads/DeskWidgets.dmg" download>Download the disk image</a>
+          <ol class="steps">
+            <li>Open the disk image and drag DeskWidgets into Applications.</li>
+            <li>Open DeskWidgets. macOS will say it can't check it for malicious software, because DeskWidgets is a free app that isn't registered with Apple's paid developer programme.</li>
+            <li><b>macOS 15 or later:</b> open System Settings ▸ Privacy &amp; Security, scroll down and click <i>Open Anyway</i>.<br><b>macOS 14:</b> right-click DeskWidgets in Applications and choose <i>Open</i>.</li>
+          </ol>
+          <p class="fine">You only need to do this the first time.</p>
+        </div>
+      </div>
+      <p class="fine">Version <span id="version">1.3</span> · It lives in your menu bar, not the Dock.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <h2>Questions</h2>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. No trial, no subscription and no account.</p>
+      </details>
+      <details>
+        <summary>Will it slow my Mac down?</summary>
+        <p>Widgets update a few times a second at most and animate at a low frame rate. Animation pauses whenever widgets are covered by windows, and you can switch it off entirely in Settings.</p>
+      </details>
+      <details>
+        <summary>What permissions does it ask for, and why?</summary>
+        <p>Only what a widget you add needs: Calendars for Events, Reminders for Reminders, Location for local weather (or type a city instead), and Automation to read and control Music or Spotify. Each one is requested the first time that widget appears, and you can decline it.</p>
+      </details>
+      <details>
+        <summary>Where do the widgets sit: behind my windows or on top?</summary>
+        <p>Your choice. By default they sit on the desktop, behind your windows. You can raise all of them, or pin individual widgets above your windows.</p>
+      </details>
+      <details>
+        <summary>Why install with a Terminal command?</summary>
+        <p>macOS shows a warning for apps downloaded in a browser unless the developer pays for Apple's developer programme. DeskWidgets is free and isn't registered, so the Terminal command is the smoothest way in: it downloads the app over a secure connection, checks it matches the published checksum, and installs it. If you'd rather not use Terminal, the disk image works too, with one extra click the first time.</p>
+      </details>
+      <details>
+        <summary>How do I uninstall it?</summary>
+        <p>Quit DeskWidgets from its menu bar icon (right-click, then Quit) and move it from Applications to the Trash. To remove its settings as well, delete its file in <code>~/Library/Preferences</code>; its name contains "DeskWidgets".</p>
+      </details>
+      <details>
+        <summary>Can I use my own wallpaper?</summary>
+        <p>Of course. Every theme looks good on its own wallpaper, but you can add any image under Wallpapers, or shuffle between them on a schedule.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="assets/img/icon.png" alt="" width="22" height="22"> DeskWidgets</div>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="credits.html">Credits &amp; licences</a>
+      <a href="mailto:gaustin618@icloud.com">Contact</a>
+      <a href="#download">Download</a>
+    </nav>
+    <p class="fine">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>. Mac and macOS are trademarks of Apple Inc. DeskWidgets is an independent app and is not affiliated with or endorsed by Apple.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <figure>
+      <img id="lightbox-image" alt="">
+      <figcaption>
+        <div>
+          <strong id="lightbox-title"></strong>
+          <span id="lightbox-tagline" class="dim"></span>
+        </div>
+        <a class="button small" id="lightbox-try" href="#playground">Open in playground</a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="assets/js/site.js?v=4" defer></script>
+</body>
+</html>
