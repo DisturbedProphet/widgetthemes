@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=5">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
 </head>
 <body>
   <header class="nav">
@@ -93,10 +93,10 @@
         <div class="pg-stage-wrap">
           <div id="pg-stage" class="pg-stage" aria-label="Desktop preview">
             <img id="pg-ornament" class="pg-ornament" alt="" aria-hidden="true">
+            <canvas id="pg-live" class="pg-ornament" aria-hidden="true" hidden></canvas>
             <div class="pg-menubar"><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span class="clock" id="pg-clock"></span></div>
           </div>
         </div>
-        <p class="pg-note" id="pg-note">Each theme's decorations, like the lines linking its widgets, redraw around your layout in the app. Reset layout to see them here again.</p>
         <div id="pg-tray" class="pg-tray" aria-label="Widgets"></div>
       </div>
     </section>
@@ -284,6 +284,7 @@
     </figure>
   </div>
 
-  <script src="assets/js/site.js?v=5" defer></script>
+  <script src="assets/js/ornament.js?v=7" defer></script>
+  <script src="assets/js/site.js?v=7" defer></script>
 </body>
 </html>

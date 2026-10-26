@@ -9,7 +9,9 @@
     for (const child of children) node.append(child);
     return node;
   };
-  const img = (theme, file) => `assets/img/themes/${theme}/${file}`;
+  // Image URLs carry the export's build stamp, so a re-export isn't hidden behind cached images.
+  let build = "";
+  const img = (theme, file) => `assets/img/themes/${theme}/${file}${build}`;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   installSection();
@@ -20,6 +22,7 @@
     .catch((error) => console.error("Couldn't load theme data", error));
 
   function start(data) {
+    if (data.build) build = `?v=${data.build}`;
     // Flagship themes first (in the hero's order), then the rest as the app lists them.
     const lead = data.heroThemes || [];
     const rank = (t) => (lead.includes(t.id) ? lead.indexOf(t.id) : lead.length);
@@ -132,6 +135,34 @@
     let theme = null;
     let placed = new Map(); // kind -> {node, x, y, w, h} in canvas points
 
+    // The theme's decoration: the app's own render of it for the preset layout, until the layout
+    // changes; then a live drawing (ornament.js) that follows the widgets around.
+    const still = $("#pg-ornament"), live = $("#pg-live"), pen = live.getContext("2d");
+    let drawing = false, frame = 0, sprites = {};
+
+    function redraw() {
+      frame = 0;
+      if (!drawing) return;
+      const ratio = window.devicePixelRatio || 1;
+      const width = Math.round(stage.clientWidth * ratio), height = Math.round(stage.clientHeight * ratio);
+      if (live.width !== width || live.height !== height) Object.assign(live, { width, height });
+      const k = scale() * ratio;
+      pen.setTransform(1, 0, 0, 1, 0, 0);
+      pen.clearRect(0, 0, width, height);
+      pen.setTransform(k, 0, 0, k, 0, 0);
+      Ornament.draw(pen, k, theme, [...placed.values()], sprites);
+    }
+    const scheduleRedraw = () => { if (!frame) frame = requestAnimationFrame(redraw); };
+
+    function layoutChanged() {
+      if (!drawing) {
+        drawing = true;
+        still.hidden = true;
+        live.hidden = false;
+      }
+      scheduleRedraw();
+    }
+
     for (const t of themes) select.append(el("option", { value: t.id, textContent: t.title }));
     select.addEventListener("change", () => load(select.value));
     $("#pg-reset").addEventListener("click", () => load(theme.id));
@@ -175,14 +206,12 @@
         // Raise with z-index: moving the node in the DOM would drop the pointer capture mid-drag.
         item.node.style.zIndex = String(++topZ);
         item.node.classList.add("dragging");
-        // The decoration is drawn around the preset layout, so it bows out once things move.
-        $("#pg-ornament").classList.add("faded");
-        $("#pg-note").classList.add("shown");
         const s = scale(), startX = event.clientX, startY = event.clientY, originX = item.x, originY = item.y;
         const move = (e) => {
           item.x = Math.min(Math.max(originX + (e.clientX - startX) / s, -item.w * 0.5), canvas.width - item.w * 0.5);
           item.y = Math.min(Math.max(originY + (e.clientY - startY) / s, 22), canvas.height - item.h * 0.5);
           position(item);
+          layoutChanged();
         };
         const up = () => {
           item.node.classList.remove("dragging");
@@ -212,6 +241,7 @@
             place(kind, { x: (canvas.width - size.w) / 2, y: (canvas.height - size.h) / 2, w: size.w, h: size.h });
           }
           renderTray();
+          layoutChanged();
         });
         tray.append(chip);
       }
@@ -223,17 +253,21 @@
       for (const item of placed.values()) item.node.remove();
       placed = new Map();
       stage.style.backgroundImage = `url("${img(theme.id, "wallpaper.webp")}")`;
-      const ornament = $("#pg-ornament");
-      ornament.src = img(theme.id, "ornament.webp");
-      ornament.classList.remove("faded");
-      $("#pg-note").classList.remove("shown");
+      still.src = img(theme.id, "ornament.webp");
+      still.hidden = false;
+      live.hidden = true;
+      drawing = false;
+      sprites = Ornament.load(theme, (name) => img(theme.id, `sprites/${name}.webp`), scheduleRedraw);
       for (const frame of theme.layout) place(frame.kind, frame);
       pair.hidden = !theme.partner;
       if (theme.partner) pair.textContent = `Switch to ${byId[theme.partner].light ? "light" : "dark"}`;
       renderTray();
     }
 
-    new ResizeObserver(() => placed.forEach(position)).observe(stage);
+    new ResizeObserver(() => {
+      placed.forEach(position);
+      scheduleRedraw();
+    }).observe(stage);
     load(themes.find((t) => t.id === "glass") ? "glass" : themes[0].id);
     return { load };
   }

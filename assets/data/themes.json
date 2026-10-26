@@ -29,6 +29,7 @@
       }
     ]
   },
+  "build" : 1792981692,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -262,6 +263,42 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+          "ink" : [
+            0.10000000000000001,
+            0.089999999999999997,
+            0.080000000000000002,
+            1
+          ]
+        },
+        "sprites" : {
+          "date" : {
+            "h" : 21,
+            "w" : 193.5,
+            "x" : 96.75,
+            "y" : 4
+          },
+          "edition" : {
+            "h" : 21,
+            "w" : 133.5,
+            "x" : 129.5,
+            "y" : 4
+          },
+          "issue" : {
+            "h" : 21,
+            "w" : 114.5,
+            "x" : 4,
+            "y" : 4
+          },
+          "masthead" : {
+            "h" : 53,
+            "w" : 371,
+            "x" : 185.5,
+            "y" : 4
+          }
+        }
+      },
       "partner" : "mono",
       "tagline" : "A light, editorial front page",
       "title" : "Paper"
@@ -466,6 +503,24 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "cyan" : [
+            0.20000000000000001,
+            0.90000000000000002,
+            1,
+            1
+          ]
+        },
+        "sprites" : {
+          "sign" : {
+            "h" : 84,
+            "w" : 181.5,
+            "x" : 90.75,
+            "y" : 24
+          }
+        }
+      },
       "tagline" : "Synthwave script, chrome numerals and neon tubes",
       "title" : "Neon"
     },
@@ -669,6 +724,37 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+          "blue" : [
+            0.11,
+            0.29999999999999999,
+            0.62,
+            1
+          ],
+          "ink" : [
+            0.089999999999999997,
+            0.089999999999999997,
+            0.089999999999999997,
+            1
+          ],
+          "red" : [
+            0.88,
+            0.22,
+            0.16,
+            1
+          ],
+          "yellow" : [
+            0.95999999999999996,
+            0.72999999999999998,
+            0.13,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Primary colours and pure geometry on cream",
       "title" : "Bauhaus"
     },
@@ -865,6 +951,31 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "gold" : [
+            0.87,
+            0.72999999999999998,
+            0.40000000000000002,
+            1
+          ],
+          "sage" : [
+            0.64000000000000001,
+            0.76000000000000001,
+            0.59999999999999998,
+            1
+          ],
+          "terracotta" : [
+            0.89000000000000001,
+            0.5,
+            0.33000000000000002,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Didot, italics and sprigs on forest green",
       "title" : "Grove"
     },
@@ -1075,6 +1186,14 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Glossy glass, gel bars and bubbles",
       "title" : "Aero"
     },
@@ -1278,6 +1397,37 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "disk" : {
+            "h" : 70,
+            "w" : 160,
+            "x" : 80,
+            "y" : 22
+          },
+          "menus" : {
+            "h" : 22,
+            "w" : 300,
+            "x" : 0,
+            "y" : 11
+          },
+          "time" : {
+            "h" : 24,
+            "w" : 66,
+            "x" : 62,
+            "y" : 12
+          },
+          "trash" : {
+            "h" : 70,
+            "w" : 160,
+            "x" : 80,
+            "y" : 22
+          }
+        }
+      },
       "tagline" : "One-bit windows on a dithered desktop",
       "title" : "Classic"
     },
@@ -1488,6 +1638,30 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "black" : [
+            0.035000000000000003,
+            0.035000000000000003,
+            0.044999999999999998,
+            1
+          ],
+          "yellow" : [
+            0.98999999999999999,
+            0.92000000000000004,
+            0.050000000000000003,
+            1
+          ]
+        },
+        "sprites" : {
+          "status" : {
+            "h" : 21,
+            "w" : 333,
+            "x" : 4,
+            "y" : 17
+          }
+        }
+      },
       "tagline" : "Hazard-yellow cyberpunk with a glitch",
       "title" : "Overdrive"
     },
@@ -1691,6 +1865,19 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "plate" : {
+            "h" : 22,
+            "w" : 486.5,
+            "x" : 243.25,
+            "y" : 4
+          }
+        }
+      },
       "tagline" : "Nixie tubes, VU needles and a tuner dial",
       "title" : "Hi-Fi"
     },
@@ -1880,6 +2067,37 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "cream" : [
+            0.96999999999999997,
+            0.90000000000000002,
+            0.76000000000000001,
+            1
+          ],
+          "mustard" : [
+            0.92000000000000004,
+            0.71999999999999997,
+            0.23999999999999999,
+            1
+          ],
+          "orange" : [
+            0.93000000000000005,
+            0.47999999999999998,
+            0.17000000000000001,
+            1
+          ],
+          "rust" : [
+            0.73999999999999999,
+            0.27000000000000002,
+            0.14999999999999999,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Seventies stripes in orange and mustard",
       "title" : "Groove"
     },
@@ -2083,6 +2301,60 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "blue" : [
+            0.62,
+            0.82999999999999996,
+            0.94999999999999996,
+            1
+          ],
+          "ink" : [
+            0.95999999999999996,
+            0.95999999999999996,
+            0.93000000000000005,
+            0.93999999999999995
+          ],
+          "pink" : [
+            0.96999999999999997,
+            0.66000000000000003,
+            0.72999999999999998,
+            1
+          ],
+          "yellow" : [
+            0.97999999999999998,
+            0.91000000000000003,
+            0.56000000000000005,
+            1
+          ]
+        },
+        "sprites" : {
+          "doodle0" : {
+            "h" : 29,
+            "w" : 21,
+            "x" : 10.5,
+            "y" : 14.5
+          },
+          "doodle1" : {
+            "h" : 34,
+            "w" : 24.5,
+            "x" : 12.25,
+            "y" : 17
+          },
+          "doodle2" : {
+            "h" : 29,
+            "w" : 21,
+            "x" : 10.5,
+            "y" : 14.5
+          },
+          "heading" : {
+            "h" : 29,
+            "w" : 248,
+            "x" : 4,
+            "y" : 25
+          }
+        }
+      },
       "tagline" : "Hand-drawn lessons on a chalkboard",
       "title" : "Chalk"
     },
@@ -2286,6 +2558,25 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "banner" : {
+            "h" : 28,
+            "w" : 223,
+            "x" : 111.5,
+            "y" : 24
+          },
+          "hand" : {
+            "h" : 38,
+            "w" : 40.5,
+            "x" : 36.5,
+            "y" : 19
+          }
+        }
+      },
       "tagline" : "A 16-bit adventure: hearts, HP and a quest log",
       "title" : "Quest"
     },
@@ -2482,6 +2773,14 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "System-style widgets on rounded frosted glass",
       "title" : "Glass"
     },
@@ -2685,6 +2984,19 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "placard" : {
+            "h" : 20,
+            "w" : 133,
+            "x" : 66.5,
+            "y" : 16
+          }
+        }
+      },
       "tagline" : "Aircraft gauges, annunciators and radar above the clouds",
       "title" : "Cockpit"
     },
@@ -2881,6 +3193,97 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "plate0" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate1" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate2" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate3" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate4" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate5" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate6" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate7" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate8" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate9" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate10" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate11" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate12" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate13" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          }
+        }
+      },
       "tagline" : "Mission-control registers, strip charts and teletype",
       "title" : "Apollo"
     },
@@ -3084,6 +3487,25 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "brass" : [
+            0.80000000000000004,
+            0.62,
+            0.32000000000000001,
+            1
+          ],
+          "brassDark" : [
+            0.40000000000000002,
+            0.27000000000000002,
+            0.10000000000000001,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Brass submarine gauges and sonar in the deep",
       "title" : "Abyss"
     },
@@ -3287,6 +3709,25 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+          "ink" : [
+            0.16,
+            0.14000000000000001,
+            0.11,
+            1
+          ],
+          "route" : [
+            0.81999999999999995,
+            0.20000000000000001,
+            0.14000000000000001,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Legend boxes and scale bars on a topographic map",
       "title" : "Atlas"
     },
@@ -3490,6 +3931,25 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "column" : {
+            "h" : 110,
+            "w" : 40,
+            "x" : 0,
+            "y" : 0
+          },
+          "seal" : {
+            "h" : 40,
+            "w" : 40,
+            "x" : 0,
+            "y" : 0
+          }
+        }
+      },
       "tagline" : "Ink ensō, kanji and hanging scrolls",
       "title" : "Kyoto"
     },
@@ -3693,6 +4153,19 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+          "red" : [
+            0.80000000000000004,
+            0.14000000000000001,
+            0.14000000000000001,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Sticky notes, polaroids and red string",
       "title" : "Corkboard"
     },
@@ -3882,6 +4355,14 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Clean type on frosted ice under the aurora",
       "title" : "Polar"
     },
@@ -4078,6 +4559,19 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "date" : {
+            "h" : 21,
+            "w" : 205,
+            "x" : 4,
+            "y" : 4
+          }
+        }
+      },
       "partner" : "paper",
       "tagline" : "Pure black, thin numerals, hairline rules",
       "title" : "Mono"
@@ -4282,6 +4776,14 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "partner" : "lumen",
       "tagline" : "A refined dark dashboard of cards",
       "title" : "Slate"
@@ -4472,6 +4974,14 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "partner" : "slate",
       "tagline" : "Soft white cards on a bright, airy desk",
       "title" : "Lumen"
@@ -4676,6 +5186,14 @@
         }
       ],
       "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "partner" : "fieldDark",
       "tagline" : "Industrial mono numerals with an orange accent",
       "title" : "Field"
@@ -4880,6 +5398,14 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
       "partner" : "field",
       "tagline" : "Field's mono numerals and orange, after dark",
       "title" : "Field Dark"
@@ -5063,6 +5589,51 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.32000000000000001,
+            0.94999999999999996,
+            0.85999999999999999,
+            1
+          ],
+          "accent2" : [
+            0.64000000000000001,
+            0.46999999999999997,
+            1,
+            1
+          ],
+          "accent3" : [
+            1,
+            0.46999999999999997,
+            0.69999999999999996,
+            1
+          ],
+          "gradient" : [
+            [
+              0.32000000000000001,
+              0.94999999999999996,
+              0.85999999999999999,
+              1
+            ],
+            [
+              0.64000000000000001,
+              0.46999999999999997,
+              1,
+              1
+            ],
+            [
+              1,
+              0.46999999999999997,
+              0.69999999999999996,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Black glass with iridescent edges and hairline numerals",
       "title" : "Obsidian"
     },
@@ -5177,88 +5748,127 @@
           "h" : 170,
           "kind" : "cpu",
           "w" : 170,
-          "x" : 100,
-          "y" : 145
+          "x" : 80,
+          "y" : 105
         },
         {
           "h" : 170,
           "kind" : "memory",
           "w" : 170,
-          "x" : 100,
-          "y" : 345
+          "x" : 80,
+          "y" : 315
         },
         {
           "h" : 170,
           "kind" : "disk",
           "w" : 170,
-          "x" : 100,
-          "y" : 545
+          "x" : 80,
+          "y" : 525
         },
         {
           "h" : 170,
           "kind" : "network",
           "w" : 350,
-          "x" : 340,
-          "y" : 225
+          "x" : 330,
+          "y" : 155
         },
         {
           "h" : 170,
           "kind" : "processes",
           "w" : 170,
-          "x" : 340,
-          "y" : 445
+          "x" : 330,
+          "y" : 365
         },
         {
           "h" : 170,
           "kind" : "battery",
           "w" : 170,
-          "x" : 530,
-          "y" : 475
+          "x" : 330,
+          "y" : 575
         },
         {
           "h" : 170,
           "kind" : "clock",
           "w" : 350,
-          "x" : 780,
-          "y" : 115
+          "x" : 760,
+          "y" : 105
         },
         {
           "h" : 170,
           "kind" : "weather",
           "w" : 350,
-          "x" : 780,
-          "y" : 325
+          "x" : 760,
+          "y" : 315
         },
         {
           "h" : 170,
           "kind" : "nowPlaying",
           "w" : 350,
-          "x" : 780,
-          "y" : 535
+          "x" : 760,
+          "y" : 525
         },
         {
           "h" : 170,
           "kind" : "calendar",
           "w" : 170,
-          "x" : 1170,
-          "y" : 145
+          "x" : 1190,
+          "y" : 155
         },
         {
           "h" : 170,
           "kind" : "events",
           "w" : 170,
-          "x" : 1170,
-          "y" : 355
+          "x" : 1190,
+          "y" : 365
         },
         {
           "h" : 170,
           "kind" : "downloads",
           "w" : 170,
-          "x" : 1170,
-          "y" : 565
+          "x" : 1190,
+          "y" : 575
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.35999999999999999,
+            0.56000000000000005,
+            1,
+            1
+          ],
+          "accent2" : [
+            0.69999999999999996,
+            0.44,
+            1,
+            1
+          ],
+          "accent3" : [
+            0.29999999999999999,
+            0.90000000000000002,
+            0.84999999999999998,
+            1
+          ],
+          "gradient" : [
+            [
+              0.35999999999999999,
+              0.56000000000000005,
+              1,
+              1
+            ],
+            [
+              0.69999999999999996,
+              0.44,
+              1,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "A deep-navy dashboard with glowing gradient charts",
       "title" : "Midnight"
     },
@@ -5441,6 +6051,45 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            1,
+            0.20000000000000001,
+            0.35999999999999999,
+            1
+          ],
+          "accent2" : [
+            0.62,
+            1,
+            0.17999999999999999,
+            1
+          ],
+          "accent3" : [
+            0.17999999999999999,
+            0.85999999999999999,
+            1,
+            1
+          ],
+          "gradient" : [
+            [
+              1,
+              0.20000000000000001,
+              0.35999999999999999,
+              1
+            ],
+            [
+              1,
+              0.20000000000000001,
+              0.35999999999999999,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Activity rings and a heartbeat in red, green and cyan",
       "title" : "Pulse"
     },
@@ -5630,6 +6279,57 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.73999999999999999,
+            0.59999999999999998,
+            1,
+            1
+          ],
+          "accent2" : [
+            1,
+            0.62,
+            0.45000000000000001,
+            1
+          ],
+          "accent3" : [
+            0.40000000000000002,
+            0.80000000000000004,
+            1,
+            1
+          ],
+          "gradient" : [
+            [
+              0.34999999999999998,
+              0.75,
+              1,
+              1
+            ],
+            [
+              0.69999999999999996,
+              0.5,
+              1,
+              1
+            ],
+            [
+              1,
+              0.45000000000000001,
+              0.59999999999999998,
+              1
+            ],
+            [
+              1,
+              0.75,
+              0.34999999999999998,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Dark frosted glass that splits the light into colour",
       "title" : "Prism"
     },
@@ -5812,6 +6512,45 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            1,
+            0.17000000000000001,
+            0.16,
+            1
+          ],
+          "accent2" : [
+            0.94999999999999996,
+            0.94999999999999996,
+            0.94999999999999996,
+            1
+          ],
+          "accent3" : [
+            1,
+            0.78000000000000003,
+            0.10000000000000001,
+            1
+          ],
+          "gradient" : [
+            [
+              1,
+              0.17000000000000001,
+              0.16,
+              1
+            ],
+            [
+              1,
+              0.17000000000000001,
+              0.16,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Carbon fibre, bold italic figures and shift lights",
       "title" : "Carbon"
     },
@@ -5994,6 +6733,45 @@
         }
       ],
       "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.94999999999999996,
+            0.80000000000000004,
+            0.56000000000000005,
+            1
+          ],
+          "accent2" : [
+            0.95999999999999996,
+            0.56000000000000005,
+            0.66000000000000003,
+            1
+          ],
+          "accent3" : [
+            0.80000000000000004,
+            0.62,
+            1,
+            1
+          ],
+          "gradient" : [
+            [
+              0.95999999999999996,
+              0.56000000000000005,
+              0.66000000000000003,
+              1
+            ],
+            [
+              0.94999999999999996,
+              0.80000000000000004,
+              0.56000000000000005,
+              1
+            ]
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
       "tagline" : "Plum velvet, champagne glow and fine italic type",
       "title" : "Velvet"
     }
