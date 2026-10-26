@@ -116,6 +116,7 @@
       $("#lightbox-title").textContent = theme.title;
       $("#lightbox-tagline").textContent = theme.tagline;
       $("#lightbox-try").onclick = () => { close(); playground.load(theme.id); };
+      $("#lightbox-page").href = `themes/${theme.id}/`;
       box.hidden = false;
       document.body.style.overflow = "hidden";
     });
@@ -166,6 +167,12 @@
     for (const t of themes) select.append(el("option", { value: t.id, textContent: t.title }));
     select.addEventListener("change", () => load(select.value));
     $("#pg-reset").addEventListener("click", () => load(theme.id));
+    // Tidy up: every widget settles into a spot where nothing overlaps, edges lined up.
+    $("#pg-tidy").addEventListener("click", () => {
+      const items = [...placed.values()];
+      const spots = Tidy.arrange(items, desk);
+      glide(items.map((item, i) => ({ item, x: spots[i].x, y: spots[i].y })));
+    });
     pair.addEventListener("click", () => theme.partner && load(theme.partner));
 
     const tick = () => {
@@ -175,6 +182,29 @@
     setInterval(tick, 30_000);
 
     const scale = () => stage.clientWidth / canvas.width;
+    // Where widgets may settle: below the menu bar, clear of the edges.
+    const desk = { x: 16, y: 40, w: canvas.width - 32, h: canvas.height - 56 };
+
+    /** Floats widgets to new spots, redrawing the decoration as they go. */
+    function glide(moves) {
+      moves = moves.filter((m) => m.x !== m.item.x || m.y !== m.item.y);
+      if (!moves.length) return;
+      const from = moves.map((m) => ({ x: m.item.x, y: m.item.y }));
+      const start = performance.now(), duration = reduceMotion ? 0 : 450;
+      const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+      layoutChanged();
+      const step = (now) => {
+        const t = duration ? Math.min((now - start) / duration, 1) : 1, k = ease(t);
+        moves.forEach((m, i) => {
+          m.item.x = from[i].x + (m.x - from[i].x) * k;
+          m.item.y = from[i].y + (m.y - from[i].y) * k;
+          position(m.item);
+        });
+        redraw();
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
 
     function position(item) {
       const s = scale();
@@ -237,8 +267,14 @@
             placed.get(kind).node.remove();
             placed.delete(kind);
           } else {
-            const size = theme.sizes[kind];
+            // A new widget appears in the middle, then floats beside the others where it fits.
+            const size = theme.sizes[kind], others = [...placed.values()];
+            const target = others.length
+              ? { x: others.reduce((s, o) => s + o.x + o.w / 2, 0) / others.length, y: others.reduce((s, o) => s + o.y + o.h / 2, 0) / others.length }
+              : { x: canvas.width / 2, y: canvas.height / 2 };
             place(kind, { x: (canvas.width - size.w) / 2, y: (canvas.height - size.h) / 2, w: size.w, h: size.h });
+            const spot = Tidy.place(size, target, others, desk);
+            glide([{ item: placed.get(kind), x: spot.x, y: spot.y }]);
           }
           renderTray();
           layoutChanged();
