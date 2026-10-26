@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1792987626,
+  "build" : 1792993749,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -1416,8 +1416,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 66,
-            "x" : 62,
+            "w" : 58,
+            "x" : 54,
             "y" : 12
           },
           "trash" : {
@@ -1656,7 +1656,7 @@
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 333,
+            "w" : 326,
             "x" : 4,
             "y" : 17
           }
@@ -6762,7 +6762,7 @@
       "title" : "Velvet"
     }
   ],
-  "version" : "1.4",
+  "version" : "1.5",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",
