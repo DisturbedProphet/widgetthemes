@@ -12,7 +12,7 @@ set -euo pipefail
 
 VERSION="1.3"
 URL="https://disturbedprophet.github.io/widgetthemes/downloads/WidgetThemes-1.3.zip"
-SHA256="4a2bc6442aa95f9cf9dce1ef651121e057dd7d005d5b55a799b1bfd3a2498628"
+SHA256="6f6ca3d63b9168f8a544adf2cadf60f097101db168ea59db8640ec2f91c4a97c"
 
 fail() { printf '\n\033[31mError:\033[0m %s\n' "$1" >&2; exit 1; }
 

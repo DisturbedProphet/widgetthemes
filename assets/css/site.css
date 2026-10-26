@@ -187,6 +187,13 @@ h1 em, h2 em { color: var(--accent); }
   color: rgba(255,255,255,0.92); font-size: max(8px, 0.95cqw);
 }
 .pg-menubar .clock { margin-left: auto; }
+.pg-ornament {
+  position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.pg-ornament.faded { opacity: 0; }
+.pg-note { margin: 10px 4px 0; color: var(--faint); font-size: 13px; opacity: 0; transition: opacity 0.35s ease; }
+.pg-note.shown { opacity: 1; }
 .pg-widget { position: absolute; cursor: grab; transition: filter 0.15s ease; will-change: left, top; }
 .pg-widget img { width: 100%; height: 100%; pointer-events: none; }
 .pg-widget:hover { filter: drop-shadow(0 0 0.4cqw rgba(255,255,255,0.35)); }

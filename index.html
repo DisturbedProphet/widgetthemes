@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WidgetThemes — Desktop widgets for your Mac</title>
-  <meta name="description" content="24 hand-made themes and 20 widgets for your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Free for macOS 14 and later.">
+  <meta name="description" content="30 hand-made themes and 20 widgets for your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Free for macOS 14 and later.">
   <meta property="og:title" content="WidgetThemes — Desktop widgets for your Mac">
-  <meta property="og:description" content="24 hand-made themes and 20 widgets for your Mac desktop. Free for macOS 14 and later.">
+  <meta property="og:description" content="30 hand-made themes and 20 widgets for your Mac desktop. Free for macOS 14 and later.">
   <meta property="og:image" content="assets/img/og.jpg">
   <meta name="theme-color" content="#0b0b0d">
   <link rel="icon" type="image/png" href="assets/img/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=4">
+  <link rel="stylesheet" href="assets/css/site.css?v=5">
 </head>
 <body>
   <header class="nav">
@@ -33,7 +33,7 @@
       <div class="hero-copy">
         <p class="eyebrow">Free for macOS 14 and later</p>
         <h1>Your desktop,<br><em>dressed for the occasion.</em></h1>
-        <p class="lede">WidgetThemes puts live widgets on your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Every one is drawn by hand in 24 complete themes, from a 1970s hi-fi to a quiet Kyoto print.</p>
+        <p class="lede">WidgetThemes puts live widgets on your Mac desktop: clocks, system meters, weather, music, a focus timer and more. Every one is drawn by hand in 30 complete themes, from a 1970s hi-fi to iridescent black glass.</p>
         <div class="cta-row">
           <a class="button" href="#download">Download for Mac</a>
           <a class="button ghost" href="#playground">Try it in your browser</a>
@@ -51,7 +51,7 @@
 
     <!-- Numbers -->
     <section class="stats" aria-label="At a glance">
-      <div><strong>24</strong><span>themes</span></div>
+      <div><strong>30</strong><span>themes</span></div>
       <div><strong>20</strong><span>widgets</span></div>
       <div><strong>~8%</strong><span>CPU with animation on</span></div>
       <div><strong>0</strong><span>trackers or accounts</span></div>
@@ -61,11 +61,12 @@
     <section id="themes" class="section">
       <div class="section-head">
         <p class="eyebrow">Themes</p>
-        <h2>Twenty-four themes.<br><em>Each one a complete design.</em></h2>
+        <h2>Thirty themes.<br><em>Each one a complete design.</em></h2>
         <p class="lede">A theme isn't a colour swap. Each one draws its own version of every widget, lays them out in its own composition, links them with its own desktop decoration, and comes with a matching wallpaper.</p>
       </div>
       <div class="chips" role="tablist" aria-label="Filter themes">
         <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="chip" data-filter="modern" role="tab" aria-selected="false">Modern</button>
         <button class="chip" data-filter="concept" role="tab" aria-selected="false">Concept</button>
         <button class="chip" data-filter="minimal" role="tab" aria-selected="false">Minimal</button>
         <button class="chip" data-filter="light" role="tab" aria-selected="false">Light</button>
@@ -91,9 +92,11 @@
         </div>
         <div class="pg-stage-wrap">
           <div id="pg-stage" class="pg-stage" aria-label="Desktop preview">
+            <img id="pg-ornament" class="pg-ornament" alt="" aria-hidden="true">
             <div class="pg-menubar"><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span class="clock" id="pg-clock"></span></div>
           </div>
         </div>
+        <p class="pg-note" id="pg-note">Each theme's decorations, like the lines linking its widgets, redraw around your layout in the app. Reset layout to see them here again.</p>
         <div id="pg-tray" class="pg-tray" aria-label="Widgets"></div>
       </div>
     </section>
@@ -281,6 +284,6 @@
     </figure>
   </div>
 
-  <script src="assets/js/site.js?v=4" defer></script>
+  <script src="assets/js/site.js?v=5" defer></script>
 </body>
 </html>

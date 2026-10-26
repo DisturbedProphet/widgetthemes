@@ -175,6 +175,9 @@
         // Raise with z-index: moving the node in the DOM would drop the pointer capture mid-drag.
         item.node.style.zIndex = String(++topZ);
         item.node.classList.add("dragging");
+        // The decoration is drawn around the preset layout, so it bows out once things move.
+        $("#pg-ornament").classList.add("faded");
+        $("#pg-note").classList.add("shown");
         const s = scale(), startX = event.clientX, startY = event.clientY, originX = item.x, originY = item.y;
         const move = (e) => {
           item.x = Math.min(Math.max(originX + (e.clientX - startX) / s, -item.w * 0.5), canvas.width - item.w * 0.5);
@@ -220,6 +223,10 @@
       for (const item of placed.values()) item.node.remove();
       placed = new Map();
       stage.style.backgroundImage = `url("${img(theme.id, "wallpaper.webp")}")`;
+      const ornament = $("#pg-ornament");
+      ornament.src = img(theme.id, "ornament.webp");
+      ornament.classList.remove("faded");
+      $("#pg-note").classList.remove("shown");
       for (const frame of theme.layout) place(frame.kind, frame);
       pair.hidden = !theme.partner;
       if (theme.partner) pair.textContent = `Switch to ${byId[theme.partner].light ? "light" : "dark"}`;
