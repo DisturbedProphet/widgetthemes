@@ -7,17 +7,78 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#121110">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css?v=12">
+  <style>
+    .lost { text-align: center; padding: 64px var(--gutter) 40px; display: flex; flex-direction: column; align-items: center; }
+    .lost h1 { font-size: clamp(44px, 7vw, 84px); margin: 6px 0 14px; }
+    .lost .lede { max-width: 520px; margin: 0 auto 30px; color: var(--dim); }
+    .scatter { position: relative; width: min(560px, 100%); height: 230px; margin: 10px 0 34px; }
+    .scatter a {
+      position: absolute; top: 50%; left: 50%; width: 168px; transition: transform 0.35s cubic-bezier(.2,.8,.2,1);
+      filter: drop-shadow(0 18px 30px rgba(0,0,0,0.5));
+    }
+    .scatter a img { width: 100%; display: block; }
+    .scatter .patch { display: block; padding: 10px; border-radius: 18px; background: center / cover; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
+    .scatter a > span:last-child { display: block; margin-top: 4px; font-size: 12px; color: var(--faint); opacity: 0; transition: opacity 0.2s; }
+    .scatter a:hover, .scatter a:focus-visible { z-index: 2; }
+    .scatter a:hover > span:last-child, .scatter a:focus-visible > span:last-child { opacity: 1; }
+    .scatter a:nth-child(1) { transform: translate(-150%, -54%) rotate(-11deg); }
+    .scatter a:nth-child(2) { transform: translate(-50%, -46%) rotate(3deg); }
+    .scatter a:nth-child(3) { transform: translate(50%, -56%) rotate(12deg); }
+    .scatter a:nth-child(1):hover { transform: translate(-150%, -62%) rotate(-6deg) scale(1.04); }
+    .scatter a:nth-child(2):hover { transform: translate(-50%, -54%) rotate(0deg) scale(1.04); }
+    .scatter a:nth-child(3):hover { transform: translate(50%, -64%) rotate(7deg) scale(1.04); }
+    @media (max-width: 560px) {
+      .scatter { height: 190px; }
+      .scatter a { width: 120px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .scatter a { transition: none; } }
+  </style>
 </head>
 <body>
-  <main class="page">
-    <p class="eyebrow">404</p>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/assets/img/icon.png" alt="" width="28" height="28"> WidgetThemes</a>
+    <nav><a href="/#themes">Themes</a><a href="/#playground">Playground</a><a href="/#features">Features</a></nav>
+    <a class="button small" href="/#download">Download</a>
+  </header>
+
+  <main class="lost">
+    <p class="eyebrow">Error 404</p>
     <h1>This page <em>wandered off.</em></h1>
-    <p>It may have moved, or never existed. The <a href="/#themes">themes</a> and the <a href="/#download">download</a> are right where you left them.</p>
-    <p><a class="button" href="/">Back to WidgetThemes</a></p>
+    <p class="lede">It may have moved, or never existed. A few widgets went looking for it and got distracted.</p>
+    <div class="scatter" id="scatter" aria-label="Widgets from three themes"></div>
+    <div class="cta-row">
+      <a class="button" href="/">Back to WidgetThemes</a>
+      <a class="button ghost" href="/#themes">Browse the 30 themes</a>
+    </div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="/assets/img/icon.png" alt="" width="22" height="22"> WidgetThemes</div>
+    <nav><a href="/privacy.html">Privacy</a><a href="/credits.html">Credits &amp; licences</a><a href="mailto:gaustin618@icloud.com">Contact</a><a href="/#download">Download</a></nav>
+  </footer>
+
+  <script>
+    // Three themes at random, one widget each, linking to the theme's page.
+    (() => {
+      const themes = [["paper", "Paper"], ["neon", "Neon"], ["bauhaus", "Bauhaus"], ["grove", "Grove"], ["aero", "Aero"], ["classic", "Classic"], ["overdrive", "Overdrive"], ["hifi", "Hi-Fi"], ["groove", "Groove"], ["chalk", "Chalk"], ["quest", "Quest"], ["glass", "Glass"], ["cockpit", "Cockpit"], ["apollo", "Apollo"], ["abyss", "Abyss"], ["atlas", "Atlas"], ["kyoto", "Kyoto"], ["cork", "Corkboard"], ["polar", "Polar"], ["mono", "Mono"], ["slate", "Slate"], ["lumen", "Lumen"], ["field", "Field"], ["fieldDark", "Field Dark"], ["obsidian", "Obsidian"], ["midnight", "Midnight"], ["pulse", "Pulse"], ["prism", "Prism"], ["carbon", "Carbon"], ["velvet", "Velvet"]];
+      const kinds = {"cpu": "CPU", "battery": "Battery", "calendar": "Calendar", "memory": "Memory", "focus": "Focus", "disk": "Disk"};
+      const pick = (list) => list.splice(Math.floor(Math.random() * list.length), 1)[0];
+      const pool = themes.slice(), kindPool = Object.keys(kinds);
+      const scatter = document.getElementById("scatter");
+      for (let i = 0; i < 3; i++) {
+        const [id, title] = pick(pool), kind = pick(kindPool);
+        const link = document.createElement("a");
+        link.href = `/themes/${id}/`;
+        // Each on a patch of its theme's wallpaper, as it would sit on a desktop.
+        link.innerHTML = `<span class="patch" style="background-image:url(/assets/img/themes/${id}/wallpaper-small.webp)"><img src="/assets/img/themes/${id}/widgets/${kind}.webp" alt="The ${kinds[kind]} widget in ${title}"></span><span>${title}</span>`;
+        scatter.append(link);
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy — WidgetThemes</title>
-  <meta name="description" content="WidgetThemes has no accounts, analytics or tracking. Here is exactly what the app reads and what leaves your Mac.">
+  <meta name="description" content="WidgetThemes has no accounts, analytics or tracking. Here is exactly what the app reads and what leaves your computer.">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="canonical" href="https://widgetthemes.com/privacy.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=10">
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
 </head>
 <body>
   <header class="nav">
@@ -23,25 +23,26 @@
   <main class="page">
     <p class="eyebrow">Privacy</p>
     <h1>Your desktop stays <em>yours.</em></h1>
-    <p>WidgetThemes has no accounts, no analytics, no advertising and no tracking. It doesn't send anything about you to the developer. Everything below happens on your Mac, except where it says otherwise.</p>
+    <p>WidgetThemes has no accounts, no analytics, no advertising and no tracking. It doesn't send anything about you to the developer. Everything below happens on your computer, except where it says otherwise. The Mac app and the Windows and Linux app differ in places, and this page says where.</p>
 
-    <h2>What leaves your Mac</h2>
+    <h2>What leaves your computer</h2>
     <ul>
-      <li><b>Weather.</b> To show the forecast, the app asks <a href="https://open-meteo.com/">Open-Meteo</a> for weather at your location, rounded to about one kilometre, or at the city you typed in Settings. If you type a city, its name is sent to Open-Meteo's place search. Open-Meteo sees your IP address, as any web server does. When the app uses your location, it also asks macOS for the place name, which Apple's geocoding service provides. This only happens if you add a Weather or Moon &amp; Sun widget.</li>
-      <li><b>Album art.</b> When Spotify is playing, the cover image is downloaded from Spotify's own image server, using the address Spotify provides.</li>
+      <li><b>Weather.</b> To show the forecast, the app asks <a href="https://open-meteo.com/">Open-Meteo</a> for weather at the city you typed in Settings, or, on a Mac, at your location rounded to about one kilometre. Without either, the Windows and Linux app uses the city your time zone is named after. A city's name is sent to Open-Meteo's place search. Open-Meteo sees your IP address, as any web server does. When the Mac app uses your location, it also asks macOS for the place name, which Apple's geocoding service provides. This only happens if you add a Weather or Moon &amp; Sun widget.</li>
+      <li><b>Calendar links</b> (Windows and Linux). If you paste calendar links into Settings, the app downloads them from wherever they're hosted, such as Google or Outlook, about every ten minutes.</li>
+      <li><b>Album art</b> (Mac). When Spotify is playing, the cover image is downloaded from Spotify's own image server, using the address Spotify provides.</li>
     </ul>
     <p>Nothing else is sent anywhere.</p>
 
-    <h2>What the app reads, and only on your Mac</h2>
+    <h2>What the app reads, and only on your computer</h2>
     <ul>
-      <li><b>Calendars and Reminders</b>, if you add the Events or Reminders widget and allow access. Ticking a reminder off marks it complete in Reminders.</li>
-      <li><b>Location</b>, if you allow it, to find local weather. You can type a city instead.</li>
-      <li><b>Music and Spotify</b>, through macOS Automation, to show the current track and send play, pause and skip.</li>
-      <li><b>System readings</b>: CPU, memory, storage, battery, network rates, the busiest apps, and connected Bluetooth devices with their battery levels.</li>
-      <li><b>Activity</b>, if you add the Activity widget: how long the Mac was in use each hour today, how far the pointer moved and how many clicks there were. It never records keystrokes, what you click on, or which apps you use. The counts reset each day.</li>
+      <li><b>Calendars and Reminders</b> (Mac), if you add the Events or Reminders widget and allow access. Ticking a reminder off marks it complete in Reminders. On Windows and Linux, reminders are kept in the app itself.</li>
+      <li><b>Location</b> (Mac), if you allow it, to find local weather. You can type a city instead.</li>
+      <li><b>What's playing.</b> On a Mac, Music and Spotify, through macOS Automation. On Windows, the system's media controls; on Linux, MPRIS. The app reads the title, artist and position, and sends play, pause and skip.</li>
+      <li><b>System readings</b>: CPU, memory, storage, battery, network rates and the busiest apps, plus, on a Mac, connected Bluetooth devices with their battery levels.</li>
+      <li><b>Activity</b>, if you add the Activity widget: how long the computer was in use each hour today, how far the pointer moved and how many clicks there were. It never records keystrokes, what you click on, or which apps you use. The counts reset each day.</li>
       <li><b>Photos</b> from a folder you choose for the Photo widget.</li>
     </ul>
-    <p>Settings, layouts, saved themes, focus-timer counts and today's activity totals are stored in the app's preferences on your Mac. Exported theme files contain only layouts and colours, never your photos, calendars or location.</p>
+    <p>Settings, layouts, saved themes, focus-timer counts and today's activity totals stay on your computer: in the app's preferences on a Mac, and in a settings file in the app's own folder on Windows and Linux. Exported theme files contain only layouts and colours, never your photos, calendars or location.</p>
 
     <h2>This website</h2>
     <p>This site uses no cookies and no analytics. Its headline font is loaded from Google Fonts, which receives your IP address when the page loads.</p>
@@ -54,7 +55,7 @@
   <footer class="footer">
     <div class="footer-brand"><img src="assets/img/icon.png" alt="" width="22" height="22"> WidgetThemes</div>
     <nav><a href="privacy.html">Privacy</a><a href="credits.html">Credits &amp; licences</a><a href="mailto:gaustin618@icloud.com">Contact</a><a href="index.html#download">Download</a></nav>
-    <p class="fine">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>. Mac and macOS are trademarks of Apple Inc. WidgetThemes is an independent app and is not affiliated with or endorsed by Apple.</p>
+    <p class="fine">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>. Mac and macOS are trademarks of Apple Inc., and Windows of Microsoft Corporation. Linux is a registered trademark of Linus Torvalds. WidgetThemes is an independent app and is not affiliated with or endorsed by Apple or Microsoft.</p>
   </footer>
 </body>
 </html>

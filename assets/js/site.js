@@ -31,7 +31,6 @@
     for (const theme of themes) theme.sizes = Object.fromEntries(theme.kinds.map((k) => [k.kind, { w: k.w, h: k.h }]));
     const byId = Object.fromEntries(themes.map((t) => [t.id, t]));
     const widgetInfo = Object.fromEntries(data.widgets.map((w) => [w.id, w]));
-    if (data.version) $("#version").textContent = data.version;
 
     hero(themes, byId, data.heroThemes || themes.map((t) => t.id));
     gallery(themes);
@@ -355,14 +354,21 @@
       copy.classList.add("done");
       setTimeout(() => { copy.textContent = "Copy"; copy.classList.remove("done"); }, 1800);
     });
-    for (const tab of document.querySelectorAll(".install-tabs .chip")) {
-      tab.addEventListener("click", () => {
-        for (const other of document.querySelectorAll(".install-tabs .chip")) {
-          other.classList.toggle("active", other === tab);
-          other.setAttribute("aria-selected", other === tab);
-        }
-        for (const panel of document.querySelectorAll(".install-panel")) panel.hidden = panel.dataset.panel !== tab.dataset.tab;
-      });
+    const tabs = [...document.querySelectorAll(".install-tabs .chip")];
+    const show = (tab) => {
+      for (const other of tabs) {
+        other.classList.toggle("active", other === tab);
+        other.setAttribute("aria-selected", other === tab);
+      }
+      for (const panel of document.querySelectorAll(".install-panel")) panel.hidden = panel.dataset.panel !== tab.dataset.tab;
+    };
+    for (const tab of tabs) tab.addEventListener("click", () => show(tab));
+    // Visitors on Windows or Linux start on their own tab, and the hero button names their system.
+    const platform = `${navigator.userAgentData?.platform || ""} ${navigator.platform || ""} ${navigator.userAgent}`;
+    const system = /Win/i.test(platform) ? "windows" : /Linux|X11/i.test(platform) && !/Android/i.test(platform) ? "linux" : null;
+    if (system) {
+      show(tabs.find((tab) => tab.dataset.tab === system));
+      $("#hero-download").textContent = `Download for ${system === "windows" ? "Windows" : "Linux"}`;
     }
   }
 
