@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793137471,
+  "build" : 1793145685,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -6762,7 +6762,7 @@
       "title" : "Velvet"
     }
   ],
-  "version" : "1.6.1",
+  "version" : "1.6.2",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",
