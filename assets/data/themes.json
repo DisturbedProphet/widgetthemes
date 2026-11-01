@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793174608,
+  "build" : 1793506319,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -58,7 +58,7 @@
   "themes" : [
     {
       "accent" : "#C72B1F",
-      "group" : "concept",
+      "group" : "crafted",
       "id" : "paper",
       "kinds" : [
         {
@@ -275,8 +275,8 @@
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 221.5,
-            "x" : 110.75,
+            "w" : 194,
+            "x" : 97,
             "y" : 4
           },
           "edition" : {
@@ -287,7 +287,7 @@
           },
           "issue" : {
             "h" : 21,
-            "w" : 113,
+            "w" : 114.5,
             "x" : 4,
             "y" : 4
           },
@@ -305,7 +305,7 @@
     },
     {
       "accent" : "#FF33CC",
-      "group" : "concept",
+      "group" : "futuristic",
       "id" : "neon",
       "kinds" : [
         {
@@ -526,7 +526,7 @@
     },
     {
       "accent" : "#E03829",
-      "group" : "concept",
+      "group" : "bold",
       "id" : "bauhaus",
       "kinds" : [
         {
@@ -760,7 +760,7 @@
     },
     {
       "accent" : "#DEBA66",
-      "group" : "concept",
+      "group" : "nature",
       "id" : "grove",
       "kinds" : [
         {
@@ -981,7 +981,7 @@
     },
     {
       "accent" : "#FFFFFF",
-      "group" : "concept",
+      "group" : "sleek",
       "id" : "aero",
       "kinds" : [
         {
@@ -1199,7 +1199,7 @@
     },
     {
       "accent" : "#000000",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "classic",
       "kinds" : [
         {
@@ -1416,8 +1416,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 58,
-            "x" : 54,
+            "w" : 66,
+            "x" : 62,
             "y" : 12
           },
           "trash" : {
@@ -1433,7 +1433,7 @@
     },
     {
       "accent" : "#FCEB0D",
-      "group" : "concept",
+      "group" : "futuristic",
       "id" : "overdrive",
       "kinds" : [
         {
@@ -1656,7 +1656,7 @@
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 326,
+            "w" : 333,
             "x" : 4,
             "y" : 17
           }
@@ -1667,7 +1667,7 @@
     },
     {
       "accent" : "#FF8024",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "hifi",
       "kinds" : [
         {
@@ -1883,7 +1883,7 @@
     },
     {
       "accent" : "#EBB83D",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "groove",
       "kinds" : [
         {
@@ -2103,7 +2103,7 @@
     },
     {
       "accent" : "#FAE88F",
-      "group" : "concept",
+      "group" : "crafted",
       "id" : "chalk",
       "kinds" : [
         {
@@ -2349,7 +2349,7 @@
           },
           "heading" : {
             "h" : 29,
-            "w" : 286.5,
+            "w" : 259,
             "x" : 4,
             "y" : 25
           }
@@ -2360,7 +2360,7 @@
     },
     {
       "accent" : "#FFD94C",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "quest",
       "kinds" : [
         {
@@ -2565,8 +2565,8 @@
         "sprites" : {
           "banner" : {
             "h" : 28,
-            "w" : 257.5,
-            "x" : 128.75,
+            "w" : 223,
+            "x" : 111.5,
             "y" : 24
           },
           "hand" : {
@@ -2582,7 +2582,7 @@
     },
     {
       "accent" : "#0A85FF",
-      "group" : "minimal",
+      "group" : "sleek",
       "id" : "glass",
       "kinds" : [
         {
@@ -2786,7 +2786,7 @@
     },
     {
       "accent" : "#FFB219",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "cockpit",
       "kinds" : [
         {
@@ -3002,7 +3002,7 @@
     },
     {
       "accent" : "#6BFF7A",
-      "group" : "concept",
+      "group" : "retro",
       "id" : "apollo",
       "kinds" : [
         {
@@ -3289,7 +3289,7 @@
     },
     {
       "accent" : "#4CFFB8",
-      "group" : "concept",
+      "group" : "nature",
       "id" : "abyss",
       "kinds" : [
         {
@@ -3511,7 +3511,7 @@
     },
     {
       "accent" : "#D13324",
-      "group" : "concept",
+      "group" : "crafted",
       "id" : "atlas",
       "kinds" : [
         {
@@ -3733,7 +3733,7 @@
     },
     {
       "accent" : "#D13824",
-      "group" : "concept",
+      "group" : "crafted",
       "id" : "kyoto",
       "kinds" : [
         {
@@ -3955,7 +3955,7 @@
     },
     {
       "accent" : "#CC2424",
-      "group" : "concept",
+      "group" : "crafted",
       "id" : "cork",
       "kinds" : [
         {
@@ -4566,7 +4566,7 @@
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 235.5,
+            "w" : 207.5,
             "x" : 4,
             "y" : 4
           }
@@ -5398,7 +5398,7 @@
     },
     {
       "accent" : "#52F2DB",
-      "group" : "modern",
+      "group" : "sleek",
       "id" : "obsidian",
       "kinds" : [
         {
@@ -5625,7 +5625,7 @@
     },
     {
       "accent" : "#5C8FFF",
-      "group" : "modern",
+      "group" : "futuristic",
       "id" : "midnight",
       "kinds" : [
         {
@@ -5860,7 +5860,7 @@
     },
     {
       "accent" : "#FF335C",
-      "group" : "modern",
+      "group" : "sleek",
       "id" : "pulse",
       "kinds" : [
         {
@@ -6081,7 +6081,7 @@
     },
     {
       "accent" : "#BD99FF",
-      "group" : "modern",
+      "group" : "sleek",
       "id" : "prism",
       "kinds" : [
         {
@@ -6321,7 +6321,7 @@
     },
     {
       "accent" : "#FF2B29",
-      "group" : "modern",
+      "group" : "futuristic",
       "id" : "carbon",
       "kinds" : [
         {
@@ -6542,7 +6542,7 @@
     },
     {
       "accent" : "#F2CC8F",
-      "group" : "modern",
+      "group" : "sleek",
       "id" : "velvet",
       "kinds" : [
         {
@@ -6648,73 +6648,73 @@
       ],
       "layout" : [
         {
-          "h" : 213,
+          "h" : 170,
           "kind" : "photo",
-          "w" : 213,
-          "x" : 185,
-          "y" : 105
+          "w" : 170,
+          "x" : 196,
+          "y" : 126
         },
         {
           "h" : 213,
           "kind" : "clock",
           "w" : 438,
-          "x" : 425,
+          "x" : 415,
           "y" : 135
         },
         {
           "h" : 170,
           "kind" : "quote",
           "w" : 350,
-          "x" : 895,
+          "x" : 885,
           "y" : 105
         },
         {
           "h" : 170,
           "kind" : "sky",
           "w" : 170,
-          "x" : 895,
+          "x" : 885,
           "y" : 295
         },
         {
           "h" : 170,
           "kind" : "events",
           "w" : 170,
-          "x" : 1085,
+          "x" : 1075,
           "y" : 295
         },
         {
           "h" : 170,
           "kind" : "calendar",
           "w" : 170,
-          "x" : 205,
+          "x" : 195,
           "y" : 355
         },
         {
           "h" : 170,
           "kind" : "weather",
           "w" : 350,
-          "x" : 405,
+          "x" : 395,
           "y" : 385
         },
         {
           "h" : 170,
           "kind" : "battery",
           "w" : 170,
-          "x" : 775,
+          "x" : 765,
           "y" : 485
         },
         {
           "h" : 170,
           "kind" : "cpu",
           "w" : 170,
-          "x" : 965,
+          "x" : 955,
           "y" : 495
         },
         {
           "h" : 170,
           "kind" : "nowPlaying",
           "w" : 350,
-          "x" : 205,
+          "x" : 195,
           "y" : 575
         }
       ],
@@ -6760,9 +6760,3480 @@
       },
       "tagline" : "Plum velvet, champagne glow and fine italic type",
       "title" : "Velvet"
+    },
+    {
+      "accent" : "#FF6B66",
+      "group" : "crafted",
+      "id" : "blueprint",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 255,
+          "kind" : "clock",
+          "w" : 525,
+          "x" : 150,
+          "y" : 151
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 715,
+          "y" : 151
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 1105,
+          "y" : 151
+        },
+        {
+          "h" : 128,
+          "kind" : "cpu",
+          "w" : 128,
+          "x" : 715,
+          "y" : 361
+        },
+        {
+          "h" : 128,
+          "kind" : "memory",
+          "w" : 128,
+          "x" : 859,
+          "y" : 361
+        },
+        {
+          "h" : 128,
+          "kind" : "disk",
+          "w" : 128,
+          "x" : 1003,
+          "y" : 361
+        },
+        {
+          "h" : 128,
+          "kind" : "battery",
+          "w" : 128,
+          "x" : 1147,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 150,
+          "y" : 446
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 520,
+          "y" : 446
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170,
+          "x" : 750,
+          "y" : 529
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 940,
+          "y" : 529
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "dimension" : {
+            "h" : 21,
+            "w" : 339.5,
+            "x" : 169.75,
+            "y" : 17
+          },
+          "title" : {
+            "h" : 52,
+            "w" : 304,
+            "x" : 2,
+            "y" : 2
+          }
+        }
+      },
+      "tagline" : "White linework, protractors and red pencil on drafting blue",
+      "title" : "Blueprint"
+    },
+    {
+      "accent" : "#8F9396",
+      "group" : "retro",
+      "id" : "pocketLCD",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 248,
+          "y" : 128
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 248,
+          "y" : 318
+        },
+        {
+          "h" : 255,
+          "kind" : "clock",
+          "w" : 525,
+          "x" : 458,
+          "y" : 108
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 458,
+          "y" : 403
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 828,
+          "y" : 403
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 1023,
+          "y" : 128
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170,
+          "x" : 1023,
+          "y" : 318
+        },
+        {
+          "h" : 128,
+          "kind" : "calendar",
+          "w" : 128,
+          "x" : 248,
+          "y" : 613
+        },
+        {
+          "h" : 128,
+          "kind" : "events",
+          "w" : 128,
+          "x" : 396,
+          "y" : 613
+        },
+        {
+          "h" : 128,
+          "kind" : "nowPlaying",
+          "w" : 263,
+          "x" : 544,
+          "y" : 613
+        },
+        {
+          "h" : 128,
+          "kind" : "downloads",
+          "w" : 128,
+          "x" : 827,
+          "y" : 613
+        },
+        {
+          "h" : 128,
+          "kind" : "photo",
+          "w" : 128,
+          "x" : 975,
+          "y" : 613
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "prompt" : {
+            "h" : 28,
+            "w" : 198.5,
+            "x" : 99.25,
+            "y" : 4
+          }
+        }
+      },
+      "tagline" : "A handheld's four-shade green dot-matrix screen in grey plastic, pixel type",
+      "title" : "Pocket LCD"
+    },
+    {
+      "accent" : "#7D8CFF",
+      "group" : "minimal",
+      "id" : "soft",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 501,
+          "y" : 108
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 291,
+          "y" : 129
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 979,
+          "y" : 129
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 320,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 530,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 740,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 950,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 350,
+          "y" : 571
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 740,
+          "y" : 571
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.48999999999999999,
+            0.54900000000000004,
+            1,
+            1
+          ],
+          "dark" : [
+            0.76500000000000001,
+            0.78800000000000003,
+            0.82699999999999996,
+            1
+          ],
+          "light" : [
+            1,
+            1,
+            1,
+            1
+          ],
+          "surface" : [
+            0.89000000000000001,
+            0.91000000000000003,
+            0.93700000000000006,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Soft UI: panels pressed out of one pale surface, inset dials, one periwinkle accent",
+      "title" : "Soft"
+    },
+    {
+      "accent" : "#A72C24",
+      "group" : "crafted",
+      "id" : "scholar",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350,
+          "x" : 544,
+          "y" : 105
+        },
+        {
+          "h" : 213,
+          "kind" : "quote",
+          "w" : 438,
+          "x" : 424,
+          "y" : 315
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 184,
+          "y" : 145
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 964,
+          "y" : 145
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 124,
+          "y" : 355
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 944,
+          "y" : 355
+        },
+        {
+          "h" : 128,
+          "kind" : "battery",
+          "w" : 128,
+          "x" : 1174,
+          "y" : 145
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 204,
+          "y" : 565
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 454,
+          "y" : 575
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 844,
+          "y" : 565
+        },
+        {
+          "h" : 128,
+          "kind" : "network",
+          "w" : 263,
+          "x" : 1054,
+          "y" : 575
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "seal" : {
+            "h" : 50,
+            "w" : 50,
+            "x" : 25,
+            "y" : 25
+          }
+        }
+      },
+      "tagline" : "Dark academia: candlelit leather desk, parchment, ink and a wax seal",
+      "title" : "Scholar"
+    },
+    {
+      "accent" : "#E3262B",
+      "group" : "bold",
+      "id" : "bricks",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350,
+          "x" : 455,
+          "y" : 55
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 365,
+          "y" : 245
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 555,
+          "y" : 245
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 925,
+          "y" : 245
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 176,
+          "y" : 434
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 365,
+          "y" : 434
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 555,
+          "y" : 434
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 925,
+          "y" : 434
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170,
+          "x" : 1114,
+          "y" : 434
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350,
+          "x" : 81,
+          "y" : 624
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 450,
+          "y" : 624
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 350,
+          "x" : 820,
+          "y" : 624
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170,
+          "x" : 1189,
+          "y" : 624
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Glossy toy bricks with studs on top, primary colours and chunky rounded type",
+      "title" : "Bricks"
+    },
+    {
+      "accent" : "#FF5B5B",
+      "group" : "bold",
+      "id" : "comic",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 350,
+          "kind" : "clock",
+          "w" : 721,
+          "x" : 163,
+          "y" : 71
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 913,
+          "y" : 71
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 913,
+          "y" : 261
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 1103,
+          "y" : 261
+        },
+        {
+          "h" : 213,
+          "kind" : "memory",
+          "w" : 213,
+          "x" : 163,
+          "y" : 461
+        },
+        {
+          "h" : 213,
+          "kind" : "nowPlaying",
+          "w" : 438,
+          "x" : 396,
+          "y" : 461
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350,
+          "x" : 854,
+          "y" : 461
+        },
+        {
+          "h" : 128,
+          "kind" : "processes",
+          "w" : 128,
+          "x" : 854,
+          "y" : 651
+        },
+        {
+          "h" : 128,
+          "kind" : "disk",
+          "w" : 128,
+          "x" : 1002,
+          "y" : 651
+        },
+        {
+          "h" : 128,
+          "kind" : "downloads",
+          "w" : 128,
+          "x" : 1150,
+          "y" : 651
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "burst" : {
+            "h" : 110,
+            "w" : 150,
+            "x" : 75,
+            "y" : 55
+          },
+          "narration" : {
+            "h" : 30,
+            "w" : 330,
+            "x" : 0,
+            "y" : 0
+          }
+        }
+      },
+      "tagline" : "Comic-book panels: halftone dots, ink outlines, speech bubbles and sound effects",
+      "title" : "Comic"
+    },
+    {
+      "accent" : "#D9572B",
+      "group" : "retro",
+      "id" : "atomic",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 204,
+          "kind" : "clock",
+          "w" : 420,
+          "x" : 510,
+          "y" : 323
+        },
+        {
+          "h" : 163,
+          "kind" : "weather",
+          "w" : 336,
+          "x" : 552,
+          "y" : 55
+        },
+        {
+          "h" : 163,
+          "kind" : "nowPlaying",
+          "w" : 336,
+          "x" : 552,
+          "y" : 631
+        },
+        {
+          "h" : 163,
+          "kind" : "memory",
+          "w" : 163,
+          "x" : 993,
+          "y" : 93
+        },
+        {
+          "h" : 163,
+          "kind" : "calendar",
+          "w" : 163,
+          "x" : 1189,
+          "y" : 251
+        },
+        {
+          "h" : 163,
+          "kind" : "battery",
+          "w" : 163,
+          "x" : 1189,
+          "y" : 435
+        },
+        {
+          "h" : 163,
+          "kind" : "disk",
+          "w" : 163,
+          "x" : 993,
+          "y" : 593
+        },
+        {
+          "h" : 163,
+          "kind" : "events",
+          "w" : 163,
+          "x" : 284,
+          "y" : 593
+        },
+        {
+          "h" : 163,
+          "kind" : "processes",
+          "w" : 163,
+          "x" : 88,
+          "y" : 435
+        },
+        {
+          "h" : 163,
+          "kind" : "downloads",
+          "w" : 163,
+          "x" : 88,
+          "y" : 251
+        },
+        {
+          "h" : 163,
+          "kind" : "cpu",
+          "w" : 163,
+          "x" : 284,
+          "y" : 93
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "star" : {
+            "h" : 64,
+            "w" : 64,
+            "x" : 32,
+            "y" : 32
+          },
+          "starSmall" : {
+            "h" : 52,
+            "w" : 52,
+            "x" : 26,
+            "y" : 26
+          }
+        }
+      },
+      "tagline" : "Mid-century modern: starburst clock, boomerang cards, mustard, teal and tangerine",
+      "title" : "Atomic"
+    },
+    {
+      "accent" : "#E3000F",
+      "group" : "bold",
+      "id" : "swiss",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 255,
+          "kind" : "clock",
+          "w" : 525,
+          "x" : 194,
+          "y" : 76
+        },
+        {
+          "h" : 213,
+          "kind" : "weather",
+          "w" : 438,
+          "x" : 194,
+          "y" : 351
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 739,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 929,
+          "y" : 76
+        },
+        {
+          "h" : 128,
+          "kind" : "battery",
+          "w" : 128,
+          "x" : 1119,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 350,
+          "x" : 739,
+          "y" : 266
+        },
+        {
+          "h" : 128,
+          "kind" : "disk",
+          "w" : 128,
+          "x" : 1119,
+          "y" : 224
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 739,
+          "y" : 456
+        },
+        {
+          "h" : 128,
+          "kind" : "processes",
+          "w" : 128,
+          "x" : 1119,
+          "y" : 372
+        },
+        {
+          "h" : 128,
+          "kind" : "nowPlaying",
+          "w" : 263,
+          "x" : 739,
+          "y" : 646
+        },
+        {
+          "h" : 128,
+          "kind" : "downloads",
+          "w" : 128,
+          "x" : 1022,
+          "y" : 646
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "heading" : {
+            "h" : 44,
+            "w" : 165.5,
+            "x" : 4,
+            "y" : 40
+          }
+        }
+      },
+      "tagline" : "International Typographic Style: strict grid, flush-left grotesque, one red",
+      "title" : "Swiss"
+    },
+    {
+      "accent" : "#E2A21B",
+      "group" : "crafted",
+      "id" : "stainedGlass",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 255,
+          "kind" : "clock",
+          "w" : 525,
+          "x" : 457,
+          "y" : 97
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 545,
+          "y" : 392
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 545,
+          "y" : 582
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 77,
+          "y" : 97
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 77,
+          "y" : 287
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 77,
+          "y" : 477
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 267,
+          "y" : 287
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 1193,
+          "y" : 97
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 1193,
+          "y" : 287
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170,
+          "x" : 1193,
+          "y" : 477
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170,
+          "x" : 1003,
+          "y" : 287
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Leaded jewel-tone panes lit from behind; the clock is a rose window",
+      "title" : "Stained Glass"
+    },
+    {
+      "accent" : "#1B1B1B",
+      "group" : "minimal",
+      "id" : "eink",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 291,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 291,
+          "y" : 319
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350,
+          "x" : 291,
+          "y" : 509
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 789,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 979,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 789,
+          "y" : 266
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 979,
+          "y" : 266
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 789,
+          "y" : 456
+        },
+        {
+          "h" : 128,
+          "kind" : "network",
+          "w" : 263,
+          "x" : 789,
+          "y" : 646
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "footer" : {
+            "h" : 23,
+            "w" : 204.5,
+            "x" : 4,
+            "y" : 4
+          }
+        }
+      },
+      "tagline" : "A reading screen: warm grey paper, crisp serif, dithered greys",
+      "title" : "E-Ink"
+    },
+    {
+      "accent" : "#FF3B00",
+      "group" : "bold",
+      "id" : "brutalist",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 345,
+          "kind" : "clock",
+          "w" : 710,
+          "x" : 122,
+          "y" : 55
+        },
+        {
+          "h" : 251,
+          "kind" : "cpu",
+          "w" : 251,
+          "x" : 870,
+          "y" : 55
+        },
+        {
+          "h" : 168,
+          "kind" : "battery",
+          "w" : 168,
+          "x" : 1151,
+          "y" : 55
+        },
+        {
+          "h" : 168,
+          "kind" : "memory",
+          "w" : 168,
+          "x" : 1151,
+          "y" : 252
+        },
+        {
+          "h" : 126,
+          "kind" : "weather",
+          "w" : 259,
+          "x" : 870,
+          "y" : 336
+        },
+        {
+          "h" : 168,
+          "kind" : "events",
+          "w" : 345,
+          "x" : 121,
+          "y" : 429
+        },
+        {
+          "h" : 168,
+          "kind" : "network",
+          "w" : 345,
+          "x" : 496,
+          "y" : 429
+        },
+        {
+          "h" : 168,
+          "kind" : "disk",
+          "w" : 168,
+          "x" : 870,
+          "y" : 491
+        },
+        {
+          "h" : 126,
+          "kind" : "processes",
+          "w" : 126,
+          "x" : 1067,
+          "y" : 492
+        },
+        {
+          "h" : 168,
+          "kind" : "nowPlaying",
+          "w" : 345,
+          "x" : 121,
+          "y" : 626
+        },
+        {
+          "h" : 168,
+          "kind" : "downloads",
+          "w" : 168,
+          "x" : 496,
+          "y" : 626
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "headline" : {
+            "h" : 76,
+            "w" : 268,
+            "x" : 4,
+            "y" : 72
+          }
+        }
+      },
+      "tagline" : "Raw concrete, white slabs, hard shadows and enormous type",
+      "title" : "Brutalist"
+    },
+    {
+      "accent" : "#7F8F52",
+      "group" : "nature",
+      "id" : "botanical",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 255,
+          "kind" : "clock",
+          "w" : 525,
+          "x" : 458,
+          "y" : 140
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 58,
+          "y" : 140
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 248,
+          "y" : 140
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 58,
+          "y" : 330
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 248,
+          "y" : 330
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 1023,
+          "y" : 140
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 1213,
+          "y" : 140
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170,
+          "x" : 1023,
+          "y" : 330
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170,
+          "x" : 1213,
+          "y" : 330
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 58,
+          "y" : 540
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 546,
+          "y" : 540
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 1033,
+          "y" : 540
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "card" : {
+            "h" : 64,
+            "w" : 310,
+            "x" : 0,
+            "y" : 0
+          },
+          "sprig" : {
+            "h" : 150,
+            "w" : 70,
+            "x" : 0,
+            "y" : 0
+          }
+        }
+      },
+      "tagline" : "Herbarium sheets: pressed leaves, tape and specimen labels",
+      "title" : "Botanical"
+    },
+    {
+      "accent" : "#FF4FA8",
+      "group" : "crafted",
+      "id" : "riso",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 104,
+          "y" : 108
+        },
+        {
+          "h" : 128,
+          "kind" : "cpu",
+          "w" : 128,
+          "x" : 582,
+          "y" : 138
+        },
+        {
+          "h" : 128,
+          "kind" : "memory",
+          "w" : 128,
+          "x" : 730,
+          "y" : 108
+        },
+        {
+          "h" : 213,
+          "kind" : "nowPlaying",
+          "w" : 438,
+          "x" : 898,
+          "y" : 148
+        },
+        {
+          "h" : 128,
+          "kind" : "calendar",
+          "w" : 128,
+          "x" : 104,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 264,
+          "y" : 361
+        },
+        {
+          "h" : 128,
+          "kind" : "battery",
+          "w" : 128,
+          "x" : 654,
+          "y" : 306
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 764,
+          "y" : 474
+        },
+        {
+          "h" : 128,
+          "kind" : "photo",
+          "w" : 128,
+          "x" : 974,
+          "y" : 401
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 104,
+          "y" : 571
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 954,
+          "y" : 569
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+          "pink" : [
+            1,
+            0.31,
+            0.66000000000000003,
+            1
+          ],
+          "teal" : [
+            0.040000000000000001,
+            0.65000000000000002,
+            0.66000000000000003,
+            1
+          ]
+        },
+        "sprites" : {
+          "slug" : {
+            "h" : 20,
+            "w" : 340,
+            "x" : 0,
+            "y" : 0
+          }
+        }
+      },
+      "tagline" : "Fluoro pink and teal overprinting, a little off-register",
+      "title" : "Risograph"
+    },
+    {
+      "accent" : "#E0DDD5",
+      "group" : "minimal",
+      "id" : "einkDark",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 291,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 291,
+          "y" : 319
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350,
+          "x" : 291,
+          "y" : 509
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 789,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 979,
+          "y" : 76
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 789,
+          "y" : 266
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 979,
+          "y" : 266
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 789,
+          "y" : 456
+        },
+        {
+          "h" : 128,
+          "kind" : "network",
+          "w" : 263,
+          "x" : 789,
+          "y" : 646
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "footer" : {
+            "h" : 23,
+            "w" : 204.5,
+            "x" : 4,
+            "y" : 4
+          }
+        }
+      },
+      "tagline" : "The reading screen in night mode: pale serif on dark grey, dithered",
+      "title" : "E-Ink Dark"
+    },
+    {
+      "accent" : "#FF3B00",
+      "group" : "bold",
+      "id" : "brutalistDark",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 345,
+          "kind" : "clock",
+          "w" : 710,
+          "x" : 122,
+          "y" : 55
+        },
+        {
+          "h" : 251,
+          "kind" : "cpu",
+          "w" : 251,
+          "x" : 870,
+          "y" : 55
+        },
+        {
+          "h" : 168,
+          "kind" : "battery",
+          "w" : 168,
+          "x" : 1151,
+          "y" : 55
+        },
+        {
+          "h" : 168,
+          "kind" : "memory",
+          "w" : 168,
+          "x" : 1151,
+          "y" : 252
+        },
+        {
+          "h" : 126,
+          "kind" : "weather",
+          "w" : 259,
+          "x" : 870,
+          "y" : 336
+        },
+        {
+          "h" : 168,
+          "kind" : "events",
+          "w" : 345,
+          "x" : 121,
+          "y" : 429
+        },
+        {
+          "h" : 168,
+          "kind" : "network",
+          "w" : 345,
+          "x" : 496,
+          "y" : 429
+        },
+        {
+          "h" : 168,
+          "kind" : "disk",
+          "w" : 168,
+          "x" : 870,
+          "y" : 491
+        },
+        {
+          "h" : 126,
+          "kind" : "processes",
+          "w" : 126,
+          "x" : 1067,
+          "y" : 492
+        },
+        {
+          "h" : 168,
+          "kind" : "nowPlaying",
+          "w" : 345,
+          "x" : 121,
+          "y" : 626
+        },
+        {
+          "h" : 168,
+          "kind" : "downloads",
+          "w" : 168,
+          "x" : 496,
+          "y" : 626
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+          "headline" : {
+            "h" : 76,
+            "w" : 268,
+            "x" : 4,
+            "y" : 72
+          }
+        }
+      },
+      "tagline" : "Black slabs on night concrete, white rules and hard white shadows",
+      "title" : "Brutalist Dark"
+    },
+    {
+      "accent" : "#FF4FA8",
+      "group" : "crafted",
+      "id" : "risoDark",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 104,
+          "y" : 108
+        },
+        {
+          "h" : 128,
+          "kind" : "cpu",
+          "w" : 128,
+          "x" : 582,
+          "y" : 138
+        },
+        {
+          "h" : 128,
+          "kind" : "memory",
+          "w" : 128,
+          "x" : 730,
+          "y" : 108
+        },
+        {
+          "h" : 213,
+          "kind" : "nowPlaying",
+          "w" : 438,
+          "x" : 898,
+          "y" : 148
+        },
+        {
+          "h" : 128,
+          "kind" : "calendar",
+          "w" : 128,
+          "x" : 104,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 264,
+          "y" : 361
+        },
+        {
+          "h" : 128,
+          "kind" : "battery",
+          "w" : 128,
+          "x" : 654,
+          "y" : 306
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 764,
+          "y" : 474
+        },
+        {
+          "h" : 128,
+          "kind" : "photo",
+          "w" : 128,
+          "x" : 974,
+          "y" : 401
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 104,
+          "y" : 571
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 954,
+          "y" : 569
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+          "pink" : [
+            0.92000000000000004,
+            0.22,
+            0.56000000000000005,
+            1
+          ],
+          "teal" : [
+            0.050000000000000003,
+            0.59999999999999998,
+            0.62,
+            1
+          ]
+        },
+        "sprites" : {
+          "slug" : {
+            "h" : 20,
+            "w" : 340,
+            "x" : 0,
+            "y" : 0
+          }
+        }
+      },
+      "tagline" : "Fluoro pink and teal printed on black stock",
+      "title" : "Risograph Dark"
+    },
+    {
+      "accent" : "#7D8CFF",
+      "group" : "minimal",
+      "id" : "softDark",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 501,
+          "y" : 108
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 291,
+          "y" : 129
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170,
+          "x" : 979,
+          "y" : 129
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 320,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 530,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 740,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 950,
+          "y" : 361
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 350,
+          "y" : 571
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 740,
+          "y" : 571
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+          "accent" : [
+            0.48999999999999999,
+            0.54900000000000004,
+            1,
+            1
+          ],
+          "dark" : [
+            0.098000000000000004,
+            0.106,
+            0.122,
+            1
+          ],
+          "light" : [
+            0.23499999999999999,
+            0.25,
+            0.28199999999999997,
+            1
+          ],
+          "surface" : [
+            0.16500000000000001,
+            0.17599999999999999,
+            0.20000000000000001,
+            1
+          ]
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Soft UI in the dark: panels pressed out of graphite, one periwinkle accent",
+      "title" : "Soft Dark"
     }
   ],
-  "version" : "1.6.3",
+  "version" : "1.7.0",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",

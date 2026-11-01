@@ -545,6 +545,134 @@ window.Ornament = (() => {
       samples(points, 90).forEach((s, index) => index % 2 === 1 && p.dot(s, 1.4, rgba([0.6, 1, 0.85]), 4));
     },
 
+    blueprint(p, items) {
+      const b = union(items), y = b.y - 22, ctx = p.ctx;
+      ctx.beginPath();
+      for (const x of [b.x, maxX(b)]) { ctx.moveTo(x, b.y - 8); ctx.lineTo(x, y - 8); }
+      ctx.moveTo(b.x, y); ctx.lineTo(maxX(b), y);
+      for (const [x, d] of [[b.x, 1], [maxX(b), -1]]) { ctx.moveTo(x + d * 9, y - 4); ctx.lineTo(x, y); ctx.lineTo(x + d * 9, y + 4); }
+      p.stroke("rgba(255, 255, 255, 0.62)", 1);
+      p.sprite("dimension", midX(b), y - 4);
+      p.sprite("title", maxX(b) - 300, maxY(b) + 16);
+    },
+
+    riso(p, items, theme) {
+      const b = union(items), blend = theme === "risoDark" ? "screen" : "multiply";
+      // Registration targets off two corners, printed in both inks a hair apart.
+      for (const c of [{ x: b.x - 24, y: b.y - 18 }, { x: maxX(b) + 24, y: maxY(b) + 18 }]) {
+        for (const [color, dx, dy] of [[rgba(p.colors.teal), 0, 0], [rgba(p.colors.pink), 2, 1.5]]) {
+          const x = c.x + dx, y = c.y + dy, ctx = p.ctx;
+          ctx.save();
+          ctx.globalCompositeOperation = blend;
+          ctx.beginPath();
+          ctx.arc(x, y, 8, 0, Math.PI * 2);
+          ctx.moveTo(x - 13, y); ctx.lineTo(x + 13, y); ctx.moveTo(x, y - 13); ctx.lineTo(x, y + 13);
+          p.stroke(color, 1.2);
+          ctx.restore();
+        }
+      }
+      p.sprite("slug", b.x, maxY(b) + 12);
+    },
+
+    botanical(p, items) {
+      const b = union(items);
+      p.sprite("card", b.x, maxY(b) + 20);
+      p.sprite("sprig", maxX(b) + 14, b.y);
+    },
+
+    brutalist(p, items, theme) {
+      const b = union(items);
+      p.sprite("headline", b.x - 4, b.y - 4);
+      p.rect(b.x, maxY(b) + 16, b.w, 14, theme === "brutalistDark" ? "rgb(242, 242, 242)" : "#000");
+    },
+
+    eink(p, items, theme) {
+      const b = union(items), y = maxY(b) + 22, now = new Date(), ink = theme === "einkDark" ? [224, 221, 213] : [27, 27, 27];
+      const start = new Date(now.getFullYear(), 0, 0), days = new Date(now.getFullYear(), 1, 29).getDate() === 29 ? 366 : 365;
+      p.rect(b.x, y, b.w, 1, `rgba(${ink.join(", ")}, 0.5)`);
+      p.rect(b.x, y - 1, b.w * (Math.floor((now - start) / 86400000) / days), 3, `rgb(${ink.join(", ")})`);
+      p.sprite("footer", b.x, y + 8);
+    },
+
+    stainedGlass(p, items) {
+      // A pointed arch of stone and lead over the windows (SceneOrnament.gothicArch).
+      const b = union(items), ctx = p.ctx;
+      const left = b.x - 26, right = maxX(b) + 26, bottom = maxY(b) + 22;
+      const spring = b.y + Math.min(b.h * 0.18, 60), apex = { x: midX(b), y: b.y - 70 }, rise = spring - apex.y, run = (right - left) * 0.16;
+      const arch = () => {
+        ctx.beginPath();
+        ctx.moveTo(left, bottom); ctx.lineTo(left, spring);
+        ctx.quadraticCurveTo(left, apex.y + rise * 0.35, left + run, apex.y + rise * 0.3);
+        ctx.lineTo(apex.x, apex.y);
+        ctx.lineTo(right - run, apex.y + rise * 0.3);
+        ctx.quadraticCurveTo(right, apex.y + rise * 0.35, right, spring);
+        ctx.lineTo(right, bottom);
+      };
+      for (const [color, width] of [["rgba(255, 191, 89, 0.25)", 14], ["rgb(82, 69, 56)", 8], ["rgb(27, 22, 18)", 3]]) { arch(); p.stroke(color, width); }
+    },
+
+    swiss(p, items) {
+      const b = union(items);
+      p.sprite("heading", b.x, b.y - 16);
+      p.rect(b.x, b.y - 12, b.w, 3, "rgb(17, 17, 17)");
+    },
+
+    atomic(p, items) {
+      const b = union(items);
+      p.sprite("star", b.x - 30, b.y - 18);
+      p.sprite("starSmall", maxX(b) + 34, maxY(b) + 14);
+    },
+
+    comic(p, items) {
+      const b = union(items);
+      p.sprite("narration", b.x, b.y - 44);
+      p.sprite("burst", maxX(b) + 6, b.y - 10);
+    },
+
+    bricks(p, items) {
+      // A green plate the bricks are built on.
+      const b = union(items), plate = { x: b.x - 16, y: maxY(b) + 6, w: b.w + 32, h: 16 }, green = "rgb(0, 166, 80)";
+      p.roundRect(plate.x, plate.y + 5, plate.w, plate.h, 4); p.fill("rgba(0, 0, 0, 0.12)");
+      p.roundRect(plate.x, plate.y, plate.w, plate.h, 4); p.fill(green);
+      p.rect(plate.x + 4, plate.y + plate.h - 4, plate.w - 8, 4, "rgba(0, 0, 0, 0.18)");
+      for (let x = plate.x + 10; x + 18 < plate.x + plate.w; x += 28) { p.roundRect(x, plate.y - 5, 18, 7, 2.5); p.fill(green); }
+    },
+
+    scholar(p, items) {
+      // A ribbon bookmark trailing from the papers, sealed in wax.
+      const b = union(items), ctx = p.ctx, end = { x: maxX(b) + 10, y: maxY(b) + 46 };
+      p.shadowed("rgba(0, 0, 0, 0.5)", 4, () => {
+        ctx.beginPath();
+        ctx.moveTo(maxX(b) - 40, maxY(b) - 10);
+        ctx.bezierCurveTo(maxX(b) - 30, maxY(b) + 30, maxX(b) - 10, maxY(b) + 40, end.x, end.y);
+        p.stroke("rgb(115, 26, 26)", 9);
+      }, 0, 3);
+      p.sprite("seal", end.x, end.y);
+    },
+
+    soft(p, items, theme) {
+      // A groove pressed into the surface beneath the panels.
+      const b = union(items), ctx = p.ctx, c = p.colors, groove = { x: b.x + 40, y: maxY(b) + 18, w: b.w - 80, h: 10 };
+      p.roundRect(groove.x, groove.y, groove.w, groove.h, 5); p.fill(rgba(c.surface));
+      ctx.save();
+      p.roundRect(groove.x, groove.y, groove.w, groove.h, 5); ctx.clip();
+      p.roundRect(groove.x + 2, groove.y + 2, groove.w, groove.h, 5); p.stroke(rgba(c.dark), 5);
+      p.roundRect(groove.x - 2, groove.y - 2, groove.w, groove.h, 5); p.stroke(rgba(c.light), 4);
+      ctx.restore();
+      p.ellipse(midX(b) - 11, maxY(b) + 12, 22, 22); p.fill(rgba(c.accent));
+    },
+
+    pocketLCD(p, items) {
+      const b = union(items);
+      p.sprite("prompt", midX(b), maxY(b) + 16);
+    },
+
+    // The dark variants draw as their light ones do, in their own colours.
+    einkDark: (p, items) => themes.eink(p, items, "einkDark"),
+    brutalistDark: (p, items) => themes.brutalist(p, items, "brutalistDark"),
+    risoDark: (p, items) => themes.riso(p, items, "risoDark"),
+    softDark: (p, items) => themes.soft(p, items, "softDark"),
+
     mono(p, items) {
       const b = union(items), y = maxY(b) + 16;
       p.rect(b.x, y, b.w, 1, rgba(WHITE, 0.6));
