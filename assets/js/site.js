@@ -13,6 +13,7 @@
   let build = "";
   const img = (theme, file) => `assets/img/themes/${theme}/${file}${build}`;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
   installSection();
 
@@ -31,14 +32,24 @@
     for (const theme of themes) theme.sizes = Object.fromEntries(theme.kinds.map((k) => [k.kind, { w: k.w, h: k.h }]));
     const byId = Object.fromEntries(themes.map((t) => [t.id, t]));
     const widgetInfo = Object.fromEntries(data.widgets.map((w) => [w.id, w]));
+    // A theme that comes in light and dark is one family; each variant knows its family and the other variant.
+    const families = Object.fromEntries((data.families || themes.map((t) => ({ ...t, light: t.id }))).map((f) => [f.id, f]));
+    for (const theme of themes) {
+      const family = families[theme.family] || families[theme.id];
+      theme.family = family.id;
+      theme.familyTitle = family.title;
+      theme.partner = family.dark ? (theme.id === family.light ? family.dark : family.light) : null;
+    }
+    // One entry per family, in the themes' order, standing for its light variant.
+    const lights = themes.filter((t) => t.id === families[t.family].light);
 
     hero(themes, byId, data.heroThemes || themes.map((t) => t.id));
-    gallery(themes);
-    const playground = createPlayground(data, themes, byId, widgetInfo);
-    widgetGallery(themes, widgetInfo);
+    gallery(lights, families);
+    const playground = createPlayground(data, themes, byId, widgetInfo, lights);
+    widgetGallery(byId, lights, families, widgetInfo);
     accentDemo(data.accentDemo);
     compareSlider();
-    lightbox(byId, playground);
+    lightbox(byId, families, playground);
   }
 
   // MARK: Hero: a laptop that cross-fades between themes
@@ -58,7 +69,7 @@
           shot.alt = `The ${theme.title} theme on a Mac desktop`;
           next.classList.remove("show");
         }, 950);
-        name.textContent = theme.title;
+        name.textContent = theme.familyTitle;
         tagline.textContent = theme.tagline;
       };
     };
@@ -72,22 +83,29 @@
 
   // MARK: Theme gallery with filters
 
-  function gallery(themes) {
+  // The variant a family shows in Auto: the one matching the visitor's system appearance.
+  const autoVariant = (family) => (family.dark && systemDark.matches ? family.dark : family.light);
+
+  function gallery(lights, families) {
     const grid = $("#theme-grid");
-    for (const theme of themes) {
+    for (const theme of lights) {
+      const family = families[theme.family];
+      const shot = el("img", { src: img(autoVariant(family), "preset-small.webp"), alt: "", loading: "lazy" });
       const card = el("button", { className: "theme-card", type: "button" }, [
-        el("div", { className: "shot" }, [el("img", { src: img(theme.id, "preset-small.webp"), alt: "", loading: "lazy" })]),
+        el("div", { className: "shot" }, [shot]),
         el("div", { className: "meta" }, [
           el("div", { className: "title" }, [
             el("span", { className: "dot", style: `background:${theme.accent};color:${theme.accent}` }),
-            theme.title,
+            theme.familyTitle,
+            ...(family.dark ? [el("span", { className: "modes", textContent: "Light & dark" })] : []),
           ]),
           el("div", { className: "tagline", textContent: theme.tagline }),
         ]),
       ]);
-      card.dataset.theme = theme.id;
-      card.dataset.groups = ["all", theme.group, theme.light ? "light" : "dark"].join(" ");
-      card.setAttribute("aria-label", `${theme.title}: ${theme.tagline}`);
+      if (family.dark) systemDark.addEventListener("change", () => { shot.src = img(autoVariant(family), "preset-small.webp"); });
+      card.dataset.theme = family.id;
+      card.dataset.groups = ["all", theme.group, theme.light ? "light" : "dark", ...(family.dark ? ["light", "dark"] : [])].join(" ");
+      card.setAttribute("aria-label", `${theme.familyTitle}${family.dark ? ", light and dark" : ""}: ${theme.tagline}`);
       grid.append(card);
     }
     for (const chip of document.querySelectorAll(".chips .chip")) {
@@ -103,19 +121,33 @@
     }
   }
 
-  function lightbox(byId, playground) {
-    const box = $("#lightbox");
+  function lightbox(byId, families, playground) {
+    const box = $("#lightbox"), modes = $("#lightbox-mode");
     const close = () => { box.hidden = true; document.body.style.overflow = ""; };
+    let family = null, mode = "auto";
+    const show = () => {
+      const id = !family.dark ? family.light : mode === "auto" ? autoVariant(family) : family[mode];
+      const theme = byId[id];
+      $("#lightbox-image").src = img(id, "preset.webp");
+      $("#lightbox-image").alt = `The ${family.title} theme${family.dark ? ` (${theme.light ? "light" : "dark"})` : ""} on a Mac desktop`;
+      $("#lightbox-try").onclick = () => { close(); playground.load(id); };
+      $("#lightbox-page").href = `themes/${family.id}/${mode === "auto" ? "" : `?mode=${mode}`}`;
+      for (const button of modes.querySelectorAll("button")) button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
+    };
+    modes.addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (button) { mode = button.dataset.mode; show(); }
+    });
+    systemDark.addEventListener("change", () => { if (family && !box.hidden) show(); });
     $("#theme-grid").addEventListener("click", (event) => {
       const card = event.target.closest(".theme-card");
       if (!card) return;
-      const theme = byId[card.dataset.theme];
-      $("#lightbox-image").src = img(theme.id, "preset.webp");
-      $("#lightbox-image").alt = `The ${theme.title} theme on a Mac desktop`;
-      $("#lightbox-title").textContent = theme.title;
-      $("#lightbox-tagline").textContent = theme.tagline;
-      $("#lightbox-try").onclick = () => { close(); playground.load(theme.id); };
-      $("#lightbox-page").href = `themes/${theme.id}/`;
+      family = families[card.dataset.theme];
+      mode = "auto";
+      $("#lightbox-title").textContent = family.title;
+      $("#lightbox-tagline").textContent = byId[family.light].tagline;
+      modes.hidden = !family.dark;
+      show();
       box.hidden = false;
       document.body.style.overflow = "hidden";
     });
@@ -127,7 +159,7 @@
 
   // MARK: Playground: a desktop you can arrange
 
-  function createPlayground(data, themes, byId, widgetInfo) {
+  function createPlayground(data, themes, byId, widgetInfo, lights) {
     const stage = $("#pg-stage"), tray = $("#pg-tray"), select = $("#pg-theme"), pair = $("#pg-pair");
     const canvas = data.canvas;
     // Widget images carry transparent padding (for shadows and tilted paper) around the widget itself.
@@ -163,8 +195,12 @@
       scheduleRedraw();
     }
 
-    for (const t of themes) select.append(el("option", { value: t.id, textContent: t.title }));
-    select.addEventListener("change", () => load(select.value));
+    for (const t of lights) select.append(el("option", { value: t.id, textContent: t.familyTitle }));
+    // Picking a family shows the variant matching the visitor's appearance; the pair button swaps it.
+    select.addEventListener("change", () => {
+      const partner = byId[select.value].partner;
+      load(partner && systemDark.matches ? partner : select.value);
+    });
     $("#pg-reset").addEventListener("click", () => load(theme.id));
     // Tidy up: every widget settles into a spot where nothing overlaps, edges lined up.
     $("#pg-tidy").addEventListener("click", () => {
@@ -284,7 +320,7 @@
 
     function load(id) {
       theme = byId[id] || themes[0];
-      select.value = theme.id;
+      select.value = theme.light || !theme.partner ? theme.id : theme.partner;
       for (const item of placed.values()) item.node.remove();
       placed = new Map();
       stage.style.backgroundImage = `url("${img(theme.id, "wallpaper.webp")}")`;
@@ -309,24 +345,26 @@
 
   // MARK: Widget gallery
 
-  function widgetGallery(themes, widgetInfo) {
+  function widgetGallery(byId, lights, families, widgetInfo) {
     const select = $("#wg-theme"), grid = $("#widget-grid");
-    for (const t of themes) select.append(el("option", { value: t.id, textContent: t.title }));
-    const render = (id) => {
-      const theme = themes.find((t) => t.id === id);
+    for (const t of lights) select.append(el("option", { value: t.id, textContent: t.familyTitle }));
+    const render = (familyId) => {
+      const id = autoVariant(families[byId[familyId].family]);
+      const theme = byId[id];
       grid.replaceChildren();
       for (const [kind, size] of Object.entries(theme.sizes)) {
         const info = widgetInfo[kind] || { title: kind, blurb: "" };
         grid.append(el("article", { className: `widget-card${size.w > size.h * 1.5 ? " medium" : ""}` }, [
           el("div", { className: "stage", style: `background-image:url("${img(id, "wallpaper-small.webp")}")` }, [
-            el("img", { src: img(id, `widgets/${kind}.webp`), alt: `${info.title} widget in ${theme.title}`, loading: "lazy" }),
+            el("img", { src: img(id, `widgets/${kind}.webp`), alt: `${info.title} widget in ${theme.familyTitle}`, loading: "lazy" }),
           ]),
           el("div", { className: "meta" }, [el("b", { textContent: info.title }), el("span", { textContent: info.blurb })]),
         ]));
       }
     };
     select.addEventListener("change", () => render(select.value));
-    select.value = themes.find((t) => t.id === "hifi") ? "hifi" : themes[0].id;
+    systemDark.addEventListener("change", () => render(select.value));
+    select.value = byId.hifi ? "hifi" : lights[0].id;
     render(select.value);
   }
 

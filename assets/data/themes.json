@@ -29,11 +29,300 @@
       }
     ]
   },
-  "build" : 1793506319,
+  "build" : 1793515876,
   "canvas" : {
     "height" : 900,
     "width" : 1440
   },
+  "families" : [
+    {
+      "dark" : "mono",
+      "group" : "crafted",
+      "id" : "paper",
+      "light" : "paper",
+      "tagline" : "A light, editorial front page",
+      "title" : "Paper"
+    },
+    {
+      "group" : "futuristic",
+      "id" : "neon",
+      "light" : "neon",
+      "tagline" : "Synthwave script, chrome numerals and neon tubes",
+      "title" : "Neon"
+    },
+    {
+      "group" : "bold",
+      "id" : "bauhaus",
+      "light" : "bauhaus",
+      "tagline" : "Primary colours and pure geometry on cream",
+      "title" : "Bauhaus"
+    },
+    {
+      "group" : "nature",
+      "id" : "grove",
+      "light" : "grove",
+      "tagline" : "Didot, italics and sprigs on forest green",
+      "title" : "Grove"
+    },
+    {
+      "group" : "sleek",
+      "id" : "aero",
+      "light" : "aero",
+      "tagline" : "Glossy glass, gel bars and bubbles",
+      "title" : "Aero"
+    },
+    {
+      "group" : "retro",
+      "id" : "classic",
+      "light" : "classic",
+      "tagline" : "One-bit windows on a dithered desktop",
+      "title" : "Classic"
+    },
+    {
+      "group" : "futuristic",
+      "id" : "overdrive",
+      "light" : "overdrive",
+      "tagline" : "Hazard-yellow cyberpunk with a glitch",
+      "title" : "Overdrive"
+    },
+    {
+      "group" : "retro",
+      "id" : "hifi",
+      "light" : "hifi",
+      "tagline" : "Nixie tubes, VU needles and a tuner dial",
+      "title" : "Hi-Fi"
+    },
+    {
+      "group" : "retro",
+      "id" : "groove",
+      "light" : "groove",
+      "tagline" : "Seventies stripes in orange and mustard",
+      "title" : "Groove"
+    },
+    {
+      "group" : "crafted",
+      "id" : "chalk",
+      "light" : "chalk",
+      "tagline" : "Hand-drawn lessons on a chalkboard",
+      "title" : "Chalk"
+    },
+    {
+      "group" : "retro",
+      "id" : "quest",
+      "light" : "quest",
+      "tagline" : "A 16-bit adventure: hearts, HP and a quest log",
+      "title" : "Quest"
+    },
+    {
+      "group" : "sleek",
+      "id" : "glass",
+      "light" : "glass",
+      "tagline" : "System-style widgets on rounded frosted glass",
+      "title" : "Glass"
+    },
+    {
+      "group" : "retro",
+      "id" : "cockpit",
+      "light" : "cockpit",
+      "tagline" : "Aircraft gauges, annunciators and radar above the clouds",
+      "title" : "Cockpit"
+    },
+    {
+      "group" : "retro",
+      "id" : "apollo",
+      "light" : "apollo",
+      "tagline" : "Mission-control registers, strip charts and teletype",
+      "title" : "Apollo"
+    },
+    {
+      "group" : "nature",
+      "id" : "abyss",
+      "light" : "abyss",
+      "tagline" : "Brass submarine gauges and sonar in the deep",
+      "title" : "Abyss"
+    },
+    {
+      "group" : "crafted",
+      "id" : "atlas",
+      "light" : "atlas",
+      "tagline" : "Legend boxes and scale bars on a topographic map",
+      "title" : "Atlas"
+    },
+    {
+      "group" : "crafted",
+      "id" : "kyoto",
+      "light" : "kyoto",
+      "tagline" : "Ink ensō, kanji and hanging scrolls",
+      "title" : "Kyoto"
+    },
+    {
+      "group" : "crafted",
+      "id" : "cork",
+      "light" : "cork",
+      "tagline" : "Sticky notes, polaroids and red string",
+      "title" : "Corkboard"
+    },
+    {
+      "group" : "minimal",
+      "id" : "polar",
+      "light" : "polar",
+      "tagline" : "Clean type on frosted ice under the aurora",
+      "title" : "Polar"
+    },
+    {
+      "dark" : "slate",
+      "group" : "minimal",
+      "id" : "lumen",
+      "light" : "lumen",
+      "tagline" : "Soft white cards on a bright, airy desk",
+      "title" : "Lumen"
+    },
+    {
+      "dark" : "fieldDark",
+      "group" : "minimal",
+      "id" : "field",
+      "light" : "field",
+      "tagline" : "Industrial mono numerals with an orange accent",
+      "title" : "Field"
+    },
+    {
+      "group" : "sleek",
+      "id" : "obsidian",
+      "light" : "obsidian",
+      "tagline" : "Black glass with iridescent edges and hairline numerals",
+      "title" : "Obsidian"
+    },
+    {
+      "group" : "futuristic",
+      "id" : "midnight",
+      "light" : "midnight",
+      "tagline" : "A deep-navy dashboard with glowing gradient charts",
+      "title" : "Midnight"
+    },
+    {
+      "group" : "sleek",
+      "id" : "pulse",
+      "light" : "pulse",
+      "tagline" : "Activity rings and a heartbeat in red, green and cyan",
+      "title" : "Pulse"
+    },
+    {
+      "group" : "sleek",
+      "id" : "prism",
+      "light" : "prism",
+      "tagline" : "Dark frosted glass that splits the light into colour",
+      "title" : "Prism"
+    },
+    {
+      "group" : "futuristic",
+      "id" : "carbon",
+      "light" : "carbon",
+      "tagline" : "Carbon fibre, bold italic figures and shift lights",
+      "title" : "Carbon"
+    },
+    {
+      "group" : "sleek",
+      "id" : "velvet",
+      "light" : "velvet",
+      "tagline" : "Plum velvet, champagne glow and fine italic type",
+      "title" : "Velvet"
+    },
+    {
+      "group" : "crafted",
+      "id" : "blueprint",
+      "light" : "blueprint",
+      "tagline" : "White linework, protractors and red pencil on drafting blue",
+      "title" : "Blueprint"
+    },
+    {
+      "group" : "retro",
+      "id" : "pocketLCD",
+      "light" : "pocketLCD",
+      "tagline" : "A handheld's four-shade green dot-matrix screen in grey plastic, pixel type",
+      "title" : "Pocket LCD"
+    },
+    {
+      "dark" : "softDark",
+      "group" : "minimal",
+      "id" : "soft",
+      "light" : "soft",
+      "tagline" : "Soft UI: panels pressed out of one pale surface, inset dials, one periwinkle accent",
+      "title" : "Soft"
+    },
+    {
+      "group" : "crafted",
+      "id" : "scholar",
+      "light" : "scholar",
+      "tagline" : "Dark academia: candlelit leather desk, parchment, ink and a wax seal",
+      "title" : "Scholar"
+    },
+    {
+      "group" : "bold",
+      "id" : "bricks",
+      "light" : "bricks",
+      "tagline" : "Glossy toy bricks with studs on top, primary colours and chunky rounded type",
+      "title" : "Bricks"
+    },
+    {
+      "group" : "bold",
+      "id" : "comic",
+      "light" : "comic",
+      "tagline" : "Comic-book panels: halftone dots, ink outlines, speech bubbles and sound effects",
+      "title" : "Comic"
+    },
+    {
+      "group" : "retro",
+      "id" : "atomic",
+      "light" : "atomic",
+      "tagline" : "Mid-century modern: starburst clock, boomerang cards, mustard, teal and tangerine",
+      "title" : "Atomic"
+    },
+    {
+      "group" : "bold",
+      "id" : "swiss",
+      "light" : "swiss",
+      "tagline" : "International Typographic Style: strict grid, flush-left grotesque, one red",
+      "title" : "Swiss"
+    },
+    {
+      "group" : "crafted",
+      "id" : "stainedGlass",
+      "light" : "stainedGlass",
+      "tagline" : "Leaded jewel-tone panes lit from behind; the clock is a rose window",
+      "title" : "Stained Glass"
+    },
+    {
+      "dark" : "einkDark",
+      "group" : "minimal",
+      "id" : "eink",
+      "light" : "eink",
+      "tagline" : "A reading screen: warm grey paper, crisp serif, dithered greys",
+      "title" : "E-Ink"
+    },
+    {
+      "dark" : "brutalistDark",
+      "group" : "bold",
+      "id" : "brutalist",
+      "light" : "brutalist",
+      "tagline" : "Raw concrete, white slabs, hard shadows and enormous type",
+      "title" : "Brutalist"
+    },
+    {
+      "group" : "nature",
+      "id" : "botanical",
+      "light" : "botanical",
+      "tagline" : "Herbarium sheets: pressed leaves, tape and specimen labels",
+      "title" : "Botanical"
+    },
+    {
+      "dark" : "risoDark",
+      "group" : "crafted",
+      "id" : "riso",
+      "light" : "riso",
+      "tagline" : "Fluoro pink and teal overprinting, a little off-register",
+      "title" : "Risograph"
+    }
+  ],
   "heroThemes" : [
     "hifi",
     "overdrive",
@@ -58,6 +347,7 @@
   "themes" : [
     {
       "accent" : "#C72B1F",
+      "family" : "paper",
       "group" : "crafted",
       "id" : "paper",
       "kinds" : [
@@ -299,12 +589,12 @@
           }
         }
       },
-      "partner" : "mono",
       "tagline" : "A light, editorial front page",
       "title" : "Paper"
     },
     {
       "accent" : "#FF33CC",
+      "family" : "neon",
       "group" : "futuristic",
       "id" : "neon",
       "kinds" : [
@@ -526,6 +816,7 @@
     },
     {
       "accent" : "#E03829",
+      "family" : "bauhaus",
       "group" : "bold",
       "id" : "bauhaus",
       "kinds" : [
@@ -760,6 +1051,7 @@
     },
     {
       "accent" : "#DEBA66",
+      "family" : "grove",
       "group" : "nature",
       "id" : "grove",
       "kinds" : [
@@ -981,6 +1273,7 @@
     },
     {
       "accent" : "#FFFFFF",
+      "family" : "aero",
       "group" : "sleek",
       "id" : "aero",
       "kinds" : [
@@ -1199,6 +1492,7 @@
     },
     {
       "accent" : "#000000",
+      "family" : "classic",
       "group" : "retro",
       "id" : "classic",
       "kinds" : [
@@ -1416,8 +1710,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 66,
-            "x" : 62,
+            "w" : 58,
+            "x" : 54,
             "y" : 12
           },
           "trash" : {
@@ -1433,6 +1727,7 @@
     },
     {
       "accent" : "#FCEB0D",
+      "family" : "overdrive",
       "group" : "futuristic",
       "id" : "overdrive",
       "kinds" : [
@@ -1656,7 +1951,7 @@
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 333,
+            "w" : 326,
             "x" : 4,
             "y" : 17
           }
@@ -1667,6 +1962,7 @@
     },
     {
       "accent" : "#FF8024",
+      "family" : "hifi",
       "group" : "retro",
       "id" : "hifi",
       "kinds" : [
@@ -1883,6 +2179,7 @@
     },
     {
       "accent" : "#EBB83D",
+      "family" : "groove",
       "group" : "retro",
       "id" : "groove",
       "kinds" : [
@@ -2103,6 +2400,7 @@
     },
     {
       "accent" : "#FAE88F",
+      "family" : "chalk",
       "group" : "crafted",
       "id" : "chalk",
       "kinds" : [
@@ -2360,6 +2658,7 @@
     },
     {
       "accent" : "#FFD94C",
+      "family" : "quest",
       "group" : "retro",
       "id" : "quest",
       "kinds" : [
@@ -2582,6 +2881,7 @@
     },
     {
       "accent" : "#0A85FF",
+      "family" : "glass",
       "group" : "sleek",
       "id" : "glass",
       "kinds" : [
@@ -2786,6 +3086,7 @@
     },
     {
       "accent" : "#FFB219",
+      "family" : "cockpit",
       "group" : "retro",
       "id" : "cockpit",
       "kinds" : [
@@ -3002,6 +3303,7 @@
     },
     {
       "accent" : "#6BFF7A",
+      "family" : "apollo",
       "group" : "retro",
       "id" : "apollo",
       "kinds" : [
@@ -3289,6 +3591,7 @@
     },
     {
       "accent" : "#4CFFB8",
+      "family" : "abyss",
       "group" : "nature",
       "id" : "abyss",
       "kinds" : [
@@ -3511,6 +3814,7 @@
     },
     {
       "accent" : "#D13324",
+      "family" : "atlas",
       "group" : "crafted",
       "id" : "atlas",
       "kinds" : [
@@ -3733,6 +4037,7 @@
     },
     {
       "accent" : "#D13824",
+      "family" : "kyoto",
       "group" : "crafted",
       "id" : "kyoto",
       "kinds" : [
@@ -3955,6 +4260,7 @@
     },
     {
       "accent" : "#CC2424",
+      "family" : "cork",
       "group" : "crafted",
       "id" : "cork",
       "kinds" : [
@@ -4171,6 +4477,7 @@
     },
     {
       "accent" : "#73FFC7",
+      "family" : "polar",
       "group" : "minimal",
       "id" : "polar",
       "kinds" : [
@@ -4368,6 +4675,7 @@
     },
     {
       "accent" : "#FF4233",
+      "family" : "paper",
       "group" : "minimal",
       "id" : "mono",
       "kinds" : [
@@ -4572,12 +4880,12 @@
           }
         }
       },
-      "partner" : "paper",
       "tagline" : "Pure black, thin numerals, hairline rules",
       "title" : "Mono"
     },
     {
       "accent" : "#8585FF",
+      "family" : "lumen",
       "group" : "minimal",
       "id" : "slate",
       "kinds" : [
@@ -4770,12 +5078,12 @@
 
         }
       },
-      "partner" : "lumen",
       "tagline" : "Soft dark cards on a deep, glowing desk",
       "title" : "Slate"
     },
     {
       "accent" : "#5C5CF5",
+      "family" : "lumen",
       "group" : "minimal",
       "id" : "lumen",
       "kinds" : [
@@ -4968,12 +5276,12 @@
 
         }
       },
-      "partner" : "slate",
       "tagline" : "Soft white cards on a bright, airy desk",
       "title" : "Lumen"
     },
     {
       "accent" : "#FF5C14",
+      "family" : "field",
       "group" : "minimal",
       "id" : "field",
       "kinds" : [
@@ -5180,12 +5488,12 @@
 
         }
       },
-      "partner" : "fieldDark",
       "tagline" : "Industrial mono numerals with an orange accent",
       "title" : "Field"
     },
     {
       "accent" : "#FF6B1F",
+      "family" : "field",
       "group" : "minimal",
       "id" : "fieldDark",
       "kinds" : [
@@ -5392,12 +5700,12 @@
 
         }
       },
-      "partner" : "field",
       "tagline" : "Field's mono numerals and orange, after dark",
       "title" : "Field Dark"
     },
     {
       "accent" : "#52F2DB",
+      "family" : "obsidian",
       "group" : "sleek",
       "id" : "obsidian",
       "kinds" : [
@@ -5625,6 +5933,7 @@
     },
     {
       "accent" : "#5C8FFF",
+      "family" : "midnight",
       "group" : "futuristic",
       "id" : "midnight",
       "kinds" : [
@@ -5860,6 +6169,7 @@
     },
     {
       "accent" : "#FF335C",
+      "family" : "pulse",
       "group" : "sleek",
       "id" : "pulse",
       "kinds" : [
@@ -6081,6 +6391,7 @@
     },
     {
       "accent" : "#BD99FF",
+      "family" : "prism",
       "group" : "sleek",
       "id" : "prism",
       "kinds" : [
@@ -6321,6 +6632,7 @@
     },
     {
       "accent" : "#FF2B29",
+      "family" : "carbon",
       "group" : "futuristic",
       "id" : "carbon",
       "kinds" : [
@@ -6542,6 +6854,7 @@
     },
     {
       "accent" : "#F2CC8F",
+      "family" : "velvet",
       "group" : "sleek",
       "id" : "velvet",
       "kinds" : [
@@ -6763,6 +7076,7 @@
     },
     {
       "accent" : "#FF6B66",
+      "family" : "blueprint",
       "group" : "crafted",
       "id" : "blueprint",
       "kinds" : [
@@ -6971,6 +7285,7 @@
     },
     {
       "accent" : "#8F9396",
+      "family" : "pocketLCD",
       "group" : "retro",
       "id" : "pocketLCD",
       "kinds" : [
@@ -7180,6 +7495,7 @@
     },
     {
       "accent" : "#7D8CFF",
+      "family" : "soft",
       "group" : "minimal",
       "id" : "soft",
       "kinds" : [
@@ -7386,6 +7702,7 @@
     },
     {
       "accent" : "#A72C24",
+      "family" : "scholar",
       "group" : "crafted",
       "id" : "scholar",
       "kinds" : [
@@ -7588,6 +7905,7 @@
     },
     {
       "accent" : "#E3262B",
+      "family" : "bricks",
       "group" : "bold",
       "id" : "bricks",
       "kinds" : [
@@ -7799,6 +8117,7 @@
     },
     {
       "accent" : "#FF5B5B",
+      "family" : "comic",
       "group" : "bold",
       "id" : "comic",
       "kinds" : [
@@ -8000,6 +8319,7 @@
     },
     {
       "accent" : "#D9572B",
+      "family" : "atomic",
       "group" : "retro",
       "id" : "atomic",
       "kinds" : [
@@ -8208,6 +8528,7 @@
     },
     {
       "accent" : "#E3000F",
+      "family" : "swiss",
       "group" : "bold",
       "id" : "swiss",
       "kinds" : [
@@ -8410,6 +8731,7 @@
     },
     {
       "accent" : "#E2A21B",
+      "family" : "stainedGlass",
       "group" : "crafted",
       "id" : "stainedGlass",
       "kinds" : [
@@ -8607,6 +8929,7 @@
     },
     {
       "accent" : "#1B1B1B",
+      "family" : "eink",
       "group" : "minimal",
       "id" : "eink",
       "kinds" : [
@@ -8795,6 +9118,7 @@
     },
     {
       "accent" : "#FF3B00",
+      "family" : "brutalist",
       "group" : "bold",
       "id" : "brutalist",
       "kinds" : [
@@ -8997,6 +9321,7 @@
     },
     {
       "accent" : "#7F8F52",
+      "family" : "botanical",
       "group" : "nature",
       "id" : "botanical",
       "kinds" : [
@@ -9212,6 +9537,7 @@
     },
     {
       "accent" : "#FF4FA8",
+      "family" : "riso",
       "group" : "crafted",
       "id" : "riso",
       "kinds" : [
@@ -9425,6 +9751,7 @@
     },
     {
       "accent" : "#E0DDD5",
+      "family" : "eink",
       "group" : "minimal",
       "id" : "einkDark",
       "kinds" : [
@@ -9613,6 +9940,7 @@
     },
     {
       "accent" : "#FF3B00",
+      "family" : "brutalist",
       "group" : "bold",
       "id" : "brutalistDark",
       "kinds" : [
@@ -9815,6 +10143,7 @@
     },
     {
       "accent" : "#FF4FA8",
+      "family" : "riso",
       "group" : "crafted",
       "id" : "risoDark",
       "kinds" : [
@@ -10028,6 +10357,7 @@
     },
     {
       "accent" : "#7D8CFF",
+      "family" : "soft",
       "group" : "minimal",
       "id" : "softDark",
       "kinds" : [
