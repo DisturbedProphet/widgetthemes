@@ -10586,7 +10586,7 @@
       "title" : "Memory"
     },
     {
-      "blurb" : "Free space on your Mac",
+      "blurb" : "Free space on your computer",
       "id" : "disk",
       "title" : "Storage"
     },
@@ -10621,7 +10621,7 @@
       "title" : "Events"
     },
     {
-      "blurb" : "Music or Spotify, with controls",
+      "blurb" : "System media playback, with controls",
       "id" : "nowPlaying",
       "title" : "Now Playing"
     },
@@ -10651,7 +10651,7 @@
       "title" : "Moon & Sun"
     },
     {
-      "blurb" : "Time at your Mac today",
+      "blurb" : "Time at your computer today",
       "id" : "activity",
       "title" : "Activity"
     },

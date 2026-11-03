@@ -16,6 +16,7 @@
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
 
   installSection();
+  document.querySelectorAll(".mobile-sections a").forEach(link => link.addEventListener("click", () => { link.closest("details").open = false; }));
 
   fetch("assets/data/themes.json")
     .then((response) => response.json())
@@ -43,6 +44,9 @@
     // One entry per family, in the themes' order, standing for its light variant.
     const lights = themes.filter((t) => t.id === families[t.family].light);
 
+    document.querySelectorAll('[data-theme-count]').forEach(n => n.textContent = lights.length);
+    document.querySelectorAll('[data-pair-count]').forEach(n => n.textContent = Object.values(families).filter(f => f.dark).length);
+    $('#paired-families').textContent = Object.values(families).filter(f => f.dark).map(f => f.title).join(', ');
     hero(themes, byId, data.heroThemes || themes.map((t) => t.id));
     gallery(lights, families);
     const playground = createPlayground(data, themes, byId, widgetInfo, lights);
@@ -86,51 +90,81 @@
   // The variant a family shows in Auto: the one matching the visitor's system appearance.
   const autoVariant = (family) => (family.dark && systemDark.matches ? family.dark : family.light);
 
+  const localThemes = {
+    get(key) { try { const value = JSON.parse(localStorage.getItem('wt.' + key) || '[]'); return Array.isArray(value) ? value.filter(v => typeof v === 'string' && v.length < 50).slice(0,40) : []; } catch { return []; } },
+    set(key, value) { try { localStorage.setItem('wt.' + key, JSON.stringify(value.slice(0,40))); } catch { /* Storage may be disabled. */ } },
+  };
   function gallery(lights, families) {
-    const grid = $("#theme-grid");
-    for (const theme of lights) {
-      const family = families[theme.family];
-      const shot = el("img", { src: img(autoVariant(family), "preset-small.webp"), alt: "", loading: "lazy" });
-      const card = el("button", { className: "theme-card", type: "button" }, [
-        el("div", { className: "shot" }, [shot]),
-        el("div", { className: "meta" }, [
-          el("div", { className: "title" }, [
-            el("span", { className: "dot", style: `background:${theme.accent};color:${theme.accent}` }),
-            theme.familyTitle,
-            ...(family.dark ? [el("span", { className: "modes", textContent: "Light & dark" })] : []),
+    const grid = $('#theme-grid'), search = $('#theme-search'), more = $('#theme-show-all');
+    const mobile = matchMedia('(max-width: 600px)');
+    let filter = 'all', expanded = false;
+    function render() {
+      const favourites = localThemes.get('favourites'), recent = localThemes.get('recent');
+      const query = search.value.trim().toLowerCase().slice(0,80);
+      let matches = lights.filter(t => (filter === 'favourites' ? favourites.includes(t.family) : filter === 'recent' ? recent.includes(t.family) : filter === 'all' || t.group === filter || filter === 'light' && (t.light || families[t.family].dark)) && `${t.familyTitle} ${t.tagline} ${t.group}`.toLowerCase().includes(query));
+      if (filter === 'recent') matches.sort((a,b)=>recent.indexOf(a.family)-recent.indexOf(b.family));
+      const compact = mobile.matches && !expanded && filter === 'all' && !query;
+      grid.replaceChildren();
+      for (const theme of compact ? matches.slice(0,6) : matches) {
+        const family = families[theme.family];
+        const shot = el('img', {src:img(autoVariant(family),'preset-small.webp'),alt:'',loading:'lazy'});
+        const card = el('button',{className:'theme-card',type:'button'},[
+          el('div',{className:'shot'},[shot]),el('div',{className:'meta'},[
+            el('div',{className:'title'},[theme.familyTitle,...(family.dark?[el('span',{className:'modes',textContent:'Light & dark'})]:[])]),
+            el('div',{className:'tagline',textContent:theme.tagline}),
           ]),
-          el("div", { className: "tagline", textContent: theme.tagline }),
-        ]),
-      ]);
-      if (family.dark) systemDark.addEventListener("change", () => { shot.src = img(autoVariant(family), "preset-small.webp"); });
-      card.dataset.theme = family.id;
-      card.dataset.groups = ["all", theme.group, theme.light ? "light" : "dark", ...(family.dark ? ["light", "dark"] : [])].join(" ");
-      card.setAttribute("aria-label", `${theme.familyTitle}${family.dark ? ", light and dark" : ""}: ${theme.tagline}`);
-      grid.append(card);
+        ]);
+        card.dataset.theme = family.id;
+        card.setAttribute('aria-label',`${theme.familyTitle}: ${theme.tagline}. Sample data preview`);
+        const favourite = el('button',{className:'chip favourite',type:'button',textContent:favourites.includes(family.id)?'★ Favourite':'☆ Favourite'});
+        favourite.setAttribute('aria-label',`Favourite ${family.title}`);
+        favourite.setAttribute('aria-pressed',String(favourites.includes(family.id)));
+        favourite.addEventListener('click',()=>{
+          const ids = localThemes.get('favourites');
+          localThemes.set('favourites',ids.includes(family.id)?ids.filter(id=>id!==family.id):[...ids,family.id]);
+          render(); grid.querySelector(`[data-favourite="${family.id}"]`)?.focus();
+        });
+        favourite.dataset.favourite = family.id;
+        grid.append(el('article',{className:'theme-entry'},[card,favourite]));
+      }
+      more.hidden = !compact || matches.length <= 6;
+      more.textContent = `Show all ${lights.length} themes`;
+      more.setAttribute('aria-expanded',String(expanded));
+      $('#theme-results').textContent = `${matches.length} themes${compact ? ', showing the first 6' : ''}${matches.length ? '' : '. Try another search or category.'}`;
     }
-    for (const chip of document.querySelectorAll(".chips .chip")) {
-      chip.addEventListener("click", () => {
-        for (const other of document.querySelectorAll(".chips .chip")) {
-          other.classList.toggle("active", other === chip);
-          other.setAttribute("aria-selected", other === chip);
-        }
-        for (const card of grid.children) {
-          card.hidden = !card.dataset.groups.split(" ").includes(chip.dataset.filter);
-        }
-      });
-    }
+    document.querySelectorAll('[data-filter]').forEach(chip=>chip.addEventListener('click',()=>{
+      filter = chip.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(other=>{other.classList.toggle('active',other===chip);other.setAttribute('aria-pressed',String(other===chip));});
+      render();
+    }));
+    const clear = el('button',{className:'chip',type:'button',textContent:'Clear history'});
+    clear.addEventListener('click',()=>{localThemes.set('recent',[]);render();});
+    more.after(clear);
+    search.addEventListener('input',render);
+    more.addEventListener('click',()=>{expanded=true;render();grid.querySelectorAll('.theme-card')[6]?.focus();});
+    mobile.addEventListener('change',render);
+    systemDark.addEventListener('change',render);
+    document.addEventListener('theme-opened',()=>{if(filter==='recent')render();});
+    render();
   }
 
   function lightbox(byId, families, playground) {
     const box = $("#lightbox"), modes = $("#lightbox-mode");
-    const close = () => { box.hidden = true; document.body.style.overflow = ""; };
+    let origin = null, inerted = [];
+    const close = () => {
+      box.hidden = true; document.body.style.overflow = '';
+      inerted.forEach(([node, old])=>{node.inert=old;}); inerted=[];
+      if (origin?.isConnected) origin.focus();
+      else ($(`#theme-grid .theme-card[data-theme="${family?.id}"]`) || $('#theme-search')).focus();
+    };
     let family = null, mode = "auto";
     const show = () => {
       const id = !family.dark ? family.light : mode === "auto" ? autoVariant(family) : family[mode];
       const theme = byId[id];
       $("#lightbox-image").src = img(id, "preset.webp");
       $("#lightbox-image").alt = `The ${family.title} theme${family.dark ? ` (${theme.light ? "light" : "dark"})` : ""} on a Mac desktop`;
-      $("#lightbox-try").onclick = () => { close(); playground.load(id); };
+      $('#lightbox-try').href = LayoutShare.query({theme:family.id,mode}) + '#playground';
+      $('#lightbox-try').onclick = event => { event.preventDefault(); close(); playground.load(id,mode); history.replaceState(null,'',LayoutShare.query({theme:family.id,mode})+'#playground'); $('#pg-theme').focus(); $('#playground').scrollIntoView(); };
       $("#lightbox-page").href = `themes/${family.id}/${mode === "auto" ? "" : `?mode=${mode}`}`;
       for (const button of modes.querySelectorAll("button")) button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
     };
@@ -142,25 +176,39 @@
     $("#theme-grid").addEventListener("click", (event) => {
       const card = event.target.closest(".theme-card");
       if (!card) return;
+      origin = card;
       family = families[card.dataset.theme];
+      localThemes.set('recent',[family.id,...localThemes.get('recent').filter(id=>id!==family.id)]);
+      document.dispatchEvent(new Event('theme-opened'));
       mode = "auto";
       $("#lightbox-title").textContent = family.title;
-      $("#lightbox-tagline").textContent = byId[family.light].tagline;
+      $("#lightbox-tagline").textContent = byId[family.light].tagline + " · Sample data";
       modes.hidden = !family.dark;
       show();
       box.hidden = false;
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
+      inerted = [...document.body.children].filter(node=>node!==box && node.tagName!=='SCRIPT').map(node=>[node,node.inert]);
+      inerted.forEach(([node])=>{node.inert=true;});
+      $('.lightbox-close',box).focus();
     });
     box.addEventListener("click", (event) => {
       if (event.target === box || event.target.closest(".lightbox-close")) close();
     });
-    document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !box.hidden) close(); });
+    box.addEventListener('keydown',event=>{
+      if(event.key!=='Tab')return;
+      const controls=[...box.querySelectorAll('button,a[href]')].filter(node=>!node.closest('[hidden]'));
+      const first=controls[0],last=controls.at(-1);
+      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+    });
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!box.hidden){event.preventDefault();close();}});
   }
 
   // MARK: Playground: a desktop you can arrange
 
   function createPlayground(data, themes, byId, widgetInfo, lights) {
-    const stage = $("#pg-stage"), tray = $("#pg-tray"), select = $("#pg-theme"), pair = $("#pg-pair");
+    const stage = $("#pg-stage"), tray = $("#pg-tray"), select = $("#pg-theme"), appearance = $("#pg-mode");
+    let mode = "auto";
     const canvas = data.canvas;
     // Widget images carry transparent padding (for shadows and tilted paper) around the widget itself.
     const pad = data.pad || 0;
@@ -198,17 +246,56 @@
     for (const t of lights) select.append(el("option", { value: t.id, textContent: t.familyTitle }));
     // Picking a family shows the variant matching the visitor's appearance; the pair button swaps it.
     select.addEventListener("change", () => {
-      const partner = byId[select.value].partner;
-      load(partner && systemDark.matches ? partner : select.value);
+      load(select.value, mode);
     });
-    $("#pg-reset").addEventListener("click", () => load(theme.id));
+    $("#pg-reset").addEventListener("click", () => load(theme.id, mode));
     // Tidy up: every widget settles into a spot where nothing overlaps, edges lined up.
     $("#pg-tidy").addEventListener("click", () => {
       const items = [...placed.values()];
       const spots = Tidy.arrange(items, desk);
       glide(items.map((item, i) => ({ item, x: spots[i].x, y: spots[i].y })));
     });
-    pair.addEventListener("click", () => theme.partner && load(theme.partner));
+    appearance.addEventListener('change',()=>load(theme.id,appearance.value,state().items));
+    systemDark.addEventListener('change',()=>{if(mode==='auto')load(theme.id,mode,state().items);});
+    const state = () => ({v:1,theme:theme.family,mode,items:[...placed.values()].map(({kind,x,y,w,h})=>({kind,x:Math.round(Math.max(0,x)),y:Math.round(Math.max(0,y)),w,h}))});
+    $('#pg-share').addEventListener('click',async()=>{
+      const url = new URL(location.href); url.search=LayoutShare.query(state());url.hash='playground';
+      history.replaceState(null,'',url);
+      try {await navigator.clipboard.writeText(url.href);$('#pg-status').textContent='Layout link copied.';}
+      catch {$('#pg-status').replaceChildren(el('a',{href:url.href,textContent:'Your layout link — copy from the address bar.'}));}
+    });
+    $('#pg-download').addEventListener('click',()=>{
+      try {
+        const file=LayoutShare.envelope(state(),data,theme.id,crypto.randomUUID());
+        const url=URL.createObjectURL(new Blob([JSON.stringify(file,null,2)],{type:'application/json'}));
+        const link=el('a',{href:url,download:`${theme.family}-layout.widgetthemes`});link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+        $('#pg-status').textContent='Layout downloaded. Open it in WidgetThemes to add it to My Themes.';
+      } catch(error){$('#pg-status').textContent=error.message;}
+    });
+    const panel=$('.playground'), expand=$('#pg-expand');
+    let previewInert=[];
+    expand.addEventListener('click',()=>{
+      const expanded=panel.classList.toggle('expanded');
+      expand.setAttribute('aria-expanded',String(expanded));expand.textContent=expanded?'Close larger preview':'Larger preview';
+      document.body.style.overflow=expanded?'hidden':'';
+      if(expanded){
+        panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-label','Larger desktop preview');
+        for(let node=panel;node.parentElement;node=node.parentElement){
+          for(const sibling of node.parentElement.children)if(sibling!==node){previewInert.push([sibling,sibling.inert]);sibling.inert=true;}
+        }
+      }else{
+        previewInert.forEach(([node,old])=>{node.inert=old;});previewInert=[];
+        panel.removeAttribute('role');panel.removeAttribute('aria-modal');panel.removeAttribute('aria-label');expand.focus();
+      }
+    });
+    panel.addEventListener('keydown',event=>{
+      if(event.key!=='Tab'||!panel.classList.contains('expanded'))return;
+      const controls=[...panel.querySelectorAll('button,select,[tabindex="0"]')].filter(n=>!n.disabled&&!n.hidden);
+      if(event.shiftKey&&document.activeElement===controls[0]){event.preventDefault();controls.at(-1).focus();}
+      else if(!event.shiftKey&&document.activeElement===controls.at(-1)){event.preventDefault();controls[0].focus();}
+    });
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.classList.contains('expanded'))expand.click();});
+    $('#pg-zoom').addEventListener('change',()=>{stage.style.width=`${Number($('#pg-zoom').value)*100}%`;});
 
     const tick = () => {
       $("#pg-clock").textContent = new Date().toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
@@ -252,10 +339,17 @@
     }
 
     function place(kind, frame) {
-      const node = el("div", { className: "pg-widget" }, [
+      const node = el("div", { className: "pg-widget", tabIndex:0, role:"group" }, [
         el("img", { src: img(theme.id, `widgets/${kind}.webp`), alt: widgetInfo[kind]?.title || kind, draggable: false }),
       ]);
       const item = { node, kind, ...frame };
+      node.setAttribute('aria-label',`${widgetInfo[kind]?.title || kind}, sample data. Use arrow keys to move.`);
+      node.addEventListener('keydown',event=>{
+        const delta={ArrowLeft:[-10,0],ArrowRight:[10,0],ArrowUp:[0,-10],ArrowDown:[0,10]}[event.key];
+        if(!delta)return;event.preventDefault();
+        item.x=Math.max(0,Math.min(canvas.width-item.w,item.x+delta[0]));
+        item.y=Math.max(22,Math.min(canvas.height-item.h,item.y+delta[1]));position(item);layoutChanged();
+      });
       placed.set(kind, item);
       stage.append(node);
       position(item);
@@ -266,15 +360,15 @@
 
     function drag(item) {
       item.node.addEventListener("pointerdown", (event) => {
-        if (event.button !== 0) return;
+        if (event.button !== 0 || matchMedia("(max-width: 600px)").matches) return;
         event.preventDefault();
         // Raise with z-index: moving the node in the DOM would drop the pointer capture mid-drag.
         item.node.style.zIndex = String(++topZ);
         item.node.classList.add("dragging");
         const s = scale(), startX = event.clientX, startY = event.clientY, originX = item.x, originY = item.y;
         const move = (e) => {
-          item.x = Math.min(Math.max(originX + (e.clientX - startX) / s, -item.w * 0.5), canvas.width - item.w * 0.5);
-          item.y = Math.min(Math.max(originY + (e.clientY - startY) / s, 22), canvas.height - item.h * 0.5);
+          item.x = Math.min(Math.max(originX + (e.clientX - startX) / s, 0), canvas.width - item.w);
+          item.y = Math.min(Math.max(originY + (e.clientY - startY) / s, 22), canvas.height - item.h);
           position(item);
           layoutChanged();
         };
@@ -292,10 +386,12 @@
     }
 
     function renderTray() {
+      const focusedKind = tray.contains(document.activeElement) ? document.activeElement.dataset.kind : null;
       tray.replaceChildren();
       for (const kind of Object.keys(theme.sizes)) {
         const on = placed.has(kind);
         const chip = el("button", { className: `chip${on ? "" : " off"}`, type: "button", textContent: `${on ? "−" : "+"} ${widgetInfo[kind]?.title || kind}` });
+        chip.dataset.kind = kind;
         chip.setAttribute("aria-pressed", on);
         chip.addEventListener("click", () => {
           if (placed.has(kind)) {
@@ -316,10 +412,16 @@
         });
         tray.append(chip);
       }
+      if (focusedKind) tray.querySelector(`[data-kind="${focusedKind}"]`)?.focus({ preventScroll: true });
     }
 
-    function load(id) {
-      theme = byId[id] || themes[0];
+    function load(id, requestedMode = 'auto', items = null) {
+      mode = ['auto','light','dark'].includes(requestedMode)?requestedMode:'auto';
+      const requested=byId[id]||themes[0], family=data.families.find(f=>f.id===requested.family);
+      const selected=family.dark ? mode==='auto' ? autoVariant(family) : family[mode] : family.light;
+      theme=byId[selected];
+      appearance.value=mode;
+      appearance.disabled=!family.dark;
       select.value = theme.light || !theme.partner ? theme.id : theme.partner;
       for (const item of placed.values()) item.node.remove();
       placed = new Map();
@@ -329,9 +431,17 @@
       live.hidden = true;
       drawing = false;
       sprites = Ornament.load(theme, (name) => img(theme.id, `sprites/${name}.webp`), scheduleRedraw);
-      for (const frame of theme.layout) place(frame.kind, frame);
-      pair.hidden = !theme.partner;
-      if (theme.partner) pair.textContent = `Switch to ${byId[theme.partner].light ? "light" : "dark"}`;
+      for (const frame of items || theme.layout) {
+        const base=theme.sizes[frame.kind];
+        // Paired variants may have different base shapes; keep the centre and scale.
+        const opposite=theme.partner && byId[theme.partner].sizes[frame.kind];
+        if(items && opposite && Math.abs(frame.w/base.w-frame.h/base.h)>0.02){
+          const ratio=Math.min(350/170,frame.w/opposite.w);
+          const w=Math.round(base.w*ratio),h=Math.round(base.h*ratio);
+          place(frame.kind,{...frame,w,h,x:Math.max(0,Math.min(canvas.width-w,frame.x+(frame.w-w)/2)),y:Math.max(22,Math.min(canvas.height-h,frame.y+(frame.h-h)/2))});
+        }else place(frame.kind,frame);
+      }
+      if(items) layoutChanged();
       renderTray();
     }
 
@@ -339,7 +449,8 @@
       placed.forEach(position);
       scheduleRedraw();
     }).observe(stage);
-    load(themes.find((t) => t.id === "glass") ? "glass" : themes[0].id);
+    const initial=LayoutShare.read(location.search,data);
+    load(initial.theme,initial.mode,initial.items);
     return { load };
   }
 
