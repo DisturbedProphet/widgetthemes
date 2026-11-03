@@ -409,7 +409,6 @@ body::after {
   .nav { gap: 8px; }
   .capabilities { font-size: 12px; }
   .capabilities th, .capabilities td { padding: 8px; }
-  .theme-index { display: none; }
   .pg-toolbar { gap: 8px; }
   .playground.expanded .pg-stage { min-width: 960px; }
 }
