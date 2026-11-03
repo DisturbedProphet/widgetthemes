@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=18">
+  <link rel="stylesheet" href="assets/css/site.css?v=21">
 </head>
 <body>
   <header class="nav">
@@ -162,7 +162,7 @@
             <div class="swatches" id="accent-swatches" aria-label="Accent colours"></div>
           </div>
           <div class="feature-visual accent-visual">
-            <img id="accent-image" alt="The Hi-Fi clock in its original nixie orange">
+            <img id="accent-image" width="796" height="436" alt="The Hi-Fi clock in its original nixie orange">
           </div>
         </article>
 
@@ -331,19 +331,28 @@
     <!-- Feedback -->
     <section class="section feedback" id="feedback">
       <h2>Got an idea, <em>or found a bug?</em></h2>
-      <p class="lede">Suggest a theme, report a bug or send feedback. This opens your email app with your message ready to send. You can also write to <a href="mailto:contact@widgetthemes.com">contact@widgetthemes.com</a>.</p>
-      <form action="mailto:contact@widgetthemes.com" method="get">
+      <p class="lede">Suggest a theme, report a bug or send feedback. You can also write to <a href="mailto:contact@widgetthemes.com">contact@widgetthemes.com</a>.</p>
+      <form action="/api/feedback" method="post" id="feedback-form">
         <label class="select inline">What's this about?
-          <select name="subject">
-            <option value="WidgetThemes theme suggestion">Theme suggestion</option>
-            <option value="WidgetThemes bug report">Bug report</option>
-            <option value="WidgetThemes feedback">Feedback</option>
+          <select name="type">
+            <option value="theme">Theme suggestion</option>
+            <option value="bug">Bug report</option>
+            <option value="feedback">Feedback</option>
           </select>
         </label>
-        <label class="feedback-message">Your message
-          <textarea name="body" rows="5" maxlength="1500" required placeholder="For a bug, say what happened and which computer you're using."></textarea>
+        <label class="feedback-field">Your message
+          <textarea name="message" rows="5" maxlength="4000" required placeholder="For a bug, say what happened and which computer you're using."></textarea>
         </label>
-        <button class="button" type="submit">Open in email</button>
+        <label class="feedback-field">Your email, if you'd like a reply (optional)
+          <input type="email" name="email" maxlength="254" autocomplete="email">
+        </label>
+        <label class="feedback-trap" aria-hidden="true">Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
+        <div class="feedback-send">
+          <button class="button" type="submit">Send</button>
+          <p class="feedback-status" id="feedback-status" role="status"></p>
+        </div>
       </form>
     </section>
   </main>
@@ -381,6 +390,7 @@
   <script src="assets/js/ornament.js?v=15" defer></script>
   <script src="assets/js/tidy.js?v=15" defer></script>
   <script src="assets/js/layout.js?v=15" defer></script>
-  <script src="assets/js/site.js?v=15" defer></script>
+  <script src="assets/js/site.js?v=16" defer></script>
+  <script src="assets/js/feedback.js?v=1" defer></script>
 </body>
 </html>

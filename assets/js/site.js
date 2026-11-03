@@ -54,6 +54,23 @@
     accentDemo(data.accentDemo);
     compareSlider();
     lightbox(byId, families, playground);
+    alignToAddress();
+  }
+
+  // The browser jumps to the address's section before the gallery above it is built, so that
+  // jump lands short. Go there properly now, and again if late fonts move things, unless the
+  // visitor has already started scrolling or is returning to a place the browser remembers.
+  function alignToAddress() {
+    const target = document.getElementById(location.hash.slice(1));
+    const arrival = performance.getEntriesByType("navigation")[0]?.type;
+    if (!target || arrival === "reload" || arrival === "back_forward") return;
+    let moved = false;
+    const stop = () => { moved = true; };
+    for (const type of ["wheel", "touchmove", "keydown", "mousedown"]) window.addEventListener(type, stop, { once: true, passive: true });
+    const align = () => { if (!moved) target.scrollIntoView({ behavior: "instant" }); };
+    align();
+    document.fonts?.ready.then(align);
+    if (document.readyState !== "complete") window.addEventListener("load", align, { once: true });
   }
 
   // MARK: Hero: a laptop that cross-fades between themes
@@ -154,8 +171,8 @@
     const close = () => {
       box.hidden = true; document.body.style.overflow = '';
       inerted.forEach(([node, old])=>{node.inert=old;}); inerted=[];
-      if (origin?.isConnected) origin.focus();
-      else ($(`#theme-grid .theme-card[data-theme="${family?.id}"]`) || $('#theme-search')).focus();
+      if (origin?.isConnected) origin.focus({preventScroll:true});
+      else ($(`#theme-grid .theme-card[data-theme="${family?.id}"]`) || $('#theme-search')).focus({preventScroll:true});
     };
     let family = null, mode = "auto";
     const show = () => {
@@ -164,7 +181,7 @@
       $("#lightbox-image").src = img(id, "preset.webp");
       $("#lightbox-image").alt = `The ${family.title} theme${family.dark ? ` (${theme.light ? "light" : "dark"})` : ""} on a Mac desktop`;
       $('#lightbox-try').href = LayoutShare.query({theme:family.id,mode}) + '#playground';
-      $('#lightbox-try').onclick = event => { event.preventDefault(); close(); playground.load(id,mode); history.replaceState(null,'',LayoutShare.query({theme:family.id,mode})+'#playground'); $('#pg-theme').focus(); $('#playground').scrollIntoView(); };
+      $('#lightbox-try').onclick = event => { event.preventDefault(); close(); playground.load(id,mode); history.replaceState(null,'',LayoutShare.query({theme:family.id,mode})+'#playground'); $('#pg-theme').focus({preventScroll:true}); $('#playground').scrollIntoView(); };
       $("#lightbox-page").href = `themes/${family.id}/${mode === "auto" ? "" : `?mode=${mode}`}`;
       for (const button of modes.querySelectorAll("button")) button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
     };
@@ -456,6 +473,9 @@
 
   // MARK: Widget gallery
 
+  // Widget images are drawn with this much space around them, for their shadows.
+  const WIDGET_MARGIN = 48;
+
   function widgetGallery(byId, lights, families, widgetInfo) {
     const select = $("#wg-theme"), grid = $("#widget-grid");
     for (const t of lights) select.append(el("option", { value: t.id, textContent: t.familyTitle }));
@@ -467,7 +487,7 @@
         const info = widgetInfo[kind] || { title: kind, blurb: "" };
         grid.append(el("article", { className: `widget-card${size.w > size.h * 1.5 ? " medium" : ""}` }, [
           el("div", { className: "stage", style: `background-image:url("${img(id, "wallpaper-small.webp")}")` }, [
-            el("img", { src: img(id, `widgets/${kind}.webp`), alt: `${info.title} widget in ${theme.familyTitle}`, loading: "lazy" }),
+            el("img", { src: img(id, `widgets/${kind}.webp`), alt: `${info.title} widget in ${theme.familyTitle}`, loading: "lazy", width: size.w + WIDGET_MARGIN, height: size.h + WIDGET_MARGIN }),
           ]),
           el("div", { className: "meta" }, [el("b", { textContent: info.title }), el("span", { textContent: info.blurb })]),
         ]));
