@@ -331,7 +331,7 @@ body::after {
 }
 .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
 .footer-brand img { border-radius: 5px; }
-.footer nav { display: flex; gap: 22px; justify-self: end; }
+.footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-self: end; }
 .footer nav a { color: var(--dim); text-decoration: none; font-size: 14px; }
 .footer nav a:hover { color: var(--text); }
 .footer .fine { grid-column: 1 / -1; margin: 0; }
@@ -382,6 +382,13 @@ body::after {
 }
 
 /* Discovery controls and phone preview. */
+.feedback { max-width: 820px; }
+.feedback h2 { font-size: clamp(34px, 4vw, 48px); margin-bottom: 16px; }
+.feedback .lede a { color: var(--text); overflow-wrap: anywhere; }
+.feedback form { margin-top: 24px; }
+.feedback .select { display: flex; flex-wrap: wrap; }
+.feedback-message { display: grid; gap: 8px; margin-bottom: 18px; color: var(--dim); font-size: 13px; }
+.feedback-message textarea { width: 100%; min-height: 130px; padding: 12px 14px; resize: vertical; background: var(--panel); color: var(--text); border: 1px solid var(--stroke); border-radius: 8px; font: 16px/1.5 var(--sans); }
 .theme-search { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 18px; }
 .theme-search input { background: var(--panel); color: var(--text); border: 1px solid var(--stroke); border-radius: 8px; padding: 10px 14px; font: inherit; width: min(100%, 340px); }
 .theme-entry { min-width: 0; }

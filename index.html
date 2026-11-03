@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=16">
+  <link rel="stylesheet" href="assets/css/site.css?v=18">
 </head>
 <body>
   <header class="nav">
@@ -327,6 +327,25 @@
         <p>Of course. Every theme looks good on its own wallpaper, but you can add any image under Wallpapers, or shuffle between them on a schedule.</p>
       </details>
     </section>
+
+    <!-- Feedback -->
+    <section class="section feedback" id="feedback">
+      <h2>Got an idea, <em>or found a bug?</em></h2>
+      <p class="lede">Suggest a theme, report a bug or send feedback. This opens your email app with your message ready to send. You can also write to <a href="mailto:contact@widgetthemes.com">contact@widgetthemes.com</a>.</p>
+      <form action="mailto:contact@widgetthemes.com" method="get">
+        <label class="select inline">What's this about?
+          <select name="subject">
+            <option value="WidgetThemes theme suggestion">Theme suggestion</option>
+            <option value="WidgetThemes bug report">Bug report</option>
+            <option value="WidgetThemes feedback">Feedback</option>
+          </select>
+        </label>
+        <label class="feedback-message">Your message
+          <textarea name="body" rows="5" maxlength="1500" required placeholder="For a bug, say what happened and which computer you're using."></textarea>
+        </label>
+        <button class="button" type="submit">Open in email</button>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
@@ -334,7 +353,8 @@
     <nav>
       <a href="privacy.html">Privacy</a>
       <a href="credits.html">Credits &amp; licences</a>
-      <a href="mailto:gaustin618@icloud.com">Contact</a>
+      <a href="mailto:contact@widgetthemes.com">Contact</a>
+      <a href="#feedback">Feedback</a>
       <a href="#download">Download</a>
     </nav>
     <p class="fine">Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>. Mac and macOS are trademarks of Apple Inc., and Windows of Microsoft Corporation. Linux is a registered trademark of Linus Torvalds. WidgetThemes is an independent app and is not affiliated with or endorsed by Apple or Microsoft.</p>
