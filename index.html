@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=21">
+  <link rel="stylesheet" href="assets/css/site.css?v=28">
 </head>
 <body>
   <header class="nav">
@@ -68,7 +68,7 @@
     <section class="stats" aria-label="At a glance">
       <div><strong data-theme-count>40</strong><span>themes</span></div>
       <div><strong>20</strong><span>widgets</span></div>
-      <div><strong>Optional</strong><span>animations, with reduce-motion support</span></div>
+      <div><strong>3</strong><span>platforms</span></div>
       <div><strong>0</strong><span>trackers or accounts</span></div>
     </section>
 
@@ -101,37 +101,81 @@
     </section>
 
     <!-- Playground -->
-    <section id="playground" class="section">
-      <div class="section-head">
+    <section id="playground" class="section pg-section">
+      <div class="section-head compact">
         <p class="eyebrow">Playground</p>
-        <h2>Arrange a desktop.<br><em>Right here.</em></h2>
-        <p class="lede">Pick a theme, arrange its widgets, then share a link or download a layout for the app. All widget readings are sample data. On phones, open the larger preview or zoom in to explore details.</p>
+        <h2>Arrange a desktop. <em>Right here.</em></h2>
+        <p class="lede">Move, resize and recolour widgets, then take the layout to the app.</p>
       </div>
+      <!-- editor:start -->
       <div class="playground">
-        <div class="pg-toolbar">
-          <label class="select">
-            <span>Theme</span>
-            <select id="pg-theme" aria-label="Theme"></select>
-          </label>
-          <label class="select"><span>Appearance</span><select id="pg-mode"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
-          <button class="chip" id="pg-tidy">Tidy up</button>
-          <button class="chip" id="pg-reset">Reset layout</button>
-          <button class="chip" id="pg-expand" aria-expanded="false">Larger preview</button>
-          <label class="select"><span>Zoom</span><select id="pg-zoom"><option value="1">Fit</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
-          <button class="chip" id="pg-share">Copy layout link</button>
-          <button class="chip" id="pg-download">Download layout</button>
-        </div>
-        <div class="pg-stage-wrap">
-          <div id="pg-stage" class="pg-stage" aria-label="Desktop preview">
-            <img id="pg-ornament" class="pg-ornament" alt="" aria-hidden="true">
-            <canvas id="pg-live" class="pg-ornament" aria-hidden="true" hidden></canvas>
-            <div class="pg-menubar"><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span class="clock" id="pg-clock"></span></div>
+        <div class="pg-toolbar" role="toolbar" aria-label="Playground controls">
+          <div class="pg-group">
+            <div class="select"><select id="pg-theme" aria-label="Theme" hidden></select></div>
+            <label class="select"><span class="pg-sr">Appearance</span><select id="pg-mode" aria-label="Appearance"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option><option value="single" hidden>One look</option></select></label>
+          </div>
+          <div class="pg-group">
+            <button class="chip icon" id="pg-undo" type="button" aria-label="Undo" title="Undo" disabled><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M6 3 2.5 6.5 6 10M3 6.5h6.5a4 4 0 0 1 0 8H7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="chip icon" id="pg-redo" type="button" aria-label="Redo" title="Redo" disabled><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3l3.5 3.5L10 10M13 6.5H6.5a4 4 0 0 0 0 8H9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="chip" id="pg-tidy" type="button">Tidy up</button>
+            <button class="chip" id="pg-reset" type="button">Reset</button>
+          </div>
+          <div class="pg-group">
+            <label class="select"><span class="pg-sr">Zoom</span><select id="pg-zoom" aria-label="Zoom"><option value="1">Fit</option><option value="1.5">150%</option><option value="2">200%</option></select></label>
+            <button class="chip" id="pg-expand" type="button" aria-expanded="false">Larger</button>
+          </div>
+          <div class="pg-group pg-finish">
+            <button class="chip" id="pg-share" type="button">Copy link</button>
+            <button class="button small" id="pg-download" type="button">Download layout</button>
           </div>
         </div>
-        <p class="hint">Sample data · Download includes theme, appearance, widget types and positions only. Open the .widgetthemes file in WidgetThemes, then find it in My Themes. Nothing is uploaded.</p>
-        <p id="pg-status" role="status" class="hint"></p>
-        <div id="pg-tray" class="pg-tray" aria-label="Widgets"></div>
+        <div class="pg-body">
+          <div class="pg-main">
+            <div class="pg-stage-wrap">
+              <div id="pg-stage" class="pg-stage" role="group" aria-label="Desktop preview">
+                <img id="pg-ornament" class="pg-ornament" alt="" aria-hidden="true">
+                <canvas id="pg-live" class="pg-ornament" aria-hidden="true" hidden></canvas>
+                <div id="pg-guide-x" class="pg-guide x" hidden></div>
+                <div id="pg-guide-y" class="pg-guide y" hidden></div>
+                <div class="pg-menubar"><b>Finder</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span class="clock" id="pg-clock"></span></div>
+              </div>
+            </div>
+            <p id="pg-tip" class="pg-tip"></p>
+            <p id="pg-status" role="status" class="pg-status"></p>
+          </div>
+          <div class="pg-side">
+            <div class="pg-side-inner">
+              <section id="pg-inspector" class="pg-box" aria-label="Selected widget" hidden>
+                <h3 id="pg-selected"></h3>
+                <label class="select"><span>Size</span><select id="pg-size" aria-label="Widget size"></select></label>
+                <div class="pg-actions">
+                  <button class="chip" id="pg-front" type="button">To front</button>
+                  <button class="chip" id="pg-back" type="button">To back</button>
+                  <button class="chip" id="pg-remove" type="button">Remove</button>
+                </div>
+              </section>
+              <section class="pg-box">
+                <h3>Widgets <span id="pg-count" class="pg-count"></span></h3>
+                <div id="pg-tray" class="pg-tray" role="group" aria-label="Widgets"></div>
+              </section>
+              <section class="pg-box">
+                <h3>Look</h3>
+                <div id="pg-accent-box">
+                  <div class="pg-accent-row">
+                    <div id="pg-accents" class="pg-swatches" role="group" aria-label="Accent colour"></div>
+                    <input id="pg-accent-custom" class="pg-well" type="color" aria-label="Custom accent colour" title="Any colour">
+                  </div>
+                  <p class="hint">A close preview: the app draws the exact colour.</p>
+                  <p id="pg-accent-note" class="hint" hidden>This theme's accent can't be previewed here, but it's saved in your download.</p>
+                </div>
+                <label class="select"><span>Wallpaper</span><select id="pg-wallpaper" aria-label="Wallpaper"><option value="own">Theme's own</option></select></label>
+              </section>
+              <p class="hint">Readings are sample data. Downloads hold the theme, appearance, accent, wallpaper, and each widget's type, size and place. Nothing is uploaded.</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- editor:end -->
     </section>
 
     <!-- Widgets -->
@@ -141,10 +185,10 @@
         <h2>Twenty widgets,<br><em>drawn for every theme.</em></h2>
         <p class="lede">From system meters to a focus timer, widgets use square or wide designs depending on the theme and widget. Sizes range from 75% to about 200%; the 10.5-point text minimum applies before scaling, so smaller widgets also have smaller text. Previews use sample data.</p>
       </div>
-      <label class="select inline">
+      <div class="select inline">
         <span>Show in</span>
-        <select id="wg-theme" aria-label="Theme for the widget gallery"></select>
-      </label>
+        <select id="wg-theme" aria-label="Theme for the widget gallery" hidden></select>
+      </div>
       <div id="widget-grid" class="widget-grid"></div>
     </section>
 
@@ -388,9 +432,12 @@
   </div>
 
   <script src="assets/js/ornament.js?v=15" defer></script>
-  <script src="assets/js/tidy.js?v=15" defer></script>
-  <script src="assets/js/layout.js?v=15" defer></script>
-  <script src="assets/js/site.js?v=16" defer></script>
+  <script src="assets/js/tidy.js?v=16" defer></script>
+  <script src="assets/js/layout.js?v=16" defer></script>
+  <script src="assets/js/history.js?v=1" defer></script>
+  <script src="assets/js/accent.js?v=2" defer></script>
+  <script src="assets/js/playground.js?v=1" defer></script>
+  <script src="assets/js/site.js?v=20" defer></script>
   <script src="assets/js/feedback.js?v=1" defer></script>
 </body>
 </html>

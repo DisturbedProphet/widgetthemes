@@ -1,6 +1,6 @@
 // Finds tidy places for widgets: no overlaps, a steady gap between neighbours, and edges lined up.
 // The same as Sources/WidgetThemes/App/Tidy.swift, on {x, y, w, h} rectangles with y running down the page.
-window.Tidy = (() => {
+(function (root) {
   "use strict";
 
   /** Space between neighbouring widgets, and how close an edge must be to be pulled into line. */
@@ -88,11 +88,68 @@ window.Tidy = (() => {
     for (const i of order) {
       const f = frames[i];
       const spot = place({ w: f.w, h: f.h }, { x: midX(f), y: midY(f) }, placed, bounds);
+      // Settling from the middle can leave gaps too small to use; rows always use the room there is.
+      if (!fits(spot, placed, bounds)) return rows(frames, bounds);
       result[i] = spot;
       placed.push(spot);
     }
     return result;
   }
 
-  return { place, arrange };
-})();
+  /** Rows centred in the bounds, tallest first, keeping each row's widgets in their left-to-right order. */
+  function rows(frames, bounds) {
+    const order = frames.map((_, i) => i).sort((a, b) => frames[b].h - frames[a].h || midY(frames[a]) - midY(frames[b]));
+    const shelves = [];
+    for (const i of order) {
+      const f = frames[i];
+      const shelf = shelves.find((row) => row.width + GAP + f.w <= bounds.w);
+      if (shelf) {
+        shelf.items.push(i);
+        shelf.width += GAP + f.w;
+      } else {
+        shelves.push({ items: [i], width: f.w, height: f.h });
+      }
+    }
+    const total = shelves.reduce((sum, row) => sum + row.height, 0) + GAP * (shelves.length - 1);
+    const result = frames.slice();
+    let y = bounds.y + Math.max(0, (bounds.h - total) / 2);
+    for (const row of shelves) {
+      let x = bounds.x + (bounds.w - row.width) / 2;
+      for (const i of row.items.sort((a, b) => midX(frames[a]) - midX(frames[b]))) {
+        result[i] = { ...frames[i], x, y };
+        x += frames[i].w + GAP;
+      }
+      y += row.height + GAP;
+    }
+    return result;
+  }
+
+  /** Whether every rectangle sits inside the bounds, clear of the others. */
+  const clear = (frames, bounds) => frames.every((f, i) => fits(f, frames.slice(0, i), bounds));
+
+  /**
+   * Where a dragged widget snaps: to the edge of the bounds, and to a neighbour's edges or a steady
+   * gap beside it, when within 14 points. `lines` are the edges it met, to draw as guides.
+   */
+  function snap(frame, bounds, others) {
+    const xs = [{ to: bounds.x, at: bounds.x }, { to: maxX(bounds) - frame.w, at: maxX(bounds) }];
+    const ys = [{ to: bounds.y, at: bounds.y }, { to: maxY(bounds) - frame.h, at: maxY(bounds) }];
+    for (const o of others) {
+      xs.push({ to: o.x, at: o.x }, { to: maxX(o) + GAP, at: maxX(o) }, { to: o.x - GAP - frame.w, at: o.x }, { to: maxX(o) - frame.w, at: maxX(o) });
+      ys.push({ to: o.y, at: o.y }, { to: maxY(o) + GAP, at: maxY(o) }, { to: o.y - GAP - frame.h, at: o.y }, { to: maxY(o) - frame.h, at: maxY(o) });
+    }
+    const nearest = (targets, v) => {
+      const best = targets.reduce((a, b) => (Math.abs(b.to - v) < Math.abs(a.to - v) ? b : a));
+      return Math.abs(best.to - v) < PULL ? best : null;
+    };
+    const x = nearest(xs, frame.x), y = nearest(ys, frame.y);
+    const lines = [];
+    if (x) lines.push({ axis: "x", at: x.at });
+    if (y) lines.push({ axis: "y", at: y.at });
+    return { x: x ? x.to : frame.x, y: y ? y.to : frame.y, lines };
+  }
+
+  const api = { place, arrange, clear, snap };
+  if (typeof module !== "undefined") module.exports = api;
+  else root.Tidy = api;
+})(typeof window !== "undefined" ? window : globalThis);

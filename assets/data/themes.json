@@ -347,6 +347,32 @@
   "themes" : [
     {
       "accent" : "#C72B1F",
+      "accents" : [
+        {
+          "color" : "#C72B1F",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "paper",
       "group" : "crafted",
       "id" : "paper",
@@ -556,9 +582,9 @@
       "ornament" : {
         "colors" : {
           "ink" : [
-            0.10000000000000001,
-            0.089999999999999997,
-            0.080000000000000002,
+            0.1,
+            0.09,
+            0.08,
             1
           ]
         },
@@ -594,6 +620,28 @@
     },
     {
       "accent" : "#FF33CC",
+      "accents" : [
+        {
+          "color" : "#FF33CC",
+          "name" : "Original"
+        },
+        {
+          "color" : "#26E6FF",
+          "name" : "Cyan"
+        },
+        {
+          "color" : "#B259FF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#99FF33",
+          "name" : "Lime"
+        },
+        {
+          "color" : "#FF801A",
+          "name" : "Orange"
+        }
+      ],
       "family" : "neon",
       "group" : "futuristic",
       "id" : "neon",
@@ -796,8 +844,8 @@
       "ornament" : {
         "colors" : {
           "cyan" : [
-            0.20000000000000001,
-            0.90000000000000002,
+            0.2,
+            0.9,
             1,
             1
           ]
@@ -816,6 +864,32 @@
     },
     {
       "accent" : "#E03829",
+      "accents" : [
+        {
+          "color" : "#E03829",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "bauhaus",
       "group" : "bold",
       "id" : "bauhaus",
@@ -1019,14 +1093,14 @@
         "colors" : {
           "blue" : [
             0.11,
-            0.29999999999999999,
+            0.3,
             0.62,
             1
           ],
           "ink" : [
-            0.089999999999999997,
-            0.089999999999999997,
-            0.089999999999999997,
+            0.09,
+            0.09,
+            0.09,
             1
           ],
           "red" : [
@@ -1036,21 +1110,49 @@
             1
           ],
           "yellow" : [
-            0.95999999999999996,
-            0.72999999999999998,
+            0.96,
+            0.73,
             0.13,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Primary colours and pure geometry on cream",
       "title" : "Bauhaus"
     },
     {
       "accent" : "#DEBA66",
+      "accents" : [
+        {
+          "color" : "#DEBA66",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "grove",
       "group" : "nature",
       "id" : "grove",
@@ -1247,32 +1349,31 @@
         "colors" : {
           "gold" : [
             0.87,
-            0.72999999999999998,
-            0.40000000000000002,
+            0.73,
+            0.4,
             1
           ],
           "sage" : [
-            0.64000000000000001,
-            0.76000000000000001,
-            0.59999999999999998,
+            0.64,
+            0.76,
+            0.6,
             1
           ],
           "terracotta" : [
-            0.89000000000000001,
+            0.89,
             0.5,
-            0.33000000000000002,
+            0.33,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Didot, italics and sprigs on forest green",
       "title" : "Grove"
     },
     {
       "accent" : "#FFFFFF",
+      "accents" : [],
       "family" : "aero",
       "group" : "sleek",
       "id" : "aero",
@@ -1480,18 +1581,15 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Glossy glass, gel bars and bubbles",
       "title" : "Aero"
     },
     {
       "accent" : "#000000",
+      "accents" : [],
       "family" : "classic",
       "group" : "retro",
       "id" : "classic",
@@ -1692,9 +1790,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "disk" : {
             "h" : 70,
@@ -1727,6 +1823,28 @@
     },
     {
       "accent" : "#FCEB0D",
+      "accents" : [
+        {
+          "color" : "#FCEB0D",
+          "name" : "Original"
+        },
+        {
+          "color" : "#1AF2FF",
+          "name" : "Cyan"
+        },
+        {
+          "color" : "#FF29B8",
+          "name" : "Magenta"
+        },
+        {
+          "color" : "#9EFF1A",
+          "name" : "Acid"
+        },
+        {
+          "color" : "#FF4233",
+          "name" : "Signal red"
+        }
+      ],
       "family" : "overdrive",
       "group" : "futuristic",
       "id" : "overdrive",
@@ -1936,15 +2054,15 @@
       "ornament" : {
         "colors" : {
           "black" : [
-            0.035000000000000003,
-            0.035000000000000003,
-            0.044999999999999998,
+            0.035,
+            0.035,
+            0.045,
             1
           ],
           "yellow" : [
-            0.98999999999999999,
-            0.92000000000000004,
-            0.050000000000000003,
+            0.99,
+            0.92,
+            0.05,
             1
           ]
         },
@@ -1962,6 +2080,28 @@
     },
     {
       "accent" : "#FF8024",
+      "accents" : [
+        {
+          "color" : "#FF8024",
+          "name" : "Original"
+        },
+        {
+          "color" : "#73D9FF",
+          "name" : "Ice"
+        },
+        {
+          "color" : "#FF3D2E",
+          "name" : "Red LED"
+        },
+        {
+          "color" : "#6BFF80",
+          "name" : "Green"
+        },
+        {
+          "color" : "#BF8CFF",
+          "name" : "Violet"
+        }
+      ],
       "family" : "hifi",
       "group" : "retro",
       "id" : "hifi",
@@ -2162,9 +2302,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "plate" : {
             "h" : 22,
@@ -2179,6 +2317,36 @@
     },
     {
       "accent" : "#EBB83D",
+      "accents" : [
+        {
+          "color" : "#EBB83D",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "groove",
       "group" : "retro",
       "id" : "groove",
@@ -2367,39 +2535,67 @@
       "ornament" : {
         "colors" : {
           "cream" : [
-            0.96999999999999997,
-            0.90000000000000002,
-            0.76000000000000001,
+            0.97,
+            0.9,
+            0.76,
             1
           ],
           "mustard" : [
-            0.92000000000000004,
-            0.71999999999999997,
-            0.23999999999999999,
+            0.92,
+            0.72,
+            0.24,
             1
           ],
           "orange" : [
-            0.93000000000000005,
-            0.47999999999999998,
-            0.17000000000000001,
+            0.93,
+            0.48,
+            0.17,
             1
           ],
           "rust" : [
-            0.73999999999999999,
-            0.27000000000000002,
-            0.14999999999999999,
+            0.74,
+            0.27,
+            0.15,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Seventies stripes in orange and mustard",
       "title" : "Groove"
     },
     {
       "accent" : "#FAE88F",
+      "accents" : [
+        {
+          "color" : "#FAE88F",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "chalk",
       "group" : "crafted",
       "id" : "chalk",
@@ -2603,26 +2799,26 @@
         "colors" : {
           "blue" : [
             0.62,
-            0.82999999999999996,
-            0.94999999999999996,
+            0.83,
+            0.95,
             1
           ],
           "ink" : [
-            0.95999999999999996,
-            0.95999999999999996,
-            0.93000000000000005,
-            0.93999999999999995
+            0.96,
+            0.96,
+            0.93,
+            0.94
           ],
           "pink" : [
-            0.96999999999999997,
-            0.66000000000000003,
-            0.72999999999999998,
+            0.97,
+            0.66,
+            0.73,
             1
           ],
           "yellow" : [
-            0.97999999999999998,
-            0.91000000000000003,
-            0.56000000000000005,
+            0.98,
+            0.91,
+            0.56,
             1
           ]
         },
@@ -2658,6 +2854,36 @@
     },
     {
       "accent" : "#FFD94C",
+      "accents" : [
+        {
+          "color" : "#FFD94C",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "quest",
       "group" : "retro",
       "id" : "quest",
@@ -2858,9 +3084,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "banner" : {
             "h" : 28,
@@ -2881,6 +3105,36 @@
     },
     {
       "accent" : "#0A85FF",
+      "accents" : [
+        {
+          "color" : "#0A85FF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "glass",
       "group" : "sleek",
       "id" : "glass",
@@ -3074,18 +3328,36 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "System-style widgets on rounded frosted glass",
       "title" : "Glass"
     },
     {
       "accent" : "#FFB219",
+      "accents" : [
+        {
+          "color" : "#FFB219",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB21A",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#59FF73",
+          "name" : "Green"
+        },
+        {
+          "color" : "#4CE6FF",
+          "name" : "Cyan"
+        },
+        {
+          "color" : "#EBF0F5",
+          "name" : "White"
+        }
+      ],
       "family" : "cockpit",
       "group" : "retro",
       "id" : "cockpit",
@@ -3286,9 +3558,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "placard" : {
             "h" : 20,
@@ -3303,6 +3573,28 @@
     },
     {
       "accent" : "#6BFF7A",
+      "accents" : [
+        {
+          "color" : "#6BFF7A",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB21A",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#59FF73",
+          "name" : "Green"
+        },
+        {
+          "color" : "#4CE6FF",
+          "name" : "Cyan"
+        },
+        {
+          "color" : "#EBF0F5",
+          "name" : "White"
+        }
+      ],
       "family" : "apollo",
       "group" : "retro",
       "id" : "apollo",
@@ -3496,9 +3788,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "plate0" : {
             "h" : 30,
@@ -3507,6 +3797,30 @@
             "y" : 29
           },
           "plate1" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate10" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate11" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate12" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate13" : {
             "h" : 30,
             "w" : 160,
             "x" : 80,
@@ -3559,30 +3873,6 @@
             "w" : 160,
             "x" : 80,
             "y" : 29
-          },
-          "plate10" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate11" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate12" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate13" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
           }
         }
       },
@@ -3591,6 +3881,36 @@
     },
     {
       "accent" : "#4CFFB8",
+      "accents" : [
+        {
+          "color" : "#4CFFB8",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "abyss",
       "group" : "nature",
       "id" : "abyss",
@@ -3793,27 +4113,51 @@
       "ornament" : {
         "colors" : {
           "brass" : [
-            0.80000000000000004,
+            0.8,
             0.62,
-            0.32000000000000001,
+            0.32,
             1
           ],
           "brassDark" : [
-            0.40000000000000002,
-            0.27000000000000002,
-            0.10000000000000001,
+            0.4,
+            0.27,
+            0.1,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Brass submarine gauges and sonar in the deep",
       "title" : "Abyss"
     },
     {
       "accent" : "#D13324",
+      "accents" : [
+        {
+          "color" : "#D13324",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "atlas",
       "group" : "crafted",
       "id" : "atlas",
@@ -4017,26 +4361,50 @@
         "colors" : {
           "ink" : [
             0.16,
-            0.14000000000000001,
+            0.14,
             0.11,
             1
           ],
           "route" : [
-            0.81999999999999995,
-            0.20000000000000001,
-            0.14000000000000001,
+            0.82,
+            0.2,
+            0.14,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Legend boxes and scale bars on a topographic map",
       "title" : "Atlas"
     },
     {
       "accent" : "#D13824",
+      "accents" : [
+        {
+          "color" : "#D13824",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "kyoto",
       "group" : "crafted",
       "id" : "kyoto",
@@ -4237,9 +4605,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "column" : {
             "h" : 110,
@@ -4260,6 +4626,32 @@
     },
     {
       "accent" : "#CC2424",
+      "accents" : [
+        {
+          "color" : "#CC2424",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "cork",
       "group" : "crafted",
       "id" : "cork",
@@ -4462,21 +4854,49 @@
       "ornament" : {
         "colors" : {
           "red" : [
-            0.80000000000000004,
-            0.14000000000000001,
-            0.14000000000000001,
+            0.8,
+            0.14,
+            0.14,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Sticky notes, polaroids and red string",
       "title" : "Corkboard"
     },
     {
       "accent" : "#73FFC7",
+      "accents" : [
+        {
+          "color" : "#73FFC7",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "polar",
       "group" : "minimal",
       "id" : "polar",
@@ -4663,18 +5083,44 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Clean type on frosted ice under the aurora",
       "title" : "Polar"
     },
     {
       "accent" : "#FF4233",
+      "accents" : [
+        {
+          "color" : "#FF4233",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "paper",
       "group" : "minimal",
       "id" : "mono",
@@ -4868,9 +5314,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "date" : {
             "h" : 21,
@@ -4885,6 +5329,36 @@
     },
     {
       "accent" : "#8585FF",
+      "accents" : [
+        {
+          "color" : "#8585FF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "lumen",
       "group" : "minimal",
       "id" : "slate",
@@ -5071,18 +5545,40 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Soft dark cards on a deep, glowing desk",
       "title" : "Slate"
     },
     {
       "accent" : "#5C5CF5",
+      "accents" : [
+        {
+          "color" : "#5C5CF5",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "lumen",
       "group" : "minimal",
       "id" : "lumen",
@@ -5269,18 +5765,40 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Soft white cards on a bright, airy desk",
       "title" : "Lumen"
     },
     {
       "accent" : "#FF5C14",
+      "accents" : [
+        {
+          "color" : "#FF5C14",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "field",
       "group" : "minimal",
       "id" : "field",
@@ -5481,18 +5999,44 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Industrial mono numerals with an orange accent",
       "title" : "Field"
     },
     {
       "accent" : "#FF6B1F",
+      "accents" : [
+        {
+          "color" : "#FF6B1F",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "field",
       "group" : "minimal",
       "id" : "fieldDark",
@@ -5693,18 +6237,44 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Field's mono numerals and orange, after dark",
       "title" : "Field Dark"
     },
     {
       "accent" : "#52F2DB",
+      "accents" : [
+        {
+          "color" : "#52F2DB",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "obsidian",
       "group" : "sleek",
       "id" : "obsidian",
@@ -5886,53 +6456,81 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.32000000000000001,
-            0.94999999999999996,
-            0.85999999999999999,
+            0.32,
+            0.95,
+            0.86,
             1
           ],
           "accent2" : [
-            0.64000000000000001,
-            0.46999999999999997,
+            0.64,
+            0.47,
             1,
             1
           ],
           "accent3" : [
             1,
-            0.46999999999999997,
-            0.69999999999999996,
+            0.47,
+            0.7,
             1
           ],
           "gradient" : [
             [
-              0.32000000000000001,
-              0.94999999999999996,
-              0.85999999999999999,
+              0.32,
+              0.95,
+              0.86,
               1
             ],
             [
-              0.64000000000000001,
-              0.46999999999999997,
+              0.64,
+              0.47,
               1,
               1
             ],
             [
               1,
-              0.46999999999999997,
-              0.69999999999999996,
+              0.47,
+              0.7,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Black glass with iridescent edges and hairline numerals",
       "title" : "Obsidian"
     },
     {
       "accent" : "#5C8FFF",
+      "accents" : [
+        {
+          "color" : "#5C8FFF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "midnight",
       "group" : "futuristic",
       "id" : "midnight",
@@ -6128,47 +6726,75 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.35999999999999999,
-            0.56000000000000005,
+            0.36,
+            0.56,
             1,
             1
           ],
           "accent2" : [
-            0.69999999999999996,
+            0.7,
             0.44,
             1,
             1
           ],
           "accent3" : [
-            0.29999999999999999,
-            0.90000000000000002,
-            0.84999999999999998,
+            0.3,
+            0.9,
+            0.85,
             1
           ],
           "gradient" : [
             [
-              0.35999999999999999,
-              0.56000000000000005,
+              0.36,
+              0.56,
               1,
               1
             ],
             [
-              0.69999999999999996,
+              0.7,
               0.44,
               1,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "A deep-navy dashboard with glowing gradient charts",
       "title" : "Midnight"
     },
     {
       "accent" : "#FF335C",
+      "accents" : [
+        {
+          "color" : "#FF335C",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "pulse",
       "group" : "sleek",
       "id" : "pulse",
@@ -6351,46 +6977,74 @@
         "colors" : {
           "accent" : [
             1,
-            0.20000000000000001,
-            0.35999999999999999,
+            0.2,
+            0.36,
             1
           ],
           "accent2" : [
             0.62,
             1,
-            0.17999999999999999,
+            0.18,
             1
           ],
           "accent3" : [
-            0.17999999999999999,
-            0.85999999999999999,
+            0.18,
+            0.86,
             1,
             1
           ],
           "gradient" : [
             [
               1,
-              0.20000000000000001,
-              0.35999999999999999,
+              0.2,
+              0.36,
               1
             ],
             [
               1,
-              0.20000000000000001,
-              0.35999999999999999,
+              0.2,
+              0.36,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Activity rings and a heartbeat in red, green and cyan",
       "title" : "Pulse"
     },
     {
       "accent" : "#BD99FF",
+      "accents" : [
+        {
+          "color" : "#BD99FF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "prism",
       "group" : "sleek",
       "id" : "prism",
@@ -6579,59 +7233,87 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.73999999999999999,
-            0.59999999999999998,
+            0.74,
+            0.6,
             1,
             1
           ],
           "accent2" : [
             1,
             0.62,
-            0.45000000000000001,
+            0.45,
             1
           ],
           "accent3" : [
-            0.40000000000000002,
-            0.80000000000000004,
+            0.4,
+            0.8,
             1,
             1
           ],
           "gradient" : [
             [
-              0.34999999999999998,
+              0.35,
               0.75,
               1,
               1
             ],
             [
-              0.69999999999999996,
+              0.7,
               0.5,
               1,
               1
             ],
             [
               1,
-              0.45000000000000001,
-              0.59999999999999998,
+              0.45,
+              0.6,
               1
             ],
             [
               1,
               0.75,
-              0.34999999999999998,
+              0.35,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Dark frosted glass that splits the light into colour",
       "title" : "Prism"
     },
     {
       "accent" : "#FF2B29",
+      "accents" : [
+        {
+          "color" : "#FF2B29",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "carbon",
       "group" : "futuristic",
       "id" : "carbon",
@@ -6814,46 +7496,74 @@
         "colors" : {
           "accent" : [
             1,
-            0.17000000000000001,
+            0.17,
             0.16,
             1
           ],
           "accent2" : [
-            0.94999999999999996,
-            0.94999999999999996,
-            0.94999999999999996,
+            0.95,
+            0.95,
+            0.95,
             1
           ],
           "accent3" : [
             1,
-            0.78000000000000003,
-            0.10000000000000001,
+            0.78,
+            0.1,
             1
           ],
           "gradient" : [
             [
               1,
-              0.17000000000000001,
+              0.17,
               0.16,
               1
             ],
             [
               1,
-              0.17000000000000001,
+              0.17,
               0.16,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Carbon fibre, bold italic figures and shift lights",
       "title" : "Carbon"
     },
     {
       "accent" : "#F2CC8F",
+      "accents" : [
+        {
+          "color" : "#F2CC8F",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "velvet",
       "group" : "sleek",
       "id" : "velvet",
@@ -7035,47 +7745,75 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.94999999999999996,
-            0.80000000000000004,
-            0.56000000000000005,
+            0.95,
+            0.8,
+            0.56,
             1
           ],
           "accent2" : [
-            0.95999999999999996,
-            0.56000000000000005,
-            0.66000000000000003,
+            0.96,
+            0.56,
+            0.66,
             1
           ],
           "accent3" : [
-            0.80000000000000004,
+            0.8,
             0.62,
             1,
             1
           ],
           "gradient" : [
             [
-              0.95999999999999996,
-              0.56000000000000005,
-              0.66000000000000003,
+              0.96,
+              0.56,
+              0.66,
               1
             ],
             [
-              0.94999999999999996,
-              0.80000000000000004,
-              0.56000000000000005,
+              0.95,
+              0.8,
+              0.56,
               1
             ]
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Plum velvet, champagne glow and fine italic type",
       "title" : "Velvet"
     },
     {
       "accent" : "#FF6B66",
+      "accents" : [
+        {
+          "color" : "#FF6B66",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "blueprint",
       "group" : "crafted",
       "id" : "blueprint",
@@ -7262,9 +8000,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "dimension" : {
             "h" : 21,
@@ -7285,6 +8021,28 @@
     },
     {
       "accent" : "#8F9396",
+      "accents" : [
+        {
+          "color" : "#8F9396",
+          "name" : "Original"
+        },
+        {
+          "color" : "#735C9E",
+          "name" : "Purple"
+        },
+        {
+          "color" : "#33999E",
+          "name" : "Teal"
+        },
+        {
+          "color" : "#CC383D",
+          "name" : "Red"
+        },
+        {
+          "color" : "#F2C733",
+          "name" : "Yellow"
+        }
+      ],
       "family" : "pocketLCD",
       "group" : "retro",
       "id" : "pocketLCD",
@@ -7478,9 +8236,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "prompt" : {
             "h" : 28,
@@ -7495,6 +8251,28 @@
     },
     {
       "accent" : "#7D8CFF",
+      "accents" : [
+        {
+          "color" : "#7D8CFF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#4CC7A6",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#FF8073",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#B880F2",
+          "name" : "Lilac"
+        },
+        {
+          "color" : "#4CA6FF",
+          "name" : "Sky"
+        }
+      ],
       "family" : "soft",
       "group" : "minimal",
       "id" : "soft",
@@ -7669,15 +8447,15 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.48999999999999999,
-            0.54900000000000004,
+            0.49,
+            0.549,
             1,
             1
           ],
           "dark" : [
-            0.76500000000000001,
-            0.78800000000000003,
-            0.82699999999999996,
+            0.765,
+            0.788,
+            0.827,
             1
           ],
           "light" : [
@@ -7687,21 +8465,41 @@
             1
           ],
           "surface" : [
-            0.89000000000000001,
-            0.91000000000000003,
-            0.93700000000000006,
+            0.89,
+            0.91,
+            0.937,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Soft UI: panels pressed out of one pale surface, inset dials, one periwinkle accent",
       "title" : "Soft"
     },
     {
       "accent" : "#A72C24",
+      "accents" : [
+        {
+          "color" : "#A72C24",
+          "name" : "Original"
+        },
+        {
+          "color" : "#263873",
+          "name" : "Ink blue"
+        },
+        {
+          "color" : "#1F5938",
+          "name" : "Bottle green"
+        },
+        {
+          "color" : "#B28529",
+          "name" : "Gold"
+        },
+        {
+          "color" : "#1F1A17",
+          "name" : "Black"
+        }
+      ],
       "family" : "scholar",
       "group" : "crafted",
       "id" : "scholar",
@@ -7888,9 +8686,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "seal" : {
             "h" : 50,
@@ -7905,6 +8701,28 @@
     },
     {
       "accent" : "#E3262B",
+      "accents" : [
+        {
+          "color" : "#E3262B",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FF730D",
+          "name" : "Orange"
+        },
+        {
+          "color" : "#7340B2",
+          "name" : "Purple"
+        },
+        {
+          "color" : "#F266A6",
+          "name" : "Pink"
+        },
+        {
+          "color" : "#009999",
+          "name" : "Teal"
+        }
+      ],
       "family" : "bricks",
       "group" : "bold",
       "id" : "bricks",
@@ -8105,18 +8923,36 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Glossy toy bricks with studs on top, primary colours and chunky rounded type",
       "title" : "Bricks"
     },
     {
       "accent" : "#FF5B5B",
+      "accents" : [
+        {
+          "color" : "#FF5B5B",
+          "name" : "Original"
+        },
+        {
+          "color" : "#F23399",
+          "name" : "Magenta"
+        },
+        {
+          "color" : "#FF801A",
+          "name" : "Orange"
+        },
+        {
+          "color" : "#33BF59",
+          "name" : "Green"
+        },
+        {
+          "color" : "#8C4CE6",
+          "name" : "Purple"
+        }
+      ],
       "family" : "comic",
       "group" : "bold",
       "id" : "comic",
@@ -8296,9 +9132,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "burst" : {
             "h" : 110,
@@ -8319,6 +9153,28 @@
     },
     {
       "accent" : "#D9572B",
+      "accents" : [
+        {
+          "color" : "#D9572B",
+          "name" : "Original"
+        },
+        {
+          "color" : "#C72633",
+          "name" : "Cherry"
+        },
+        {
+          "color" : "#738C33",
+          "name" : "Avocado"
+        },
+        {
+          "color" : "#26A6B2",
+          "name" : "Turquoise"
+        },
+        {
+          "color" : "#E6738C",
+          "name" : "Pink"
+        }
+      ],
       "family" : "atomic",
       "group" : "retro",
       "id" : "atomic",
@@ -8505,9 +9361,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "star" : {
             "h" : 64,
@@ -8528,6 +9382,28 @@
     },
     {
       "accent" : "#E3000F",
+      "accents" : [
+        {
+          "color" : "#E3000F",
+          "name" : "Original"
+        },
+        {
+          "color" : "#0054BF",
+          "name" : "Blue"
+        },
+        {
+          "color" : "#FF6600",
+          "name" : "Orange"
+        },
+        {
+          "color" : "#009959",
+          "name" : "Green"
+        },
+        {
+          "color" : "#121212",
+          "name" : "Black"
+        }
+      ],
       "family" : "swiss",
       "group" : "bold",
       "id" : "swiss",
@@ -8714,9 +9590,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "heading" : {
             "h" : 44,
@@ -8731,6 +9605,36 @@
     },
     {
       "accent" : "#E2A21B",
+      "accents" : [
+        {
+          "color" : "#E2A21B",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
       "family" : "stainedGlass",
       "group" : "crafted",
       "id" : "stainedGlass",
@@ -8917,18 +9821,36 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
+        "colors" : {},
+        "sprites" : {}
       },
       "tagline" : "Leaded jewel-tone panes lit from behind; the clock is a rose window",
       "title" : "Stained Glass"
     },
     {
       "accent" : "#1B1B1B",
+      "accents" : [
+        {
+          "color" : "#1B1B1B",
+          "name" : "Original"
+        },
+        {
+          "color" : "#B23333",
+          "name" : "Red"
+        },
+        {
+          "color" : "#334C8C",
+          "name" : "Blue"
+        },
+        {
+          "color" : "#33734C",
+          "name" : "Green"
+        },
+        {
+          "color" : "#A67A26",
+          "name" : "Ochre"
+        }
+      ],
       "family" : "eink",
       "group" : "minimal",
       "id" : "eink",
@@ -9101,9 +10023,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "footer" : {
             "h" : 23,
@@ -9118,6 +10038,28 @@
     },
     {
       "accent" : "#FF3B00",
+      "accents" : [
+        {
+          "color" : "#FF3B00",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFD900",
+          "name" : "Yellow"
+        },
+        {
+          "color" : "#2659FF",
+          "name" : "Blue"
+        },
+        {
+          "color" : "#FF59A6",
+          "name" : "Pink"
+        },
+        {
+          "color" : "#26D166",
+          "name" : "Green"
+        }
+      ],
       "family" : "brutalist",
       "group" : "bold",
       "id" : "brutalist",
@@ -9304,9 +10246,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "headline" : {
             "h" : 76,
@@ -9321,6 +10261,32 @@
     },
     {
       "accent" : "#7F8F52",
+      "accents" : [
+        {
+          "color" : "#7F8F52",
+          "name" : "Original"
+        },
+        {
+          "color" : "#CC2626",
+          "name" : "Crimson"
+        },
+        {
+          "color" : "#1F59D9",
+          "name" : "Cobalt"
+        },
+        {
+          "color" : "#1A7A4C",
+          "name" : "Forest"
+        },
+        {
+          "color" : "#F27314",
+          "name" : "Tangerine"
+        },
+        {
+          "color" : "#8038A6",
+          "name" : "Plum"
+        }
+      ],
       "family" : "botanical",
       "group" : "nature",
       "id" : "botanical",
@@ -9514,9 +10480,7 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "card" : {
             "h" : 64,
@@ -9537,6 +10501,28 @@
     },
     {
       "accent" : "#FF4FA8",
+      "accents" : [
+        {
+          "color" : "#FF4FA8",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FF6B2E",
+          "name" : "Orange"
+        },
+        {
+          "color" : "#785CCC",
+          "name" : "Purple"
+        },
+        {
+          "color" : "#EB3340",
+          "name" : "Red"
+        },
+        {
+          "color" : "#0078BF",
+          "name" : "Blue"
+        }
+      ],
       "family" : "riso",
       "group" : "crafted",
       "id" : "riso",
@@ -9727,13 +10713,13 @@
           "pink" : [
             1,
             0.31,
-            0.66000000000000003,
+            0.66,
             1
           ],
           "teal" : [
-            0.040000000000000001,
-            0.65000000000000002,
-            0.66000000000000003,
+            0.04,
+            0.65,
+            0.66,
             1
           ]
         },
@@ -9751,6 +10737,28 @@
     },
     {
       "accent" : "#E0DDD5",
+      "accents" : [
+        {
+          "color" : "#E0DDD5",
+          "name" : "Original"
+        },
+        {
+          "color" : "#B23333",
+          "name" : "Red"
+        },
+        {
+          "color" : "#334C8C",
+          "name" : "Blue"
+        },
+        {
+          "color" : "#33734C",
+          "name" : "Green"
+        },
+        {
+          "color" : "#A67A26",
+          "name" : "Ochre"
+        }
+      ],
       "family" : "eink",
       "group" : "minimal",
       "id" : "einkDark",
@@ -9923,9 +10931,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "footer" : {
             "h" : 23,
@@ -9940,6 +10946,28 @@
     },
     {
       "accent" : "#FF3B00",
+      "accents" : [
+        {
+          "color" : "#FF3B00",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFD900",
+          "name" : "Yellow"
+        },
+        {
+          "color" : "#2659FF",
+          "name" : "Blue"
+        },
+        {
+          "color" : "#FF59A6",
+          "name" : "Pink"
+        },
+        {
+          "color" : "#26D166",
+          "name" : "Green"
+        }
+      ],
       "family" : "brutalist",
       "group" : "bold",
       "id" : "brutalistDark",
@@ -10126,9 +11154,7 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {
-
-        },
+        "colors" : {},
         "sprites" : {
           "headline" : {
             "h" : 76,
@@ -10143,6 +11169,28 @@
     },
     {
       "accent" : "#FF4FA8",
+      "accents" : [
+        {
+          "color" : "#FF4FA8",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FF6B2E",
+          "name" : "Orange"
+        },
+        {
+          "color" : "#785CCC",
+          "name" : "Purple"
+        },
+        {
+          "color" : "#EB3340",
+          "name" : "Red"
+        },
+        {
+          "color" : "#0078BF",
+          "name" : "Blue"
+        }
+      ],
       "family" : "riso",
       "group" : "crafted",
       "id" : "risoDark",
@@ -10331,14 +11379,14 @@
       "ornament" : {
         "colors" : {
           "pink" : [
-            0.92000000000000004,
+            0.92,
             0.22,
-            0.56000000000000005,
+            0.56,
             1
           ],
           "teal" : [
-            0.050000000000000003,
-            0.59999999999999998,
+            0.05,
+            0.6,
             0.62,
             1
           ]
@@ -10357,6 +11405,28 @@
     },
     {
       "accent" : "#7D8CFF",
+      "accents" : [
+        {
+          "color" : "#7D8CFF",
+          "name" : "Original"
+        },
+        {
+          "color" : "#4CC7A6",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#FF8073",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#B880F2",
+          "name" : "Lilac"
+        },
+        {
+          "color" : "#4CA6FF",
+          "name" : "Sky"
+        }
+      ],
       "family" : "soft",
       "group" : "minimal",
       "id" : "softDark",
@@ -10531,33 +11601,31 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.48999999999999999,
-            0.54900000000000004,
+            0.49,
+            0.549,
             1,
             1
           ],
           "dark" : [
-            0.098000000000000004,
+            0.098,
             0.106,
             0.122,
             1
           ],
           "light" : [
-            0.23499999999999999,
+            0.235,
             0.25,
-            0.28199999999999997,
+            0.282,
             1
           ],
           "surface" : [
-            0.16500000000000001,
-            0.17599999999999999,
-            0.20000000000000001,
+            0.165,
+            0.176,
+            0.2,
             1
           ]
         },
-        "sprites" : {
-
-        }
+        "sprites" : {}
       },
       "tagline" : "Soft UI in the dark: panels pressed out of graphite, one periwinkle accent",
       "title" : "Soft Dark"

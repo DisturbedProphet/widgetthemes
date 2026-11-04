@@ -9,6 +9,7 @@
     const requested = catalog.themes.find(t => t.id === params.get('theme'));
     const family = families.find(f => f.id === requested?.family || f.id === requested?.id) || families[0];
     const result = {v:1, theme:family.id, mode:modes.includes(params.get('mode')) ? params.get('mode') : 'auto'};
+    if (/^#[0-9a-f]{6}$/i.test(params.get('accent'))) result.accent = params.get('accent');
     const raw = params.get('layout');
     if (!raw || raw.length > 8000) return result;
     try {
@@ -25,7 +26,12 @@
           && Math.abs(item.w / base.w - item.h / base.h) < 0.02)
           && item.x >= 0 && item.y >= 0 && item.x + item.w <= catalog.canvas.width && item.y + item.h <= catalog.canvas.height;
       });
-      if (valid) return {v:1,theme:f.id,mode:value.mode,items:value.items.map(({kind,x,y,w,h})=>({kind,x,y,w,h}))};
+      if (valid) {
+        const look = {};
+        if (/^#[0-9a-f]{6}$/i.test(value.accent)) look.accent = value.accent;
+        if (catalog.themes.some(t => t.id === value.wallpaper)) look.wallpaper = value.wallpaper;
+        return {v:1,theme:f.id,mode:value.mode,...look,items:value.items.map(({kind,x,y,w,h})=>({kind,x,y,w,h}))};
+      }
     } catch { /* An invalid or future URL opens a safe stock theme. */ }
     return result;
   }
@@ -36,17 +42,18 @@
   }
   function envelope(state, catalog, skin, id, now = Date.now()) {
     const clean = read(query(state), catalog);
-    if (!clean.items?.length) throw new Error('Add a widget before downloading your layout.');
+    if (!clean.items?.length) throw new Error('Add a widget first.');
     const theme = catalog.themes.find(t => t.id === skin && t.family === clean.theme);
     if (!theme) throw new Error('Choose a valid theme.');
     const scales = [[0.75,'small'],[1,'medium'],[1.25,'large'],[1.5,'huge'],[350/170,'double']];
     const family = catalog.families.find(f => f.id === clean.theme);
-    return {format:'WidgetThemes Theme',version:1,theme:{
-      ...(id ? {id} : {}),name:`${family.title} browser layout`,created:now/1000-978307200,wallpaper:skin,
+    return {format:'WidgetThemes Theme',version:1,...(clean.accent ? {accents:{[skin]:clean.accent}} : {}),theme:{
+      ...(id ? {id} : {}),name:`${family.title} browser layout`,created:now/1000-978307200,wallpaper:clean.wallpaper || skin,
       widgets:clean.items.map(item => {
         const base = theme.kinds.find(k=>k.kind===item.kind);
         const ratio = item.w/base.w;
-        const [scale,name] = scales.find(([s])=>s>=ratio-0.00001) || scales[scales.length-1];
+        // A point's rounding mustn't tip a widget into the next size up.
+        const [scale,name] = scales.find(([s])=>s*base.w>=item.w-0.5001) || scales[scales.length-1];
         return {config:{kind:item.kind,skin,scale:name,fit:Math.min(1,ratio/scale),origin:[0,0],...(family.dark?{variant:clean.mode}:{})},
           fx:clamp(item.x / Math.max(1,catalog.canvas.width-item.w),1),
           fy:clamp(item.y / Math.max(1,catalog.canvas.height-item.h),1)};
