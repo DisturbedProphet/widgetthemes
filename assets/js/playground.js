@@ -137,7 +137,10 @@
     const stage = $("#pg-stage"), tray = $("#pg-tray"), select = $("#pg-theme"), appearance = $("#pg-mode");
     const wrap = $(".pg-stage-wrap"), status = $("#pg-status"), tip = $("#pg-tip"), panel = $(".playground");
     let mode = "auto";
+    // The website's desk is always this size. In the apps it's the display being arranged (`real`,
+    // set by Editor/editor.js), so what's arranged is what lands on it.
     const canvas = data.canvas;
+    const menuBar = canvas.top ?? 22;
     // Widget images carry transparent padding (for shadows and tilted paper) around the widget itself.
     const pad = data.pad || 0;
     // The sizes the app offers, as multiples of a widget's natural size.
@@ -154,7 +157,7 @@
 
     function redraw() {
       frame = 0;
-      if (!drawing) return;
+      if (!drawing && !canvas.real) return;
       const ratio = window.devicePixelRatio || 1;
       const width = Math.round(stage.clientWidth * ratio), height = Math.round(stage.clientHeight * ratio);
       if (live.width !== width || live.height !== height) Object.assign(live, { width, height });
@@ -330,7 +333,7 @@
 
     const scale = () => stage.clientWidth / canvas.width;
     // Where widgets may settle: below the menu bar, clear of the edges.
-    const desk = { x: 16, y: 40, w: canvas.width - 32, h: canvas.height - 56 };
+    const desk = { x: 16, y: menuBar + 18, w: canvas.width - 32, h: canvas.height - menuBar - 34 };
 
     let glideRun = 0, gliding = null;
     /** Puts widgets still floating at their destinations, so what's saved is where they're going. */
@@ -394,7 +397,7 @@
     }
 
     const clampX = (item, x) => Math.min(Math.max(x, 0), canvas.width - item.w);
-    const clampY = (item, y) => Math.min(Math.max(y, 22), canvas.height - item.h);
+    const clampY = (item, y) => Math.min(Math.max(y, menuBar), canvas.height - item.h);
 
     function place(kind, frame) {
       const title = widgetInfo[kind]?.title || kind;
@@ -742,6 +745,26 @@
       wallpaperSelect.value = look.wallpaper || "own";
     }
 
+    /**
+     * The theme's own layout. On a real display it goes where the app will put it: centred, with
+     * room for the decoration, made smaller if it must be but never larger (as Presets.swift).
+     */
+    function ownLayout() {
+      if (!canvas.real) return theme.layout;
+      const frames = theme.layout;
+      const left = Math.min(...frames.map((f) => f.x)), top = Math.min(...frames.map((f) => f.y));
+      const width = Math.max(...frames.map((f) => f.x + f.w)) - left, height = Math.max(...frames.map((f) => f.y + f.h)) - top;
+      const fit = Math.min(1, (canvas.width - 112) / width, (canvas.height - 60) / height);
+      return frames.map((f) => {
+        const w = f.w * fit, h = f.h * fit;
+        return {
+          kind: f.kind, w, h,
+          x: Math.round(canvas.width / 2 + (f.x + f.w / 2 - left - width / 2) * fit - w / 2),
+          y: Math.round(canvas.height / 2 + (f.y + f.h / 2 - top - height / 2) * fit - h / 2),
+        };
+      });
+    }
+
     function load(id, requestedMode = "auto", items = null, chosenLook = {}) {
       mode = ["auto", "light", "dark"].includes(requestedMode) ? requestedMode : "auto";
       const requested = byId[id] || themes[0], family = data.families.find((f) => f.id === requested.family);
@@ -758,22 +781,24 @@
       placed = new Map();
       gliding = null;
       glideRun++;
+      // The still is a picture of the layout on the website's desk, so a real display draws its own.
       still.src = img(theme.id, "ornament.webp");
-      still.hidden = false;
-      live.hidden = true;
+      still.hidden = Boolean(canvas.real);
+      live.hidden = !canvas.real;
       drawing = false;
       sprites = Ornament.load(theme, (name) => img(theme.id, `sprites/${name}.webp`), scheduleRedraw);
-      for (const frame of items || theme.layout) {
+      for (const frame of items || ownLayout()) {
         const base = theme.sizes[frame.kind];
         // Paired variants may have different base shapes; keep the centre and scale.
         const opposite = theme.partner && byId[theme.partner].sizes[frame.kind];
         if (items && opposite && Math.abs(frame.w / base.w - frame.h / base.h) > 0.02) {
           const ratio = Math.min(350 / 170, frame.w / opposite.w);
           const w = Math.round(base.w * ratio), h = Math.round(base.h * ratio);
-          place(frame.kind, { ...frame, w, h, x: Math.max(0, Math.min(canvas.width - w, frame.x + (frame.w - w) / 2)), y: Math.max(22, Math.min(canvas.height - h, frame.y + (frame.h - h) / 2)) });
+          place(frame.kind, { ...frame, w, h, x: Math.max(0, Math.min(canvas.width - w, frame.x + (frame.w - w) / 2)), y: Math.max(menuBar, Math.min(canvas.height - h, frame.y + (frame.h - h) / 2)) });
         } else place(frame.kind, frame);
       }
       if (items) layoutChanged();
+      else if (canvas.real) scheduleRedraw();
       showWallpaper();
       showAccents();
       if (look.accent) tintAll();

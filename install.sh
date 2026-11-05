@@ -1,7 +1,7 @@
 #!/bin/bash
 # WidgetThemes installer.
 #
-# This script downloads WidgetThemes 1.7.0, checks it against the checksum below,
+# This script downloads WidgetThemes 1.8.0, checks it against the checksum below,
 # moves it into your Applications folder and opens it. That's all it does: it doesn't
 # need your password, change any settings, or install anything else.
 #
@@ -10,9 +10,9 @@
 # To uninstall, quit WidgetThemes from its menu bar icon and move it to the Trash.
 set -euo pipefail
 
-VERSION="1.7.0"
-URL="https://widgetthemes.com/downloads/WidgetThemes-1.7.0.zip"
-SHA256="97d9d82a191c1fe324f81efd257944345e2992ab32a1ce0e46475f20f89969dc"
+VERSION="1.8.0"
+URL="https://widgetthemes.com/downloads/WidgetThemes-1.8.0.zip"
+SHA256="cff175497ced45a1880804cf7acdabc86e87390c50956a889bfd397699078b02"
 
 fail() { printf '\n\033[31mError:\033[0m %s\n' "$1" >&2; exit 1; }
 

@@ -224,7 +224,7 @@ body::after {
 .chip:disabled { opacity: 0.4; cursor: default; box-shadow: none; }
 .pg-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .pg-body { --stage-height: max(300px, calc(100svh - 150px)); display: grid; grid-template-columns: minmax(0, 1fr) 268px; gap: 14px; }
-.pg-main { position: relative; isolation: isolate; min-width: 0; width: 100%; max-width: calc(var(--stage-height) * 1.6); margin-inline: auto; }
+.pg-main { position: relative; isolation: isolate; min-width: 0; width: 100%; max-width: calc(var(--stage-height) * var(--desk-ratio, 1.6)); margin-inline: auto; }
 .pg-side { position: relative; min-width: 0; }
 .pg-side-inner { position: absolute; inset: 0; overflow: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 2px; }
 .pg-box { background: rgba(255,255,255,0.03); border: 1px solid var(--stroke); border-radius: 12px; padding: 10px 12px 12px; }
