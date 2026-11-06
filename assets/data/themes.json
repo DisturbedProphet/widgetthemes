@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793956028,
+  "build" : 1793980337,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -240,6 +240,13 @@
       "light" : "pocketLCD",
       "tagline" : "A handheld's four-shade green dot-matrix screen in grey plastic, pixel type",
       "title" : "Pocket LCD"
+    },
+    {
+      "group" : "retro",
+      "id" : "crt",
+      "light" : "crt",
+      "tagline" : "Amber phosphor and scanlines: panes joined by pipes, over the system's own log",
+      "title" : "CRT Terminal"
     },
     {
       "dark" : "softDark",
@@ -631,6 +638,7 @@
         }
       },
       "tagline" : "A light, editorial front page",
+      "tintsWallpaper" : false,
       "title" : "Paper"
     },
     {
@@ -875,6 +883,7 @@
         }
       },
       "tagline" : "Synthwave script, chrome numerals and neon tubes",
+      "tintsWallpaper" : false,
       "title" : "Neon"
     },
     {
@@ -1136,6 +1145,7 @@
         }
       },
       "tagline" : "Primary colours and pure geometry on cream",
+      "tintsWallpaper" : false,
       "title" : "Bauhaus"
     },
     {
@@ -1388,6 +1398,7 @@
         }
       },
       "tagline" : "Didot, italics and sprigs on forest green",
+      "tintsWallpaper" : false,
       "title" : "Grove"
     },
     {
@@ -1610,6 +1621,7 @@
         }
       },
       "tagline" : "Glossy glass, gel bars and bubbles",
+      "tintsWallpaper" : false,
       "title" : "Aero"
     },
     {
@@ -1835,8 +1847,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 58,
-            "x" : 54,
+            "w" : 66,
+            "x" : 62,
             "y" : 12
           },
           "trash" : {
@@ -1848,6 +1860,7 @@
         }
       },
       "tagline" : "One-bit windows on a dithered desktop",
+      "tintsWallpaper" : false,
       "title" : "Classic"
     },
     {
@@ -2098,13 +2111,14 @@
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 326,
+            "w" : 333,
             "x" : 4,
             "y" : 17
           }
         }
       },
       "tagline" : "Hazard-yellow cyberpunk with a glitch",
+      "tintsWallpaper" : false,
       "title" : "Overdrive"
     },
     {
@@ -2344,6 +2358,7 @@
         }
       },
       "tagline" : "Nixie tubes, VU needles and a tuner dial",
+      "tintsWallpaper" : false,
       "title" : "Hi-Fi"
     },
     {
@@ -2595,6 +2610,7 @@
         }
       },
       "tagline" : "Seventies stripes in orange and mustard",
+      "tintsWallpaper" : true,
       "title" : "Groove"
     },
     {
@@ -2883,6 +2899,7 @@
         }
       },
       "tagline" : "Hand-drawn lessons on a chalkboard",
+      "tintsWallpaper" : false,
       "title" : "Chalk"
     },
     {
@@ -3136,6 +3153,7 @@
         }
       },
       "tagline" : "A 16-bit adventure: hearts, HP and a quest log",
+      "tintsWallpaper" : false,
       "title" : "Quest"
     },
     {
@@ -3371,6 +3389,7 @@
         }
       },
       "tagline" : "System-style widgets on rounded frosted glass",
+      "tintsWallpaper" : false,
       "title" : "Glass"
     },
     {
@@ -3610,6 +3629,7 @@
         }
       },
       "tagline" : "Aircraft gauges, annunciators and radar above the clouds",
+      "tintsWallpaper" : false,
       "title" : "Cockpit"
     },
     {
@@ -3920,6 +3940,7 @@
         }
       },
       "tagline" : "Mission-control registers, strip charts and teletype",
+      "tintsWallpaper" : false,
       "title" : "Apollo"
     },
     {
@@ -4173,6 +4194,7 @@
         }
       },
       "tagline" : "Brass submarine gauges and sonar in the deep",
+      "tintsWallpaper" : false,
       "title" : "Abyss"
     },
     {
@@ -4422,6 +4444,7 @@
         }
       },
       "tagline" : "Legend boxes and scale bars on a topographic map",
+      "tintsWallpaper" : false,
       "title" : "Atlas"
     },
     {
@@ -4671,6 +4694,7 @@
         }
       },
       "tagline" : "Ink ensō, kanji and hanging scrolls",
+      "tintsWallpaper" : false,
       "title" : "Kyoto"
     },
     {
@@ -4914,6 +4938,7 @@
         }
       },
       "tagline" : "Sticky notes, polaroids and red string",
+      "tintsWallpaper" : true,
       "title" : "Corkboard"
     },
     {
@@ -5142,6 +5167,7 @@
         }
       },
       "tagline" : "Clean type on frosted ice under the aurora",
+      "tintsWallpaper" : false,
       "title" : "Polar"
     },
     {
@@ -5382,6 +5408,7 @@
         }
       },
       "tagline" : "Pure black, thin numerals, hairline rules",
+      "tintsWallpaper" : false,
       "title" : "Mono"
     },
     {
@@ -5610,6 +5637,7 @@
         }
       },
       "tagline" : "Soft dark cards on a deep, glowing desk",
+      "tintsWallpaper" : false,
       "title" : "Slate"
     },
     {
@@ -5834,6 +5862,7 @@
         }
       },
       "tagline" : "Soft white cards on a bright, airy desk",
+      "tintsWallpaper" : false,
       "title" : "Lumen"
     },
     {
@@ -6072,6 +6101,7 @@
         }
       },
       "tagline" : "Industrial mono numerals with an orange accent",
+      "tintsWallpaper" : true,
       "title" : "Field"
     },
     {
@@ -6314,6 +6344,7 @@
         }
       },
       "tagline" : "Field's mono numerals and orange, after dark",
+      "tintsWallpaper" : true,
       "title" : "Field Dark"
     },
     {
@@ -6572,6 +6603,7 @@
         }
       },
       "tagline" : "Black glass with iridescent edges and hairline numerals",
+      "tintsWallpaper" : false,
       "title" : "Obsidian"
     },
     {
@@ -6838,6 +6870,7 @@
         }
       },
       "tagline" : "A deep-navy dashboard with glowing gradient charts",
+      "tintsWallpaper" : false,
       "title" : "Midnight"
     },
     {
@@ -7090,6 +7123,7 @@
         }
       },
       "tagline" : "Activity rings and a heartbeat in red, green and cyan",
+      "tintsWallpaper" : false,
       "title" : "Pulse"
     },
     {
@@ -7361,6 +7395,7 @@
         }
       },
       "tagline" : "Dark frosted glass that splits the light into colour",
+      "tintsWallpaper" : false,
       "title" : "Prism"
     },
     {
@@ -7613,6 +7648,7 @@
         }
       },
       "tagline" : "Carbon fibre, bold italic figures and shift lights",
+      "tintsWallpaper" : false,
       "title" : "Carbon"
     },
     {
@@ -7865,6 +7901,7 @@
         }
       },
       "tagline" : "Plum velvet, champagne glow and fine italic type",
+      "tintsWallpaper" : false,
       "title" : "Velvet"
     },
     {
@@ -8104,6 +8141,7 @@
         }
       },
       "tagline" : "White linework, protractors and red pencil on drafting blue",
+      "tintsWallpaper" : true,
       "title" : "Blueprint"
     },
     {
@@ -8336,7 +8374,245 @@
         }
       },
       "tagline" : "A handheld's four-shade green dot-matrix screen in grey plastic, pixel type",
+      "tintsWallpaper" : false,
       "title" : "Pocket LCD"
+    },
+    {
+      "accent" : "#FFB545",
+      "accents" : [
+        {
+          "color" : "#FFB545",
+          "name" : "Original"
+        },
+        {
+          "color" : "#59FF73",
+          "name" : "P1 Green"
+        },
+        {
+          "color" : "#E0EBE5",
+          "name" : "P4 White"
+        },
+        {
+          "color" : "#59E0FF",
+          "name" : "Cyan"
+        },
+        {
+          "color" : "#FF738C",
+          "name" : "Rose"
+        }
+      ],
+      "family" : "crt",
+      "group" : "retro",
+      "id" : "crt",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 122,
+          "y" : 98
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 350,
+          "x" : 612,
+          "y" : 98
+        },
+        {
+          "h" : 213,
+          "kind" : "cpu",
+          "w" : 213,
+          "x" : 1016,
+          "y" : 98
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 122,
+          "y" : 360
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 524,
+          "y" : 320
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 350,
+          "x" : 746,
+          "y" : 320
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 1148,
+          "y" : 360
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 122,
+          "y" : 582
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170,
+          "x" : 524,
+          "y" : 542
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 746,
+          "y" : 542
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170,
+          "x" : 1148,
+          "y" : 582
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+          "glass" : [
+            0.055,
+            0.035000000000000003,
+            0.012,
+            1
+          ],
+          "phosphor" : [
+            1,
+            0.70999999999999996,
+            0.27000000000000002,
+            1
+          ]
+        },
+        "sprites" : {
+          "banner" : {
+            "h" : 25,
+            "w" : 253,
+            "x" : 4,
+            "y" : 21
+          }
+        }
+      },
+      "tagline" : "Amber phosphor and scanlines: panes joined by pipes, over the system's own log",
+      "tintsWallpaper" : true,
+      "title" : "CRT Terminal"
     },
     {
       "accent" : "#7D8CFF",
@@ -8565,6 +8841,7 @@
         }
       },
       "tagline" : "Soft UI: panels pressed out of one pale surface, inset dials, one periwinkle accent",
+      "tintsWallpaper" : false,
       "title" : "Soft"
     },
     {
@@ -8790,6 +9067,7 @@
         }
       },
       "tagline" : "Dark academia: candlelit leather desk, parchment, ink and a wax seal",
+      "tintsWallpaper" : false,
       "title" : "Scholar"
     },
     {
@@ -9024,6 +9302,7 @@
         }
       },
       "tagline" : "Glossy toy bricks with studs on top, primary colours and chunky rounded type",
+      "tintsWallpaper" : false,
       "title" : "Bricks"
     },
     {
@@ -9248,6 +9527,7 @@
         }
       },
       "tagline" : "Comic-book panels: halftone dots, ink outlines, speech bubbles and sound effects",
+      "tintsWallpaper" : false,
       "title" : "Comic"
     },
     {
@@ -9479,6 +9759,7 @@
         }
       },
       "tagline" : "Mid-century modern: starburst clock, boomerang cards, mustard, teal and tangerine",
+      "tintsWallpaper" : false,
       "title" : "Atomic"
     },
     {
@@ -9704,6 +9985,7 @@
         }
       },
       "tagline" : "International Typographic Style: strict grid, flush-left grotesque, one red",
+      "tintsWallpaper" : false,
       "title" : "Swiss"
     },
     {
@@ -9932,6 +10214,7 @@
         }
       },
       "tagline" : "Leaded jewel-tone panes lit from behind; the clock is a rose window",
+      "tintsWallpaper" : false,
       "title" : "Stained Glass"
     },
     {
@@ -10143,6 +10426,7 @@
         }
       },
       "tagline" : "A reading screen: warm grey paper, crisp serif, dithered greys",
+      "tintsWallpaper" : false,
       "title" : "E-Ink"
     },
     {
@@ -10368,6 +10652,7 @@
         }
       },
       "tagline" : "Raw concrete, white slabs, hard shadows and enormous type",
+      "tintsWallpaper" : false,
       "title" : "Brutalist"
     },
     {
@@ -10610,6 +10895,7 @@
         }
       },
       "tagline" : "Herbarium sheets: pressed leaves, tape and specimen labels",
+      "tintsWallpaper" : false,
       "title" : "Botanical"
     },
     {
@@ -10846,6 +11132,7 @@
         }
       },
       "tagline" : "Fluoro pink and teal overprinting, a little off-register",
+      "tintsWallpaper" : true,
       "title" : "Risograph"
     },
     {
@@ -11057,6 +11344,7 @@
         }
       },
       "tagline" : "The reading screen in night mode: pale serif on dark grey, dithered",
+      "tintsWallpaper" : false,
       "title" : "E-Ink Dark"
     },
     {
@@ -11282,6 +11570,7 @@
         }
       },
       "tagline" : "Black slabs on night concrete, white rules and hard white shadows",
+      "tintsWallpaper" : false,
       "title" : "Brutalist Dark"
     },
     {
@@ -11518,6 +11807,7 @@
         }
       },
       "tagline" : "Fluoro pink and teal printed on black stock",
+      "tintsWallpaper" : true,
       "title" : "Risograph Dark"
     },
     {
@@ -11747,6 +12037,7 @@
         }
       },
       "tagline" : "Soft UI in the dark: panels pressed out of graphite, one periwinkle accent",
+      "tintsWallpaper" : false,
       "title" : "Soft Dark"
     },
     {
@@ -11946,6 +12237,7 @@
         }
       },
       "tagline" : "Figures carved into white Carrara, with brass inlaid in the grooves",
+      "tintsWallpaper" : false,
       "title" : "Marble"
     },
     {
@@ -12145,6 +12437,7 @@
         }
       },
       "tagline" : "Figures carved into black Nero marble, with brass inlaid in the grooves",
+      "tintsWallpaper" : false,
       "title" : "Marble Dark"
     },
     {
@@ -12352,10 +12645,11 @@
         }
       },
       "tagline" : "A sun print in Prussian blue: pressed ferns and grasses as the readings",
+      "tintsWallpaper" : false,
       "title" : "Cyanotype"
     }
   ],
-  "version" : "1.10.1",
+  "version" : "1.11.0",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",

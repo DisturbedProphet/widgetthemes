@@ -290,7 +290,15 @@ body::after {
 .pg-widget { position: absolute; pointer-events: none; transition: filter 0.15s ease; will-change: left, top; }
 .pg-widget::before { content: ""; position: absolute; inset: var(--p, 0); pointer-events: auto; cursor: grab; }
 .pg-widget.dragging::before { cursor: grabbing; }
-.pg-widget img { width: 100%; height: 100%; pointer-events: none; }
+.pg-widget img { position: relative; width: 100%; height: 100%; pointer-events: none; }
+/* The app's own background and border behind and around a widget (WidgetWindow's backdrop). */
+.pg-backdrop, .pg-edge { display: none; position: absolute; inset: var(--p, 0); border-radius: var(--r, 0); pointer-events: none; }
+.pg-widget.bd-dim .pg-backdrop { display: block; background: rgba(0,0,0,0.38); }
+.pg-widget.bd-glass .pg-backdrop { display: block; background: rgba(38,38,42,0.5); -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5); }
+.pg-widget.bd-border .pg-edge { display: block; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22); }
+.pg-backdrop-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 10px 0; }
+.pg-check { display: inline-flex; align-items: center; gap: 6px; color: var(--dim); font-size: 13px; cursor: pointer; }
+.pg-check input { accent-color: #ffd995; margin: 0; }
 .pg-widget:hover { filter: drop-shadow(0 0 0.4cqw rgba(255,255,255,0.35)); }
 .pg-widget.dragging { filter: drop-shadow(0 1cqw 1.6cqw rgba(0,0,0,0.6)); }
 .pg-widget.selected::after { content: ""; position: absolute; inset: var(--p, 0); border-radius: 8px; outline: 2px solid #ffd995; outline-offset: 2px; pointer-events: none; }

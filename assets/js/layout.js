@@ -21,6 +21,8 @@
     }
     return best;
   }
+  /** A widget's own background in the app (Backdrop); none is left out. */
+  const backdrops = ['dim','glass'];
   function read(search, catalog) {
     const params = new URLSearchParams(search);
     const families = catalog.families;
@@ -50,7 +52,7 @@
         const look = {};
         if (/^#[0-9a-f]{6}$/i.test(value.accent)) look.accent = value.accent;
         if (catalog.themes.some(t => t.id === value.wallpaper)) look.wallpaper = value.wallpaper;
-        return {v:1,theme:f.id,mode:value.mode,...look,items:value.items.map(({kind,x,y,w,h,skin,ref})=>({kind,x,y,w,h,...(skin?{skin}:{}),...(ref!==undefined?{ref}:{})}))};
+        return {v:1,theme:f.id,mode:value.mode,...look,items:value.items.map(({kind,x,y,w,h,skin,ref,backdrop,border})=>({kind,x,y,w,h,...(skin?{skin}:{}),...(ref!==undefined?{ref}:{}),...(backdrops.includes(backdrop)?{backdrop}:{}),...(border===true?{border}:{})}))};
       }
     } catch { /* An invalid or future URL opens a safe stock theme. */ }
     return result;
@@ -78,7 +80,7 @@
         const [scale,name] = scales.find(([s])=>s*base.w>=item.w-0.5001) || scales[scales.length-1];
         // A widget from another theme keeps the look it was given; the desk's own follow its appearance.
         const variant = own === theme ? clean.mode : own.id === ownFamily?.dark ? 'dark' : 'light';
-        return {...(item.ref!==undefined?{ref:item.ref}:{}),config:{kind:item.kind,skin:own.id,scale:name,fit:Math.min(1,ratio/scale),origin:[0,0],...(ownFamily?.dark?{variant}:{})},
+        return {...(item.ref!==undefined?{ref:item.ref}:{}),config:{kind:item.kind,skin:own.id,scale:name,fit:Math.min(1,ratio/scale),origin:[0,0],...(ownFamily?.dark?{variant}:{}),...(item.backdrop?{backdrop:item.backdrop}:{}),...(item.border?{border:true}:{})},
           fx:clamp(item.x / Math.max(1,catalog.canvas.width-item.w),1),
           fy:clamp(item.y / Math.max(1,catalog.canvas.height-item.h),1)};
       })}};

@@ -300,9 +300,10 @@
       const { custom, ...shared } = look;
       return {
         v: 1, theme: theme.family, mode, ...shared,
-        items: [...placed.values()].filter((item) => item !== carrying).map(({ kind, x, y, w, h, skin, ref }) => ({
+        items: [...placed.values()].filter((item) => item !== carrying).map(({ kind, x, y, w, h, skin, ref, backdrop, border }) => ({
           kind, x: Math.round(Math.max(0, x)), y: Math.round(Math.max(0, y)), w, h,
           ...(skin ? { skin } : {}), ...(ref !== undefined ? { ref } : {}),
+          ...(backdrop ? { backdrop } : {}), ...(border ? { border: true } : {}),
         })),
       };
     };
@@ -403,6 +404,14 @@
         width: `${(item.w + 2 * p) * s}px`, height: `${(item.h + 2 * p) * s}px`,
       });
       item.node.style.setProperty("--p", `${p * s}px`);
+      item.node.style.setProperty("--r", `${20 * (item.w / base.w) * s}px`);
+    }
+
+    /** Shows a widget's background and border the way the app draws them. */
+    function dress(item) {
+      item.node.classList.toggle("bd-dim", item.backdrop === "dim");
+      item.node.classList.toggle("bd-glass", item.backdrop === "glass");
+      item.node.classList.toggle("bd-border", Boolean(item.border));
     }
 
     /** Front to back follows the order widgets are listed in, which is the order a layout saves. */
@@ -427,10 +436,13 @@
       const uid = `w${++nextUid}`;
       const handle = el("span", { className: "pg-handle" });
       const node = el("div", { className: "pg-widget", tabIndex: 0, role: "group" }, [
+        el("span", { className: "pg-backdrop" }),
         el("img", { alt: title, draggable: false }),
+        el("span", { className: "pg-edge" }),
         handle,
       ]);
       const item = { node, uid, kind, ...frame };
+      dress(item);
       node.querySelector("img").src = widgetImage(item);
       node.setAttribute("aria-label", `${title}, sample data. Arrow keys move it, plus and minus resize it, Delete removes it.`);
       node.addEventListener("focus", () => choose(uid));
@@ -636,6 +648,7 @@
     // MARK: The selected widget
 
     const inspector = $("#pg-inspector"), sizeSelect = $("#pg-size"), sizeResetButton = $("#pg-size-reset"), widgetTheme = $("#pg-widget-theme");
+    const backdropSelect = $("#pg-backdrop"), borderBox = $("#pg-border"), backdropAll = $("#pg-backdrop-all"), borderAll = $("#pg-border-all");
     function choose(uid) {
       if (selected === uid) return;
       placed.get(selected)?.node.classList.remove("selected");
@@ -659,7 +672,46 @@
       for (const option of widgetTheme.options) if (option.value) option.hidden = !byId[option.value].sizes[item.kind];
       widgetTheme.options[0].textContent = `Desk theme (${theme.familyTitle})`;
       widgetTheme.value = item.skin || "";
+      backdropSelect.value = item.backdrop || "";
+      borderBox.checked = Boolean(item.border);
     }
+
+    /** The all-widgets controls show a shared setting, or Mixed when the widgets differ. */
+    function showAllBackdrops() {
+      const items = [...placed.values()];
+      const backdrops = new Set(items.map((item) => item.backdrop || "")), borders = new Set(items.map((item) => Boolean(item.border)));
+      backdropAll.value = backdrops.size > 1 ? "mixed" : [...backdrops][0] ?? "";
+      borderAll.indeterminate = borders.size > 1;
+      borderAll.checked = borders.size === 1 && [...borders][0];
+      backdropAll.disabled = borderAll.disabled = !items.length;
+    }
+    function setBackdrop(items, change) {
+      for (const item of items) {
+        change(item);
+        if (!item.backdrop) delete item.backdrop;
+        if (!item.border) delete item.border;
+        dress(item);
+      }
+      showAllBackdrops();
+      commit();
+    }
+    backdropSelect.addEventListener("change", () => {
+      const item = placed.get(selected);
+      if (item) setBackdrop([item], (it) => { it.backdrop = backdropSelect.value; });
+    });
+    borderBox.addEventListener("change", () => {
+      const item = placed.get(selected);
+      if (item) setBackdrop([item], (it) => { it.border = borderBox.checked; });
+    });
+    backdropAll.addEventListener("change", () => {
+      if (backdropAll.value === "mixed") return;
+      setBackdrop([...placed.values()], (it) => { it.backdrop = backdropAll.value; });
+      showInspector();
+    });
+    borderAll.addEventListener("change", () => {
+      setBackdrop([...placed.values()], (it) => { it.border = borderAll.checked; });
+      showInspector();
+    });
 
     SIZES.forEach(([, name], index) => sizeSelect.append(el("option", { value: String(index), textContent: name })));
     const customSize = el("option", { value: "custom", textContent: "Custom", hidden: true, disabled: true });
@@ -812,6 +864,7 @@
     trayTheme.addEventListener("change", renderTray);
 
     function renderTray() {
+      showAllBackdrops();
       const focusedKind = tray.contains(document.activeElement) ? document.activeElement.dataset.kind : null;
       const source = byId[trayTheme.value] || theme;
       tray.replaceChildren();
@@ -867,6 +920,7 @@
       if (color) look = { ...look, accent: color.toUpperCase() };
       else { const { accent, ...rest } = look; look = rest; }
       tintAll();
+      showWallpaper();
       showAccents();
       // The chosen colour has to reach the file, so the layout counts as the visitor's own now.
       layoutChanged();
@@ -969,10 +1023,36 @@
       if (event.key === "Escape") { event.preventDefault(); event.stopPropagation(); showWallpaperPanel(false, true); }
     });
 
+    let wallTintRun = 0, wallTinted = null;
+    /** A theme whose wallpaper is drawn in its accent shows it recoloured, like its widgets. */
+    async function tintWallpaper(url, run) {
+      const original = new Image();
+      original.src = url;
+      await original.decode();
+      if (run !== wallTintRun) return;
+      const scale = Math.min(1, 1600 / original.naturalWidth);
+      const board = Object.assign(document.createElement("canvas"), { width: Math.round(original.naturalWidth * scale), height: Math.round(original.naturalHeight * scale) });
+      const context = board.getContext("2d", { willReadFrequently: true });
+      context.drawImage(original, 0, 0, board.width, board.height);
+      const pixels = context.getImageData(0, 0, board.width, board.height);
+      AccentTint.recolor(pixels.data, theme.accent, look.accent);
+      context.putImageData(pixels, 0, 0);
+      const blob = await new Promise((resolve) => board.toBlob(resolve, "image/jpeg", 0.9));
+      if (run !== wallTintRun) return;
+      if (wallTinted) URL.revokeObjectURL(wallTinted);
+      wallTinted = URL.createObjectURL(blob);
+      stage.style.backgroundImage = `url("${wallTinted}")`;
+      wallpaperFace.src = wallTinted;
+    }
+
     function showWallpaper() {
       const url = look.custom?.url || img(look.wallpaper || theme.id, "wallpaper.webp");
       stage.style.backgroundImage = `url("${url}")`;
       wallpaperFace.src = url;
+      const run = ++wallTintRun;
+      if (!look.custom && !look.wallpaper && look.accent && theme.tintsWallpaper && AccentTint.previewable(theme.accent)) {
+        tintWallpaper(url, run).catch(() => {});
+      }
       wallpaperName.textContent = look.custom?.title || (look.wallpaper ? byId[look.wallpaper]?.title : "Theme's own");
     }
 
