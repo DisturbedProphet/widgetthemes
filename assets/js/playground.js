@@ -283,7 +283,14 @@
       else say(moved ? "Tidied." : "Already tidy: nothing overlaps.", { undoable: moved });
     }
     appearance.addEventListener("change", () => {
-      load(theme.id, appearance.value, drawing ? state().items : null, look);
+      // A wallpaper from this same theme switches with it, rather than staying on the variant it was.
+      const family = data.families.find((f) => f.id === theme.family);
+      let next = look;
+      if (family && look.wallpaper && [family.light, family.dark].includes(look.wallpaper)) {
+        const { wallpaper, ...rest } = look;
+        next = rest;
+      }
+      load(theme.id, appearance.value, drawing ? state().items : null, next);
       commit();
     });
     systemDark.addEventListener("change", () => { if (mode === "auto") load(theme.id, mode, drawing ? state().items : null, look); });

@@ -14,7 +14,7 @@
   installSection();
   document.querySelectorAll(".mobile-sections a").forEach(link => link.addEventListener("click", () => { link.closest("details").open = false; }));
 
-  fetch("assets/data/themes.json")
+  fetch("assets/data/themes.json", { cache: "no-cache" })
     .then((response) => response.json())
     .then(start)
     .catch((error) => console.error("Couldn't load theme data", error));

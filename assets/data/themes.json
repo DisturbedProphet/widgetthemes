@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793953336,
+  "build" : 1793956028,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -336,13 +336,6 @@
       "light" : "cyanotype",
       "tagline" : "A sun print in Prussian blue: pressed ferns and grasses as the readings",
       "title" : "Cyanotype"
-    },
-    {
-      "group" : "retro",
-      "id" : "bakelite",
-      "light" : "bakelite",
-      "tagline" : "A wartime wireless: swirled resin cases, amber dials, chrome and cream knobs",
-      "title" : "Bakelite"
     }
   ],
   "heroThemes" : [
@@ -12360,223 +12353,9 @@
       },
       "tagline" : "A sun print in Prussian blue: pressed ferns and grasses as the readings",
       "title" : "Cyanotype"
-    },
-    {
-      "accent" : "#FAB854",
-      "accents" : [
-        {
-          "color" : "#FAB854",
-          "name" : "Original"
-        },
-        {
-          "color" : "#FFB233",
-          "name" : "Amber"
-        },
-        {
-          "color" : "#FF7366",
-          "name" : "Coral"
-        },
-        {
-          "color" : "#66F2B8",
-          "name" : "Mint"
-        },
-        {
-          "color" : "#61BFFF",
-          "name" : "Sky"
-        },
-        {
-          "color" : "#B88FFF",
-          "name" : "Violet"
-        },
-        {
-          "color" : "#FF7ABD",
-          "name" : "Rose"
-        }
-      ],
-      "family" : "bakelite",
-      "group" : "retro",
-      "id" : "bakelite",
-      "kinds" : [
-        {
-          "h" : 170,
-          "kind" : "clock",
-          "w" : 350
-        },
-        {
-          "h" : 170,
-          "kind" : "calendar",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "cpu",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "memory",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "disk",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "battery",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "network",
-          "w" : 350
-        },
-        {
-          "h" : 170,
-          "kind" : "downloads",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "processes",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "weather",
-          "w" : 350
-        },
-        {
-          "h" : 170,
-          "kind" : "events",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "nowPlaying",
-          "w" : 350
-        },
-        {
-          "h" : 170,
-          "kind" : "photo",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "focus",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "reminders",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "countdown",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "sky",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "activity",
-          "w" : 170
-        },
-        {
-          "h" : 170,
-          "kind" : "quote",
-          "w" : 350
-        },
-        {
-          "h" : 170,
-          "kind" : "devices",
-          "w" : 170
-        }
-      ],
-      "layout" : [
-        {
-          "h" : 170,
-          "kind" : "cpu",
-          "w" : 170,
-          "x" : 281,
-          "y" : 137
-        },
-        {
-          "h" : 170,
-          "kind" : "memory",
-          "w" : 170,
-          "x" : 281,
-          "y" : 327
-        },
-        {
-          "h" : 213,
-          "kind" : "clock",
-          "w" : 438,
-          "x" : 476,
-          "y" : 107
-        },
-        {
-          "h" : 213,
-          "kind" : "nowPlaying",
-          "w" : 438,
-          "x" : 476,
-          "y" : 337
-        },
-        {
-          "h" : 170,
-          "kind" : "battery",
-          "w" : 170,
-          "x" : 941,
-          "y" : 137
-        },
-        {
-          "h" : 170,
-          "kind" : "disk",
-          "w" : 170,
-          "x" : 941,
-          "y" : 327
-        },
-        {
-          "h" : 170,
-          "kind" : "weather",
-          "w" : 350,
-          "x" : 281,
-          "y" : 572
-        },
-        {
-          "h" : 170,
-          "kind" : "network",
-          "w" : 350,
-          "x" : 656,
-          "y" : 572
-        },
-        {
-          "h" : 128,
-          "kind" : "downloads",
-          "w" : 128,
-          "x" : 1031,
-          "y" : 572
-        }
-      ],
-      "light" : false,
-      "ornament" : {
-        "colors" : {
-
-        },
-        "sprites" : {
-
-        }
-      },
-      "tagline" : "A wartime wireless: swirled resin cases, amber dials, chrome and cream knobs",
-      "title" : "Bakelite"
     }
   ],
-  "version" : "1.10.0",
+  "version" : "1.10.1",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",
