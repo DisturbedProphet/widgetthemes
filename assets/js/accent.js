@@ -23,8 +23,11 @@
   const previewable = (hex) => parse(hex)[1] >= 0.2;
 
   /** Recolours RGBA pixels in place. */
-  function recolor(pixels, fromHex, toHex) {
-    const [fromH, fromS, fromL] = parse(fromHex), [toH, toS, toL] = parse(toHex);
+  function recolor(pixels, fromHex, toHex, hue) {
+    let [fromH, fromS, fromL] = parse(fromHex);
+    const [toH, toS, toL] = parse(toHex);
+    // A wallpaper's accent can sit at another hue from the widgets' (Neon's grid).
+    if (Number.isFinite(hue)) fromH = hue;
     for (let i = 0; i < pixels.length; i += 4) {
       if (!pixels[i + 3]) continue;
       const r = pixels[i], g = pixels[i + 1], b = pixels[i + 2];

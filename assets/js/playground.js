@@ -1035,7 +1035,7 @@
       const context = board.getContext("2d", { willReadFrequently: true });
       context.drawImage(original, 0, 0, board.width, board.height);
       const pixels = context.getImageData(0, 0, board.width, board.height);
-      AccentTint.recolor(pixels.data, theme.accent, look.accent);
+      AccentTint.recolor(pixels.data, theme.accent, look.accent, theme.wallpaperHue);
       context.putImageData(pixels, 0, 0);
       const blob = await new Promise((resolve) => board.toBlob(resolve, "image/jpeg", 0.9));
       if (run !== wallTintRun) return;
