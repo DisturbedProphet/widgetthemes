@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793937162,
+  "build" : 1793953336,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -321,6 +321,28 @@
       "light" : "riso",
       "tagline" : "Fluoro pink and teal overprinting, a little off-register",
       "title" : "Risograph"
+    },
+    {
+      "dark" : "marbleDark",
+      "group" : "crafted",
+      "id" : "marble",
+      "light" : "marble",
+      "tagline" : "Figures carved into white Carrara, with brass inlaid in the grooves",
+      "title" : "Marble"
+    },
+    {
+      "group" : "nature",
+      "id" : "cyanotype",
+      "light" : "cyanotype",
+      "tagline" : "A sun print in Prussian blue: pressed ferns and grasses as the readings",
+      "title" : "Cyanotype"
+    },
+    {
+      "group" : "retro",
+      "id" : "bakelite",
+      "light" : "bakelite",
+      "tagline" : "A wartime wireless: swirled resin cases, amber dials, chrome and cream knobs",
+      "title" : "Bakelite"
     }
   ],
   "heroThemes" : [
@@ -591,8 +613,8 @@
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 212.5,
-            "x" : 106.25,
+            "w" : 189.5,
+            "x" : 94.75,
             "y" : 4
           },
           "edition" : {
@@ -603,7 +625,7 @@
           },
           "issue" : {
             "h" : 21,
-            "w" : 115,
+            "w" : 113,
             "x" : 4,
             "y" : 4
           },
@@ -1820,8 +1842,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 66,
-            "x" : 62,
+            "w" : 58,
+            "x" : 54,
             "y" : 12
           },
           "trash" : {
@@ -2083,7 +2105,7 @@
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 333,
+            "w" : 326,
             "x" : 4,
             "y" : 17
           }
@@ -2861,7 +2883,7 @@
           },
           "heading" : {
             "h" : 29,
-            "w" : 277,
+            "w" : 256.5,
             "x" : 4,
             "y" : 25
           }
@@ -3108,8 +3130,8 @@
         "sprites" : {
           "banner" : {
             "h" : 28,
-            "w" : 240.5,
-            "x" : 120.25,
+            "w" : 219,
+            "x" : 109.5,
             "y" : 24
           },
           "hand" : {
@@ -5360,7 +5382,7 @@
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 226,
+            "w" : 202,
             "x" : 4,
             "y" : 4
           }
@@ -11733,9 +11755,828 @@
       },
       "tagline" : "Soft UI in the dark: panels pressed out of graphite, one periwinkle accent",
       "title" : "Soft Dark"
+    },
+    {
+      "accent" : "#CC9E45",
+      "accents" : [
+        {
+          "color" : "#CC9E45",
+          "name" : "Original"
+        },
+        {
+          "color" : "#C2734C",
+          "name" : "Copper"
+        },
+        {
+          "color" : "#BFC4CC",
+          "name" : "Silver"
+        },
+        {
+          "color" : "#D99485",
+          "name" : "Rose gold"
+        },
+        {
+          "color" : "#5C9E8C",
+          "name" : "Verdigris"
+        }
+      ],
+      "family" : "marble",
+      "group" : "crafted",
+      "id" : "marble",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 350,
+          "kind" : "clock",
+          "w" : 721,
+          "x" : 163,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 923,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 1108,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 923,
+          "y" : 327
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 163,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 538,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 728,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 923,
+          "y" : 532
+        }
+      ],
+      "light" : true,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Figures carved into white Carrara, with brass inlaid in the grooves",
+      "title" : "Marble"
+    },
+    {
+      "accent" : "#CC9E45",
+      "accents" : [
+        {
+          "color" : "#CC9E45",
+          "name" : "Original"
+        },
+        {
+          "color" : "#C2734C",
+          "name" : "Copper"
+        },
+        {
+          "color" : "#BFC4CC",
+          "name" : "Silver"
+        },
+        {
+          "color" : "#D99485",
+          "name" : "Rose gold"
+        },
+        {
+          "color" : "#5C9E8C",
+          "name" : "Verdigris"
+        }
+      ],
+      "family" : "marble",
+      "group" : "crafted",
+      "id" : "marbleDark",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 350,
+          "kind" : "clock",
+          "w" : 721,
+          "x" : 163,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 923,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 1108,
+          "y" : 147
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 923,
+          "y" : 327
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350,
+          "x" : 163,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 538,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 728,
+          "y" : 532
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 923,
+          "y" : 532
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "Figures carved into black Nero marble, with brass inlaid in the grooves",
+      "title" : "Marble Dark"
+    },
+    {
+      "accent" : "#9EC7F2",
+      "accents" : [
+        {
+          "color" : "#9EC7F2",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
+      "family" : "cyanotype",
+      "group" : "nature",
+      "id" : "cyanotype",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 300,
+          "y" : 98
+        },
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 500,
+          "y" : 98
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170,
+          "x" : 970,
+          "y" : 98
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 300,
+          "y" : 328
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 500,
+          "y" : 343
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 880,
+          "y" : 328
+        },
+        {
+          "h" : 213,
+          "kind" : "nowPlaying",
+          "w" : 438,
+          "x" : 300,
+          "y" : 538
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 770,
+          "y" : 538
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "A sun print in Prussian blue: pressed ferns and grasses as the readings",
+      "title" : "Cyanotype"
+    },
+    {
+      "accent" : "#FAB854",
+      "accents" : [
+        {
+          "color" : "#FAB854",
+          "name" : "Original"
+        },
+        {
+          "color" : "#FFB233",
+          "name" : "Amber"
+        },
+        {
+          "color" : "#FF7366",
+          "name" : "Coral"
+        },
+        {
+          "color" : "#66F2B8",
+          "name" : "Mint"
+        },
+        {
+          "color" : "#61BFFF",
+          "name" : "Sky"
+        },
+        {
+          "color" : "#B88FFF",
+          "name" : "Violet"
+        },
+        {
+          "color" : "#FF7ABD",
+          "name" : "Rose"
+        }
+      ],
+      "family" : "bakelite",
+      "group" : "retro",
+      "id" : "bakelite",
+      "kinds" : [
+        {
+          "h" : 170,
+          "kind" : "clock",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "calendar",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "downloads",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "processes",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "events",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "nowPlaying",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "photo",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "focus",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "reminders",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "countdown",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "sky",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "activity",
+          "w" : 170
+        },
+        {
+          "h" : 170,
+          "kind" : "quote",
+          "w" : 350
+        },
+        {
+          "h" : 170,
+          "kind" : "devices",
+          "w" : 170
+        }
+      ],
+      "layout" : [
+        {
+          "h" : 170,
+          "kind" : "cpu",
+          "w" : 170,
+          "x" : 281,
+          "y" : 137
+        },
+        {
+          "h" : 170,
+          "kind" : "memory",
+          "w" : 170,
+          "x" : 281,
+          "y" : 327
+        },
+        {
+          "h" : 213,
+          "kind" : "clock",
+          "w" : 438,
+          "x" : 476,
+          "y" : 107
+        },
+        {
+          "h" : 213,
+          "kind" : "nowPlaying",
+          "w" : 438,
+          "x" : 476,
+          "y" : 337
+        },
+        {
+          "h" : 170,
+          "kind" : "battery",
+          "w" : 170,
+          "x" : 941,
+          "y" : 137
+        },
+        {
+          "h" : 170,
+          "kind" : "disk",
+          "w" : 170,
+          "x" : 941,
+          "y" : 327
+        },
+        {
+          "h" : 170,
+          "kind" : "weather",
+          "w" : 350,
+          "x" : 281,
+          "y" : 572
+        },
+        {
+          "h" : 170,
+          "kind" : "network",
+          "w" : 350,
+          "x" : 656,
+          "y" : 572
+        },
+        {
+          "h" : 128,
+          "kind" : "downloads",
+          "w" : 128,
+          "x" : 1031,
+          "y" : 572
+        }
+      ],
+      "light" : false,
+      "ornament" : {
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
+      },
+      "tagline" : "A wartime wireless: swirled resin cases, amber dials, chrome and cream knobs",
+      "title" : "Bakelite"
     }
   ],
-  "version" : "1.9.0",
+  "version" : "1.10.0",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",
