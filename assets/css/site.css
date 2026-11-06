@@ -295,7 +295,22 @@ body::after {
 .pg-widget.dragging { filter: drop-shadow(0 1cqw 1.6cqw rgba(0,0,0,0.6)); }
 .pg-widget.selected::after { content: ""; position: absolute; inset: var(--p, 0); border-radius: 8px; outline: 2px solid #ffd995; outline-offset: 2px; pointer-events: none; }
 .pg-handle { display: none; position: absolute; right: calc(var(--p, 0px) - 9px); bottom: calc(var(--p, 0px) - 9px); width: 18px; height: 18px; border-radius: 50%; background: #ffd995; border: 2px solid #1a1917; cursor: nwse-resize; touch-action: none; pointer-events: auto; z-index: 1; }
-.pg-widget.selected .pg-handle { display: block; }
+.pg-widget.selected .pg-handle { display: block; cursor: nwse-resize; touch-action: none; }
+.pg-widget.placing { opacity: 0.8; pointer-events: none; z-index: 60 !important; filter: drop-shadow(0 1cqw 1.6cqw rgba(0,0,0,0.6)); }
+.pg-wallpaper-box { position: relative; margin-top: 8px; }
+.pg-wallpaper-button { display: grid; grid-template-columns: 48px auto 1fr; align-items: center; gap: 8px; width: 100%; padding: 5px 8px 5px 5px; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; background: rgba(255,255,255,0.04); color: inherit; font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
+.pg-wallpaper-button img { width: 48px; height: 30px; border-radius: 4px; object-fit: cover; }
+.pg-wallpaper-button b { justify-self: end; max-width: 100%; overflow: hidden; color: var(--dim); font-weight: 400; text-overflow: ellipsis; white-space: nowrap; }
+.pg-wallpaper-panel { position: fixed; z-index: 200; right: 24px; bottom: 24px; width: min(460px, calc(100vw - 32px)); max-height: min(560px, calc(100vh - 48px)); overflow: auto; padding: 14px; border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; background: #1b1a17; box-shadow: 0 18px 50px rgba(0,0,0,0.55); }
+.pg-wallpaper-panel[hidden] { display: none; }
+.pg-wallpaper-panel h4 { margin: 0 0 8px; font-size: 13px; font-weight: 600; }
+.pg-wallpaper-panel section + section { margin-top: 14px; }
+.pg-wall-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.pg-wall { min-width: 0; padding: 0; border: 2px solid transparent; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+.pg-wall img { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: 6px; object-fit: cover; background: rgba(255,255,255,0.05); }
+.pg-wall span { display: block; overflow: hidden; padding: 3px 2px; font-size: 11.5px; text-align: left; text-overflow: ellipsis; white-space: nowrap; color: var(--dim); }
+.pg-wall.active { border-color: #ffd995; }
+.pg-wall.add { display: grid; place-items: center; aspect-ratio: 16 / 10; border: 1px dashed rgba(255,255,255,0.28); }
 @media (pointer: coarse) { .pg-handle { width: 26px; height: 26px; right: calc(var(--p, 0px) - 13px); bottom: calc(var(--p, 0px) - 13px); } }
 .pg-guide { position: absolute; z-index: 90; background: #ffd995; pointer-events: none; opacity: 0.85; }
 .pg-guide.x { top: 0; bottom: 0; width: 1px; }
@@ -311,11 +326,11 @@ body::after {
 .pg-status a { color: #ffd995; font-weight: 600; white-space: nowrap; }
 .pg-tray { display: grid; grid-template-columns: 1fr; gap: 4px; }
 .pg-add {
-  display: grid; grid-template-columns: 28px 1fr 14px; align-items: center; gap: 8px; width: 100%; padding: 4px 8px 4px 4px; text-align: left;
+  display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 8px; width: 100%; padding: 4px 8px 4px 4px; text-align: left;
   background: var(--key-face); color: var(--text); border: 0; border-radius: 9px; box-shadow: var(--key-shadow); font: 500 13px var(--sans); cursor: pointer;
 }
 .pg-add img { width: 28px; height: 28px; object-fit: contain; }
-.pg-add-mark { grid-column: 3; grid-row: 1; color: #ffd995; font-weight: 700; text-align: center; }
+.pg-add-mark { grid-column: 3; grid-row: 1; min-width: 14px; color: #ffd995; font-weight: 700; text-align: center; white-space: nowrap; }
 .pg-add-name { grid-column: 2; grid-row: 1; }
 .pg-add.on { background: rgba(255,255,255,0.03); box-shadow: var(--well-shadow); color: var(--dim); }
 .pg-add.on .pg-add-mark { color: var(--dim); }

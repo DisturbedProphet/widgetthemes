@@ -20,14 +20,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <!-- structured-data -->
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "WidgetThemes", "alternateName": "Widget Themes", "url": "https://widgetthemes.com/", "description": "Free desktop widgets for Mac, Windows and Linux in 40 hand-made widget themes: clocks, system meters, weather, music, a focus timer and more.", "applicationCategory": "DesktopEnhancementApplication", "operatingSystem": "macOS 14 or later, Windows 10 or later, Linux", "softwareVersion": "1.8.0", "downloadUrl": "https://widgetthemes.com/#download", "screenshot": "https://widgetthemes.com/assets/img/og.jpg", "image": "https://widgetthemes.com/assets/img/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["40 complete themes", "20 widgets", "Tidy Up arrangement", "Automatic light and dark themes", "Multiple displays", "Updates itself"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "WidgetThemes", "alternateName": "Widget Themes", "url": "https://widgetthemes.com/", "description": "Free desktop widgets for Mac, Windows and Linux in 40 hand-made widget themes: clocks, system meters, weather, music, a focus timer and more.", "applicationCategory": "DesktopEnhancementApplication", "operatingSystem": "macOS 14 or later, Windows 10 or later, Linux", "softwareVersion": "1.9.0", "downloadUrl": "https://widgetthemes.com/#download", "screenshot": "https://widgetthemes.com/assets/img/og.jpg", "image": "https://widgetthemes.com/assets/img/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["40 complete themes", "20 widgets", "Tidy Up arrangement", "Automatic light and dark themes", "Multiple displays", "Updates itself"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What are widget themes?", "acceptedAnswer": {"@type": "Answer", "text": "A widget theme restyles a whole set of desktop widgets so they match. In WidgetThemes, each theme draws its own version of every widget, arranges them in its own layout and comes with a matching wallpaper."}}, {"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. No trial, no subscription and no account."}}, {"@type": "Question", "name": "Will it slow my computer down?", "acceptedAnswer": {"@type": "Answer", "text": "Widgets update a few times a second at most and animate at a low frame rate. Animation pauses whenever widgets are covered by windows, and you can switch it off entirely in Settings."}}, {"@type": "Question", "name": "What permissions does it ask for, and why?", "acceptedAnswer": {"@type": "Answer", "text": "On a Mac, only what a widget you add needs: Calendars for Events, Reminders for Reminders, Location for local weather (or type a city instead), and Automation to read and control Music or Spotify. Each one is requested the first time that widget appears, and you can decline it. On Windows and Linux, the only one is location, for local weather, which the system asks about (or type a city instead). Events reads the calendar links you paste into Settings, and Now Playing reads the system's media controls."}}, {"@type": "Question", "name": "Where do the widgets sit: behind my windows or on top?", "acceptedAnswer": {"@type": "Answer", "text": "Your choice. By default they sit on the desktop, behind your windows. You can raise all of them, or pin individual widgets above your windows."}}, {"@type": "Question", "name": "Why does my computer warn me about the download?", "acceptedAnswer": {"@type": "Answer", "text": "macOS and Windows warn about apps whose developers haven't paid for code signing: Apple's developer programme, or a Windows signing certificate. WidgetThemes is free and isn't registered with either. On a Mac, the Terminal command is the smoothest way in: it downloads the app over a secure connection, checks it matches the published checksum, and installs it. The disk image works too, with one extra click the first time. On Windows, click More info, then Run anyway."}}, {"@type": "Question", "name": "How do I uninstall it?", "acceptedAnswer": {"@type": "Answer", "text": "Mac: quit WidgetThemes from its menu bar icon (right-click, then Quit) and move it from Applications to the Trash. To remove its settings as well, delete its file in ~/Library/Preferences; its name contains \"WidgetThemes\". Windows: Settings \u25b8 Apps \u25b8 Installed apps, then WidgetThemes \u25b8 Uninstall. Linux: sudo apt remove widget-themes on Ubuntu or Debian, sudo dnf remove WidgetThemes on Fedora, or delete the AppImage."}}, {"@type": "Question", "name": "Can I use my own wallpaper?", "acceptedAnswer": {"@type": "Answer", "text": "Of course. Every theme looks good on its own wallpaper, but you can add any image under Wallpapers, or shuffle between them on a schedule."}}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "WidgetThemes", "alternateName": "Widget Themes", "url": "https://widgetthemes.com/"}</script>
   <!-- /structured-data -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=28">
+  <link rel="stylesheet" href="assets/css/site.css?v=29">
 </head>
 <body>
   <header class="nav">
@@ -148,15 +148,13 @@
               <section id="pg-inspector" class="pg-box" aria-label="Selected widget" hidden>
                 <h3 id="pg-selected"></h3>
                 <label class="select"><span>Size</span><select id="pg-size" aria-label="Widget size"></select></label>
+                <button class="chip" id="pg-size-reset" type="button">Reset to theme size</button>
+                <label class="select"><span>Theme</span><select id="pg-widget-theme" aria-label="This widget's theme"></select></label>
                 <div class="pg-actions">
                   <button class="chip" id="pg-front" type="button">To front</button>
                   <button class="chip" id="pg-back" type="button">To back</button>
                   <button class="chip" id="pg-remove" type="button">Remove</button>
                 </div>
-              </section>
-              <section class="pg-box">
-                <h3>Widgets <span id="pg-count" class="pg-count"></span></h3>
-                <div id="pg-tray" class="pg-tray" role="group" aria-label="Widgets"></div>
               </section>
               <section class="pg-box">
                 <h3>Look</h3>
@@ -168,9 +166,19 @@
                   <p class="hint">A close preview: the app draws the exact colour.</p>
                   <p id="pg-accent-note" class="hint" hidden>This theme's accent can't be previewed here, but it's saved in your download.</p>
                 </div>
-                <label class="select"><span>Wallpaper</span><select id="pg-wallpaper" aria-label="Wallpaper"><option value="own">Theme's own</option></select></label>
+                <div class="pg-wallpaper-box">
+                  <button class="pg-wallpaper-button" id="pg-wallpaper" type="button" aria-haspopup="dialog" aria-expanded="false">
+                    <img id="pg-wallpaper-face" alt="" width="48" height="30"><span>Wallpaper</span><b id="pg-wallpaper-name"></b>
+                  </button>
+                  <div class="pg-wallpaper-panel" id="pg-wallpaper-panel" role="dialog" aria-label="Choose a wallpaper" hidden></div>
+                </div>
               </section>
-              <p class="hint">Readings are sample data. Downloads hold the theme, appearance, accent, wallpaper, and each widget's type, size and place. Nothing is uploaded.</p>
+              <section class="pg-box">
+                <h3>Widgets <span id="pg-count" class="pg-count"></span></h3>
+                <label class="select"><span>From</span><select id="pg-tray-theme" aria-label="Show widgets from"></select></label>
+                <div id="pg-tray" class="pg-tray" role="group" aria-label="Widgets"></div>
+              </section>
+              <p class="hint">Readings are sample data. Downloads hold the theme, appearance, accent, wallpaper, and each widget's type, theme, size and place. A picture you upload stays in this browser.</p>
             </div>
           </div>
         </div>
@@ -328,7 +336,7 @@
           <p class="fine">64-bit, Ubuntu 22.04 or newer or similar. Now Playing works with any player that supports MPRIS. The AppImage updates itself; with the .deb or .rpm, the app tells you when a new version is out.</p>
         </div>
       </div>
-      <p class="fine">Mac version <span id="version">1.8.0</span>, in your menu bar · Windows and Linux version 0.4.0, in the system tray.</p>
+      <p class="fine">Mac version <span id="version">1.9.0</span>, in your menu bar · Windows and Linux version 0.4.0, in the system tray.</p>
     </section>
 
     <!-- FAQ -->
@@ -433,10 +441,10 @@
 
   <script src="assets/js/ornament.js?v=15" defer></script>
   <script src="assets/js/tidy.js?v=16" defer></script>
-  <script src="assets/js/layout.js?v=16" defer></script>
+  <script src="assets/js/layout.js?v=17" defer></script>
   <script src="assets/js/history.js?v=1" defer></script>
   <script src="assets/js/accent.js?v=2" defer></script>
-  <script src="assets/js/playground.js?v=1" defer></script>
+  <script src="assets/js/playground.js?v=4" defer></script>
   <script src="assets/js/site.js?v=20" defer></script>
   <script src="assets/js/feedback.js?v=1" defer></script>
 </body>

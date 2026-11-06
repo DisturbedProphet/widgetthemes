@@ -29,7 +29,7 @@
       }
     ]
   },
-  "build" : 1793515876,
+  "build" : 1793937162,
   "canvas" : {
     "height" : 900,
     "width" : 1440
@@ -361,7 +361,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -582,17 +582,17 @@
       "ornament" : {
         "colors" : {
           "ink" : [
-            0.1,
-            0.09,
-            0.08,
+            0.10000000000000001,
+            0.089999999999999997,
+            0.080000000000000002,
             1
           ]
         },
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 194,
-            "x" : 97,
+            "w" : 212.5,
+            "x" : 106.25,
             "y" : 4
           },
           "edition" : {
@@ -603,7 +603,7 @@
           },
           "issue" : {
             "h" : 21,
-            "w" : 114.5,
+            "w" : 115,
             "x" : 4,
             "y" : 4
           },
@@ -626,7 +626,7 @@
           "name" : "Original"
         },
         {
-          "color" : "#26E6FF",
+          "color" : "#26E5FF",
           "name" : "Cyan"
         },
         {
@@ -638,7 +638,7 @@
           "name" : "Lime"
         },
         {
-          "color" : "#FF801A",
+          "color" : "#FF8019",
           "name" : "Orange"
         }
       ],
@@ -844,8 +844,8 @@
       "ornament" : {
         "colors" : {
           "cyan" : [
-            0.2,
-            0.9,
+            0.20000000000000001,
+            0.90000000000000002,
             1,
             1
           ]
@@ -878,7 +878,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -1093,14 +1093,14 @@
         "colors" : {
           "blue" : [
             0.11,
-            0.3,
+            0.29999999999999999,
             0.62,
             1
           ],
           "ink" : [
-            0.09,
-            0.09,
-            0.09,
+            0.089999999999999997,
+            0.089999999999999997,
+            0.089999999999999997,
             1
           ],
           "red" : [
@@ -1110,13 +1110,15 @@
             1
           ],
           "yellow" : [
-            0.96,
-            0.73,
+            0.95999999999999996,
+            0.72999999999999998,
             0.13,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Primary colours and pure geometry on cream",
       "title" : "Bauhaus"
@@ -1349,31 +1351,35 @@
         "colors" : {
           "gold" : [
             0.87,
-            0.73,
-            0.4,
+            0.72999999999999998,
+            0.40000000000000002,
             1
           ],
           "sage" : [
-            0.64,
-            0.76,
-            0.6,
+            0.64000000000000001,
+            0.76000000000000001,
+            0.59999999999999998,
             1
           ],
           "terracotta" : [
-            0.89,
+            0.89000000000000001,
             0.5,
-            0.33,
+            0.33000000000000002,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Didot, italics and sprigs on forest green",
       "title" : "Grove"
     },
     {
       "accent" : "#FFFFFF",
-      "accents" : [],
+      "accents" : [
+
+      ],
       "family" : "aero",
       "group" : "sleek",
       "id" : "aero",
@@ -1581,15 +1587,21 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Glossy glass, gel bars and bubbles",
       "title" : "Aero"
     },
     {
       "accent" : "#000000",
-      "accents" : [],
+      "accents" : [
+
+      ],
       "family" : "classic",
       "group" : "retro",
       "id" : "classic",
@@ -1790,7 +1802,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "disk" : {
             "h" : 70,
@@ -1806,8 +1820,8 @@
           },
           "time" : {
             "h" : 24,
-            "w" : 58,
-            "x" : 54,
+            "w" : 66,
+            "x" : 62,
             "y" : 12
           },
           "trash" : {
@@ -1829,7 +1843,7 @@
           "name" : "Original"
         },
         {
-          "color" : "#1AF2FF",
+          "color" : "#19F2FF",
           "name" : "Cyan"
         },
         {
@@ -1837,7 +1851,7 @@
           "name" : "Magenta"
         },
         {
-          "color" : "#9EFF1A",
+          "color" : "#9EFF19",
           "name" : "Acid"
         },
         {
@@ -2054,22 +2068,22 @@
       "ornament" : {
         "colors" : {
           "black" : [
-            0.035,
-            0.035,
-            0.045,
+            0.035000000000000003,
+            0.035000000000000003,
+            0.044999999999999998,
             1
           ],
           "yellow" : [
-            0.99,
-            0.92,
-            0.05,
+            0.98999999999999999,
+            0.92000000000000004,
+            0.050000000000000003,
             1
           ]
         },
         "sprites" : {
           "status" : {
             "h" : 21,
-            "w" : 326,
+            "w" : 333,
             "x" : 4,
             "y" : 17
           }
@@ -2302,7 +2316,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "plate" : {
             "h" : 22,
@@ -2535,31 +2551,33 @@
       "ornament" : {
         "colors" : {
           "cream" : [
-            0.97,
-            0.9,
-            0.76,
+            0.96999999999999997,
+            0.90000000000000002,
+            0.76000000000000001,
             1
           ],
           "mustard" : [
-            0.92,
-            0.72,
-            0.24,
+            0.92000000000000004,
+            0.71999999999999997,
+            0.23999999999999999,
             1
           ],
           "orange" : [
-            0.93,
-            0.48,
-            0.17,
+            0.93000000000000005,
+            0.47999999999999998,
+            0.17000000000000001,
             1
           ],
           "rust" : [
-            0.74,
-            0.27,
-            0.15,
+            0.73999999999999999,
+            0.27000000000000002,
+            0.14999999999999999,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Seventies stripes in orange and mustard",
       "title" : "Groove"
@@ -2799,26 +2817,26 @@
         "colors" : {
           "blue" : [
             0.62,
-            0.83,
-            0.95,
+            0.82999999999999996,
+            0.94999999999999996,
             1
           ],
           "ink" : [
-            0.96,
-            0.96,
-            0.93,
-            0.94
+            0.95999999999999996,
+            0.95999999999999996,
+            0.93000000000000005,
+            0.93999999999999995
           ],
           "pink" : [
-            0.97,
-            0.66,
-            0.73,
+            0.96999999999999997,
+            0.66000000000000003,
+            0.72999999999999998,
             1
           ],
           "yellow" : [
-            0.98,
-            0.91,
-            0.56,
+            0.97999999999999998,
+            0.91000000000000003,
+            0.56000000000000005,
             1
           ]
         },
@@ -2843,7 +2861,7 @@
           },
           "heading" : {
             "h" : 29,
-            "w" : 259,
+            "w" : 277,
             "x" : 4,
             "y" : 25
           }
@@ -3084,12 +3102,14 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "banner" : {
             "h" : 28,
-            "w" : 223,
-            "x" : 111.5,
+            "w" : 240.5,
+            "x" : 120.25,
             "y" : 24
           },
           "hand" : {
@@ -3328,8 +3348,12 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "System-style widgets on rounded frosted glass",
       "title" : "Glass"
@@ -3342,7 +3366,7 @@
           "name" : "Original"
         },
         {
-          "color" : "#FFB21A",
+          "color" : "#FFB219",
           "name" : "Amber"
         },
         {
@@ -3350,7 +3374,7 @@
           "name" : "Green"
         },
         {
-          "color" : "#4CE6FF",
+          "color" : "#4CE5FF",
           "name" : "Cyan"
         },
         {
@@ -3558,7 +3582,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "placard" : {
             "h" : 20,
@@ -3579,7 +3605,7 @@
           "name" : "Original"
         },
         {
-          "color" : "#FFB21A",
+          "color" : "#FFB219",
           "name" : "Amber"
         },
         {
@@ -3587,7 +3613,7 @@
           "name" : "Green"
         },
         {
-          "color" : "#4CE6FF",
+          "color" : "#4CE5FF",
           "name" : "Cyan"
         },
         {
@@ -3788,7 +3814,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "plate0" : {
             "h" : 30,
@@ -3797,30 +3825,6 @@
             "y" : 29
           },
           "plate1" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate10" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate11" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate12" : {
-            "h" : 30,
-            "w" : 160,
-            "x" : 80,
-            "y" : 29
-          },
-          "plate13" : {
             "h" : 30,
             "w" : 160,
             "x" : 80,
@@ -3869,6 +3873,30 @@
             "y" : 29
           },
           "plate9" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate10" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate11" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate12" : {
+            "h" : 30,
+            "w" : 160,
+            "x" : 80,
+            "y" : 29
+          },
+          "plate13" : {
             "h" : 30,
             "w" : 160,
             "x" : 80,
@@ -4113,19 +4141,21 @@
       "ornament" : {
         "colors" : {
           "brass" : [
-            0.8,
+            0.80000000000000004,
             0.62,
-            0.32,
+            0.32000000000000001,
             1
           ],
           "brassDark" : [
-            0.4,
-            0.27,
-            0.1,
+            0.40000000000000002,
+            0.27000000000000002,
+            0.10000000000000001,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Brass submarine gauges and sonar in the deep",
       "title" : "Abyss"
@@ -4146,7 +4176,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -4361,18 +4391,20 @@
         "colors" : {
           "ink" : [
             0.16,
-            0.14,
+            0.14000000000000001,
             0.11,
             1
           ],
           "route" : [
-            0.82,
-            0.2,
-            0.14,
+            0.81999999999999995,
+            0.20000000000000001,
+            0.14000000000000001,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Legend boxes and scale bars on a topographic map",
       "title" : "Atlas"
@@ -4393,7 +4425,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -4605,7 +4637,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "column" : {
             "h" : 110,
@@ -4640,7 +4674,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -4854,13 +4888,15 @@
       "ornament" : {
         "colors" : {
           "red" : [
-            0.8,
-            0.14,
-            0.14,
+            0.80000000000000004,
+            0.14000000000000001,
+            0.14000000000000001,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Sticky notes, polaroids and red string",
       "title" : "Corkboard"
@@ -5083,8 +5119,12 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Clean type on frosted ice under the aurora",
       "title" : "Polar"
@@ -5314,11 +5354,13 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "date" : {
             "h" : 21,
-            "w" : 207.5,
+            "w" : 226,
             "x" : 4,
             "y" : 4
           }
@@ -5545,8 +5587,12 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Soft dark cards on a deep, glowing desk",
       "title" : "Slate"
@@ -5567,7 +5613,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -5765,8 +5811,12 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Soft white cards on a bright, airy desk",
       "title" : "Lumen"
@@ -5787,7 +5837,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -5999,8 +6049,12 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Industrial mono numerals with an orange accent",
       "title" : "Field"
@@ -6237,8 +6291,12 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Field's mono numerals and orange, after dark",
       "title" : "Field Dark"
@@ -6456,45 +6514,47 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.32,
-            0.95,
-            0.86,
+            0.32000000000000001,
+            0.94999999999999996,
+            0.85999999999999999,
             1
           ],
           "accent2" : [
-            0.64,
-            0.47,
+            0.64000000000000001,
+            0.46999999999999997,
             1,
             1
           ],
           "accent3" : [
             1,
-            0.47,
-            0.7,
+            0.46999999999999997,
+            0.69999999999999996,
             1
           ],
           "gradient" : [
             [
-              0.32,
-              0.95,
-              0.86,
+              0.32000000000000001,
+              0.94999999999999996,
+              0.85999999999999999,
               1
             ],
             [
-              0.64,
-              0.47,
+              0.64000000000000001,
+              0.46999999999999997,
               1,
               1
             ],
             [
               1,
-              0.47,
-              0.7,
+              0.46999999999999997,
+              0.69999999999999996,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Black glass with iridescent edges and hairline numerals",
       "title" : "Obsidian"
@@ -6726,39 +6786,41 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.36,
-            0.56,
+            0.35999999999999999,
+            0.56000000000000005,
             1,
             1
           ],
           "accent2" : [
-            0.7,
+            0.69999999999999996,
             0.44,
             1,
             1
           ],
           "accent3" : [
-            0.3,
-            0.9,
-            0.85,
+            0.29999999999999999,
+            0.90000000000000002,
+            0.84999999999999998,
             1
           ],
           "gradient" : [
             [
-              0.36,
-              0.56,
+              0.35999999999999999,
+              0.56000000000000005,
               1,
               1
             ],
             [
-              0.7,
+              0.69999999999999996,
               0.44,
               1,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "A deep-navy dashboard with glowing gradient charts",
       "title" : "Midnight"
@@ -6977,38 +7039,40 @@
         "colors" : {
           "accent" : [
             1,
-            0.2,
-            0.36,
+            0.20000000000000001,
+            0.35999999999999999,
             1
           ],
           "accent2" : [
             0.62,
             1,
-            0.18,
+            0.17999999999999999,
             1
           ],
           "accent3" : [
-            0.18,
-            0.86,
+            0.17999999999999999,
+            0.85999999999999999,
             1,
             1
           ],
           "gradient" : [
             [
               1,
-              0.2,
-              0.36,
+              0.20000000000000001,
+              0.35999999999999999,
               1
             ],
             [
               1,
-              0.2,
-              0.36,
+              0.20000000000000001,
+              0.35999999999999999,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Activity rings and a heartbeat in red, green and cyan",
       "title" : "Pulse"
@@ -7233,51 +7297,53 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.74,
-            0.6,
+            0.73999999999999999,
+            0.59999999999999998,
             1,
             1
           ],
           "accent2" : [
             1,
             0.62,
-            0.45,
+            0.45000000000000001,
             1
           ],
           "accent3" : [
-            0.4,
-            0.8,
+            0.40000000000000002,
+            0.80000000000000004,
             1,
             1
           ],
           "gradient" : [
             [
-              0.35,
+              0.34999999999999998,
               0.75,
               1,
               1
             ],
             [
-              0.7,
+              0.69999999999999996,
               0.5,
               1,
               1
             ],
             [
               1,
-              0.45,
-              0.6,
+              0.45000000000000001,
+              0.59999999999999998,
               1
             ],
             [
               1,
               0.75,
-              0.35,
+              0.34999999999999998,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Dark frosted glass that splits the light into colour",
       "title" : "Prism"
@@ -7496,38 +7562,40 @@
         "colors" : {
           "accent" : [
             1,
-            0.17,
+            0.17000000000000001,
             0.16,
             1
           ],
           "accent2" : [
-            0.95,
-            0.95,
-            0.95,
+            0.94999999999999996,
+            0.94999999999999996,
+            0.94999999999999996,
             1
           ],
           "accent3" : [
             1,
-            0.78,
-            0.1,
+            0.78000000000000003,
+            0.10000000000000001,
             1
           ],
           "gradient" : [
             [
               1,
-              0.17,
+              0.17000000000000001,
               0.16,
               1
             ],
             [
               1,
-              0.17,
+              0.17000000000000001,
               0.16,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Carbon fibre, bold italic figures and shift lights",
       "title" : "Carbon"
@@ -7745,39 +7813,41 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.95,
-            0.8,
-            0.56,
+            0.94999999999999996,
+            0.80000000000000004,
+            0.56000000000000005,
             1
           ],
           "accent2" : [
-            0.96,
-            0.56,
-            0.66,
+            0.95999999999999996,
+            0.56000000000000005,
+            0.66000000000000003,
             1
           ],
           "accent3" : [
-            0.8,
+            0.80000000000000004,
             0.62,
             1,
             1
           ],
           "gradient" : [
             [
-              0.96,
-              0.56,
-              0.66,
+              0.95999999999999996,
+              0.56000000000000005,
+              0.66000000000000003,
               1
             ],
             [
-              0.95,
-              0.8,
-              0.56,
+              0.94999999999999996,
+              0.80000000000000004,
+              0.56000000000000005,
               1
             ]
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Plum velvet, champagne glow and fine italic type",
       "title" : "Velvet"
@@ -8000,7 +8070,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "dimension" : {
             "h" : 21,
@@ -8236,7 +8308,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "prompt" : {
             "h" : 28,
@@ -8447,15 +8521,15 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.49,
-            0.549,
+            0.48999999999999999,
+            0.54900000000000004,
             1,
             1
           ],
           "dark" : [
-            0.765,
-            0.788,
-            0.827,
+            0.76500000000000001,
+            0.78800000000000003,
+            0.82699999999999996,
             1
           ],
           "light" : [
@@ -8465,13 +8539,15 @@
             1
           ],
           "surface" : [
-            0.89,
-            0.91,
-            0.937,
+            0.89000000000000001,
+            0.91000000000000003,
+            0.93700000000000006,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Soft UI: panels pressed out of one pale surface, inset dials, one periwinkle accent",
       "title" : "Soft"
@@ -8496,7 +8572,7 @@
           "name" : "Gold"
         },
         {
-          "color" : "#1F1A17",
+          "color" : "#1F1917",
           "name" : "Black"
         }
       ],
@@ -8686,7 +8762,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "seal" : {
             "h" : 50,
@@ -8923,8 +9001,12 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Glossy toy bricks with studs on top, primary colours and chunky rounded type",
       "title" : "Bricks"
@@ -8941,7 +9023,7 @@
           "name" : "Magenta"
         },
         {
-          "color" : "#FF801A",
+          "color" : "#FF8019",
           "name" : "Orange"
         },
         {
@@ -8949,7 +9031,7 @@
           "name" : "Green"
         },
         {
-          "color" : "#8C4CE6",
+          "color" : "#8C4CE5",
           "name" : "Purple"
         }
       ],
@@ -9132,7 +9214,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "burst" : {
             "h" : 110,
@@ -9171,7 +9255,7 @@
           "name" : "Turquoise"
         },
         {
-          "color" : "#E6738C",
+          "color" : "#E5738C",
           "name" : "Pink"
         }
       ],
@@ -9361,7 +9445,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "star" : {
             "h" : 64,
@@ -9590,7 +9676,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "heading" : {
             "h" : 44,
@@ -9821,8 +9909,12 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
-        "sprites" : {}
+        "colors" : {
+
+        },
+        "sprites" : {
+
+        }
       },
       "tagline" : "Leaded jewel-tone panes lit from behind; the clock is a rose window",
       "title" : "Stained Glass"
@@ -10023,7 +10115,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "footer" : {
             "h" : 23,
@@ -10246,7 +10340,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "headline" : {
             "h" : 76,
@@ -10275,7 +10371,7 @@
           "name" : "Cobalt"
         },
         {
-          "color" : "#1A7A4C",
+          "color" : "#197A4C",
           "name" : "Forest"
         },
         {
@@ -10480,7 +10576,9 @@
       ],
       "light" : true,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "card" : {
             "h" : 64,
@@ -10713,13 +10811,13 @@
           "pink" : [
             1,
             0.31,
-            0.66,
+            0.66000000000000003,
             1
           ],
           "teal" : [
-            0.04,
-            0.65,
-            0.66,
+            0.040000000000000001,
+            0.65000000000000002,
+            0.66000000000000003,
             1
           ]
         },
@@ -10931,7 +11029,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "footer" : {
             "h" : 23,
@@ -11154,7 +11254,9 @@
       ],
       "light" : false,
       "ornament" : {
-        "colors" : {},
+        "colors" : {
+
+        },
         "sprites" : {
           "headline" : {
             "h" : 76,
@@ -11379,14 +11481,14 @@
       "ornament" : {
         "colors" : {
           "pink" : [
-            0.92,
+            0.92000000000000004,
             0.22,
-            0.56,
+            0.56000000000000005,
             1
           ],
           "teal" : [
-            0.05,
-            0.6,
+            0.050000000000000003,
+            0.59999999999999998,
             0.62,
             1
           ]
@@ -11601,37 +11703,39 @@
       "ornament" : {
         "colors" : {
           "accent" : [
-            0.49,
-            0.549,
+            0.48999999999999999,
+            0.54900000000000004,
             1,
             1
           ],
           "dark" : [
-            0.098,
+            0.098000000000000004,
             0.106,
             0.122,
             1
           ],
           "light" : [
-            0.235,
+            0.23499999999999999,
             0.25,
-            0.282,
+            0.28199999999999997,
             1
           ],
           "surface" : [
-            0.165,
-            0.176,
-            0.2,
+            0.16500000000000001,
+            0.17599999999999999,
+            0.20000000000000001,
             1
           ]
         },
-        "sprites" : {}
+        "sprites" : {
+
+        }
       },
       "tagline" : "Soft UI in the dark: panels pressed out of graphite, one periwinkle accent",
       "title" : "Soft Dark"
     }
   ],
-  "version" : "1.7.0",
+  "version" : "1.9.0",
   "widgets" : [
     {
       "blurb" : "Time and date, or another city's time",
